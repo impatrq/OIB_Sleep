@@ -1,0 +1,295 @@
+/* ANIMACIONES Y EFECTOS */
+
+/* Scroll suave para toda la página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animación de typing para subtítulos */
+.typing-effect {
+  overflow: hidden;
+  border-right: .15em solid #f59e0b;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .15em;
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f59e0b; }
+}
+
+/* Efecto de resaltado para texto importante */
+.highlight-text {
+  position: relative;
+  display: inline-block;
+  color: #f59e0b;
+  font-weight: 600;
+}
+
+.highlight-text::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: rgba(245, 158, 11, 0.15);
+  z-index: -1;
+  transform: rotate(-2deg) translateY(0);
+  transition: all 0.3s ease;
+}
+
+.highlight-text:hover::after {
+  height: 40%;
+  background-color: rgba(245, 158, 11, 0.3);
+  transform: rotate(-1deg) translateY(-2px);
+}
+
+/* Animaciones para las secciones al hacer scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fade-in-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scale-in.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Efecto de destello para iconos sociales */
+.social-icons a {
+  position: relative;
+  overflow: hidden;
+}
+
+.social-icons a::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: rotate(45deg) translateY(-50%) translateX(-50%);
+  transition: all 0.5s ease-out;
+  z-index: 1;
+  opacity: 0;
+}
+
+.social-icons a:hover::before {
+  animation: shine 0.7s forwards;
+}
+
+@keyframes shine {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translateY(-50%) translateX(-50%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translateY(150%) translateX(150%);
+  }
+}
+
+/* Efecto tilt para las tarjetas de equipo */
+.tilt-effect {
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.tilt-effect:hover {
+  transform: perspective(1000px) rotateX(2deg) rotateY(5deg) scale(1.03);
+}
+
+/* Animación para los valores al hacer hover */
+.value-animation {
+  position: relative;
+  overflow: hidden;
+}
+
+.value-animation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(245, 158, 11, 0.1) 0%, rgba(30, 58, 138, 0.1) 100%);
+  transform: translateY(100%);
+  transition: transform 0.5s ease;
+  z-index: -1;
+}
+
+.value-animation:hover::before {
+  transform: translateY(0);
+}
+
+.value-animation .value-icon {
+  transition: transform 0.5s ease;
+}
+
+.value-animation:hover .value-icon {
+  transform: scale(1.2) rotate(10deg);
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.4) rotate(15deg); }
+}
+
+/* Efecto de partículas para el banner */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* About banner mejorado */
+.about-banner-enhanced {
+  position: relative;
+  background-color: rgba(13, 27, 33, 0.5);
+  overflow: hidden;
+  padding: 80px 20px;
+  border-radius: 0;
+  margin-bottom: 70px;
+}
+
+.about-banner-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(30, 58, 138, 0.6), rgba(245, 158, 11, 0.3));
+  z-index: -2;
+}
+
+.about-banner-enhanced h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 48px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.about-banner-enhanced .subtitle {
+  position: relative;
+  z-index: 2;
+  font-size: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ffffff;
+  opacity: 0;
+  animation: fadeInUp 1s 0.3s ease-out forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos para botones animados */
+.animated-btn {
+  position: relative;
+  padding: 12px 30px;
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 1;
+}
+
+.animated-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #f59e0b;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.animated-btn:hover {
+  color: #1e3a8a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.animated-btn:hover::before {
+  width: 100%;
+}

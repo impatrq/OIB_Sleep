@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+
+# Set crawl rate (for Google)
+User-agent: Googlebot
+Crawl-delay: 1
+
+# Set crawl rate (for Bing)
+User-agent: Bingbot
+Crawl-delay: 1
+
+# Reference to the sitemap
+Sitemap: https://oibsleep.glitch.me/sitemap.xml
