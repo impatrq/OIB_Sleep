@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - OIB Sleep</title>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.global/0e83ee2c-bb90-4eea-8ad8-5db746efb7c3/Img%2FScreenshot_2025-03-26_081756-removebg-preview.png?v=1745206406451">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/transition.js"></script>
+    <script src="../scripts/particle-effect.js"></script>
+    <script src="../scripts/back-to-top.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.glitch.global/0e83ee2c-bb90-4eea-8ad8-5db746efb7c3/logo_OIB.PNG?v=1747828129633">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.global/0e83ee2c-bb90-4eea-8ad8-5db746efb7c3/logo_OIB.PNG?v=1747828129633">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.glitch.global/0e83ee2c-bb90-4eea-8ad8-5db746efb7c3/logo_OIB.PNG?v=1747828129633">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#1e3a8a">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="../index.html" style="text-decoration: none;">
+            <div class="logo">OIB<span>Sleep</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="Sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="galería.html">Galería</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <h1 class="typewriter-heading" style="text-align: center; margin: 50px 0; color: #1e3a8a;">Contacto</h1>
+        <p class="subtitle" style="text-align: center; margin-bottom: 50px;">Estamos aquí para responder cualquier
+            pregunta o inquietud que puedas tener.</p>
+
+        <div class="contact-container">
+            <div class="contact-info">
+            </div>
+
+            <div class="contact-form">
+                <h2 style="text-align: center; margin-bottom: 30px; color: #1e3a8a;">Envíanos un mensaje</h2>
+                <form id="contactForm" action="https://formsubmit.co/oibsleep@gmail.com" method="POST" onsubmit="submitForm(event)">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Enviar mensaje</button>
+
+                    <!-- Campos ocultos para configurar FormSubmit -->
+                    <input type="hidden" name="_next" value="">
+                    <input type="hidden" name="_subject" value="Nuevo mensaje de contacto OIB Sleep">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_autoresponse" value="Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.">
+                </form>
+                <div id="formMessage" class="form-message"></div>
+            </div>
+        </div>
+
+        <div class="contact-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6559.727924343114!2d-58.235531!3d-34.708611000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32e343e263fa9%3A0x5fa88a6233e34383!2sIMPA!5e0!3m2!1ses!2sar!4v1745169070879!5m2!1ses!2sar"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" width="100%" height="100%" style="border:0;"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre OIB Sleep</h3>
+                <p>Innovando en el descanso inteligente. Nuestra misión es proporcionar la mejor experiencia de sueño a
+                    través de tecnología avanzada y diseño ergonómico.</p>
+                <div class="social-icons">
+                    <a href="#"><span>fb</span></a>
+                    <a href="https://www.instagram.com/oibsleep/"><span>ig</span></a>
+                    <a href="#"><span>tw</span></a>
+                    <a href="#"><span>in</span></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="Sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="galería.html">Galería</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                    <li><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-info">
+                    <p><i>📍</i>E.E.S.T.Nº7</p>
+                    <p><i>📞</i> +54 9 11 6747-4895</p>
+                    <p><i>✉️</i> <a href="mailto:oibsleep@gmail.com">oibsleep@gmail.com</a></p>
+                    <p><i>⏰</i> Lun-Vie: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Boletín Informativo</h3>
+                <p>Suscríbete para recibir las últimas noticias y ofertas especiales.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+            
+            const form = document.getElementById('contactForm');
+            const formData = new FormData(form);
+            const messageDiv = document.getElementById('formMessage');
+            
+            // Show loading state
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = 'Enviando...';
+            submitButton.disabled = true;
+            
+            fetch('https://formsubmit.co/ajax/oibsleep@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Show success message
+                messageDiv.className = 'form-message success';
+                messageDiv.textContent = '¡Mensaje enviado correctamente! Gracias por contactarnos.';
+                messageDiv.style.display = 'block';
+                
+                // Reset form
+                form.reset();
+                
+                // Reset button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    messageDiv.style.display = 'none';
+                }, 5000);
+            })
+            .catch(error => {
+                // Show error message
+                messageDiv.className = 'form-message error';
+                messageDiv.textContent = 'Ha ocurrido un error al enviar el mensaje. Intente nuevamente.';
+                messageDiv.style.display = 'block';
+                
+                // Reset button
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                
+                console.error('Error:', error);
+            });
+        }
+    </script>
+</body>
+
+</html>

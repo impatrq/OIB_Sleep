@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - OIB Sleep</title>
+    <link rel="icon" type="image/png" href="https://cdn.glitch.global/0e83ee2c-bb90-4eea-8ad8-5db746efb7c3/Img%2FScreenshot_2025-03-26_081756-removebg-preview.png?v=1745206406451">
+    <link rel="stylesheet" href="../styles/style.css">
+    <script src="../scripts/script.js"></script>
+    <script src="../scripts/transition.js"></script>
+    <script src="../scripts/particle-effect.js"></script>
+    <script src="../scripts/back-to-top.js"></script>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.glitch.global/0e83ee2c-bb90-4eea-8ad8-5db746efb7c3/logo_OIB.PNG?v=1747828129633">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://cdn.glitch.global/0e83ee2c-bb90-4eea-8ad8-5db746efb7c3/logo_OIB.PNG?v=1747828129633">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://cdn.glitch.global/0e83ee2c-bb90-4eea-8ad8-5db746efb7c3/logo_OIB.PNG?v=1747828129633">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-config" content="/browserconfig.xml">
+    <meta name="theme-color" content="#1e3a8a">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <a href="../index.html" style="text-decoration: none;">
+            <div class="logo">OIB<span>Sleep</span></div>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="Sobre-nosotros.html">Sobre Nosotros</a></li>
+            <li><a href="galería.html">Galería</a></li>
+            <li><a href="Contacto.html">Contacto</a></li>
+        </ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <h1 class="typewriter-heading" style="text-align: center; margin: 50px 0; color: #1e3a8a;">Galería OIB Sleep</h1>
+        <p class="subtitle" style="text-align: center; margin-bottom: 50px;">Descubre nuestra innovadora tecnología de descanso</p>
+
+        <!-- Filtros para la galería -->
+        <div class="gallery-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="productos">Productos</button>
+            <button class="filter-btn" data-filter="tecnologia">Tecnología</button>
+            <button class="filter-btn" data-filter="aplicaciones">Aplicaciones</button>
+        </div>
+
+        <!-- Contenedor principal de la galería -->
+        <div class="gallery-container">
+            <!-- Ítem de galería 1 -->
+            <div class="gallery-item" data-category="productos">
+                <div class="gallery-image">
+                    <div class="coming-soon-placeholder">
+                        <span>Próximamente</span>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Modelo Estándar</h3>
+                            <p>Nuestra cama inteligente básica con control de temperatura y monitoreo de sueño.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ítem de galería 2 -->
+            <div class="gallery-item" data-category="productos">
+                <div class="gallery-image">
+                    <div class="coming-soon-placeholder">
+                        <span>Próximamente</span>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Modelo Premium</h3>
+                            <p>Versión avanzada con ajustes de postura automáticos y sistema de masaje integrado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ítem de galería 3 -->
+            <div class="gallery-item" data-category="tecnologia">
+                <div class="gallery-image">
+                    <div class="coming-soon-placeholder">
+                        <span>Próximamente</span>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Sensores Térmicos</h3>
+                            <p>Tecnología de precisión para regular la temperatura según las necesidades del usuario.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ítem de galería 4 -->
+            <div class="gallery-item" data-category="tecnologia">
+                <div class="gallery-image">
+                    <div class="coming-soon-placeholder">
+                        <span>Próximamente</span>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Sistema de Monitoreo</h3>
+                            <p>Analiza patrones de sueño y signos vitales para optimizar el descanso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ítem de galería 5 -->
+            <div class="gallery-item" data-category="aplicaciones">
+                <div class="gallery-image">
+                    <div class="coming-soon-placeholder">
+                        <span>Próximamente</span>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Aplicación Móvil</h3>
+                            <p>Controla todas las funciones de tu cama inteligente desde tu smartphone.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ítem de galería 6 -->
+            <div class="gallery-item" data-category="aplicaciones">
+                <div class="gallery-image">
+                    <div class="coming-soon-placeholder">
+                        <span>Próximamente</span>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Dashboard de Analíticas</h3>
+                            <p>Visualiza estadísticas detalladas sobre tu calidad de sueño y recibe recomendaciones personalizadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ítem de galería 7 -->
+            <div class="gallery-item" data-category="productos">
+                <div class="gallery-image">
+                    <div class="coming-soon-placeholder">
+                        <span>Próximamente</span>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Modelo Hospitalario</h3>
+                            <p>Diseñado específicamente para entornos médicos con funciones avanzadas de monitoreo y soporte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ítem de galería 8 -->
+            <div class="gallery-item" data-category="tecnologia">
+                <div class="gallery-image">
+                    <div class="coming-soon-placeholder">
+                        <span>Próximamente</span>
+                    </div>
+                    <div class="overlay">
+                        <div class="overlay-content">
+                            <h3>Sistema de Ajuste Postural</h3>
+                            <p>Tecnología que detecta y corrige automáticamente la postura durante el sueño.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lightbox para ver imágenes en grande -->
+        <div id="lightbox" class="lightbox">
+            <span class="close-lightbox">&times;</span>
+            <img class="lightbox-content" id="lightbox-img">
+            <div id="lightbox-caption"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sobre OIB Sleep</h3>
+                <p>Innovando en el descanso inteligente. Nuestra misión es proporcionar la mejor experiencia de sueño a
+                    través de tecnología avanzada y diseño ergonómico.</p>
+                <div class="social-icons">
+                    <a href="#"><span>fb</span></a>
+                    <a href="https://www.instagram.com/oibsleep/"><span>ig</span></a>
+                    <a href="#"><span>tw</span></a>
+                    <a href="#"><span>in</span></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Enlaces Rápidos</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="Sobre-nosotros.html">Sobre Nosotros</a></li>
+                    <li><a href="galería.html">Galería</a></li>
+                    <li><a href="Contacto.html">Contacto</a></li>
+                    <li><a href="#preguntas-frecuentes">Preguntas Frecuentes</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contacto</h3>
+                <div class="contact-info">
+                    <p><i>📍</i>E.E.S.T.Nº7</p>
+                    <p><i>📞</i> +54 9 11 6747-4895</p>
+                    <p><i>✉️</i> <a href="mailto:oibsleep@gmail.com">oibsleep@gmail.com</a></p>
+                    <p><i>⏰</i> Lun-Vie: 8:00 AM - 5:00 PM</p>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Boletín Informativo</h3>
+                <p>Suscríbete para recibir las últimas noticias y ofertas especiales.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Tu correo electrónico">
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script para la funcionalidad de filtrado de la galería
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            
+            // Filtrar elementos de la galería
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover clase active de todos los botones
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Añadir clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    galleryItems.forEach(item => {
+                        if(filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+            
+            // Lightbox para ver imágenes en grande
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const galleryImages = document.querySelectorAll('.gallery-image img');
+            const closeLightbox = document.querySelector('.close-lightbox');
+            
+            galleryImages.forEach(img => {
+                img.addEventListener('click', function() {
+                    lightbox.style.display = 'block';
+                    lightboxImg.src = this.src;
+                    
+                    // Obtener el título y descripción del overlay
+                    const title = this.nextElementSibling.querySelector('h3').textContent;
+                    const desc = this.nextElementSibling.querySelector('p').textContent;
+                    lightboxCaption.innerHTML = `<h3>${title}</h3><p>${desc}</p>`;
+                });
+            });
+            
+            // Cerrar lightbox
+            closeLightbox.addEventListener('click', function() {
+                lightbox.style.display = 'none';
+            });
+            
+            // También cerrar lightbox al hacer clic fuera de la imagen
+            lightbox.addEventListener('click', function(e) {
+                if(e.target === lightbox) {
+                    lightbox.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
