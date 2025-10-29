@@ -1,0 +1,4 @@
+# Nmap 7.94SVN scan initiated Wed Oct  8 11:40:50 2025 as: nmap -sn -oG hosts_172.17.16.gnmap 172.17.16.0/20
+Host: 172.17.16.1 (eze_laptop.mshome.net)	Status: Up
+Host: 172.17.26.150 ()	Status: Up
+# Nmap done at Wed Oct  8 11:41:00 2025 -- 4096 IP addresses (2 hosts up) scanned in 9.59 seconds

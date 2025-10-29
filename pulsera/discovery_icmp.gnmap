@@ -1,0 +1,5 @@
+# Nmap 7.94SVN scan initiated Wed Oct  8 11:46:20 2025 as: nmap -sn -oG discovery_icmp.gnmap 10.119.250.0/24
+Host: 10.119.250.27 ()	Status: Up
+Host: 10.119.250.85 ()	Status: Up
+Host: 10.119.250.189 ()	Status: Up
+# Nmap done at Wed Oct  8 11:47:46 2025 -- 256 IP addresses (3 hosts up) scanned in 85.59 seconds
