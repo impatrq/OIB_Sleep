@@ -1,7 +1,8 @@
 """
-Sistema de Control de Bomba y Válvula para Raspberry Pi Zero 2 W
-Controla una bomba eléctrica (GPIO 15) y una válvula eléctrica (GPIO 29)
-con pausas programadas para evitar sobrecalentamiento de la bomba.
+Sistema de Control de Flujo de Agua para Raspberry Pi Zero 2 W
+Controla una bomba eléctrica (GPIO 22) y una válvula eléctrica (GPIO 5)
+para bombear agua a través de una manguera hacia una cama.
+La bomba opera con pausas programadas para evitar sobrecalentamiento.
 """
 
 import RPi.GPIO as GPIO
@@ -10,13 +11,62 @@ import signal
 import sys
 
 # Configuración de pines GPIO
-PIN_BOMBA = 15      # GPIO 15 - Bomba eléctrica
-PIN_VALVULA = 29    # GPIO 29 - Válvula eléctrica
+PIN_BOMBA = 22      # GPIO 22 - Bomba eléctrica
+PIN_VALVULA = 5    # GPIO 5 - Válvula eléctrica
 # Alimentación: Pin 1 (3.3V o 5V según tu circuito)
 # Ground: Pin 6
 
 # Tiempos de operación (en segundos)
-TIEMPO_BOMBA_ON = 30      # Tiempo que la bomba está encendida
-TIEMPO_BOMBA_OFF = 10     # Tiempo de pausa para evitar sobrecalentamiento
-TIEMPO_VALVULA_ON = 40    # Tiempo que la válvula está abierta
+TIEMPO_BOMBA_ON = 300      # Tiempo que la bomba está encendida (5 minutos)
+TIEMPO_BOMBA_OFF = 30      # Tiempo de pausa para evitar sobrecalentamiento (30 segundos)
+TIEMPO_TOTAL_FLUJO = 1200  # Tiempo total de flujo de agua (20 minutos)
+
+# Variable de control para detener el programa de forma segura
+running = True
+
+def signal_handler(sig, frame):
+    """Maneja la señal de interrupción (Ctrl+C) para apagar todo de forma segura"""
+    global running
+    print("\n\nDeteniendo el sistema de forma segura...")
+    running = False
+
+def setup_gpio():
+    """Configura los pines GPIO"""
+    # Usa numeración BCM (GPIO)
+    GPIO.setmode(GPIO.BCM)
+    
+    # Configura los pines como salidas
+    GPIO.setup(PIN_BOMBA, GPIO.OUT, initial=GPIO.LOW)
+    GPIO.setup(PIN_VALVULA, GPIO.OUT, initial=GPIO.LOW)
+    
+    print("GPIO configurado correctamente")
+    print(f"Bomba: GPIO {PIN_BOMBA}")
+    print(f"Válvula: GPIO {PIN_VALVULA}")
+
+def encender_bomba():
+    """Enciende la bomba eléctrica para iniciar el flujo de agua"""
+    GPIO.output(PIN_BOMBA, GPIO.HIGH)
+    print("✓ Bomba ENCENDIDA - Flujo de agua activo")
+
+def apagar_bomba():
+    """Apaga la bomba eléctrica y detiene el flujo de agua"""
+    GPIO.output(PIN_BOMBA, GPIO.LOW)
+    print("✗ Bomba APAGADA - Flujo de agua detenido")
+
+def abrir_valvula():
+    """Abre la válvula eléctrica para permitir el paso del agua"""
+    GPIO.output(PIN_VALVULA, GPIO.HIGH)
+    print("✓ Válvula ABIERTA - Paso de agua habilitado")
+
+def cerrar_valvula():
+    """Cierra la válvula eléctrica y bloquea el paso del agua"""
+    GPIO.output(PIN_VALVULA, GPIO.LOW)
+    print("✗ Válvula CERRADA - Paso de agua bloqueado")
+
+def cleanup():
+    """Limpia la configuración GPIO y apaga todo"""
+    apagar_bomba()
+    cerrar_valvula()
+    GPIO.cleanup()
+    print("Sistema apagado y GPIO limpiado")
 
