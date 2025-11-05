@@ -125,3 +125,44 @@ def ciclo_flujo_agua():
     print("FLUJO DE AGUA COMPLETADO")
     print("="*50 + "\n")
 
+def main():
+    """Función principal"""
+    global running
+    
+    # Configura el manejador de señales para Ctrl+C
+    signal.signal(signal.SIGINT, signal_handler)
+    
+    try:
+        # Configurar GPIO
+        setup_gpio()
+        
+        print("\n" + "="*50)
+        print("SISTEMA DE FLUJO DE AGUA ACTIVADO")
+        print("="*50)
+        print(f"Tiempo de operación de bomba: {TIEMPO_BOMBA_ON}s ({int(TIEMPO_BOMBA_ON/60)} minutos)")
+        print(f"Tiempo de pausa de bomba: {TIEMPO_BOMBA_OFF}s")
+        print(f"Tiempo total de flujo: {TIEMPO_TOTAL_FLUJO}s ({int(TIEMPO_TOTAL_FLUJO/60)} minutos)")
+        print("\nPresiona Ctrl+C para detener el sistema de forma segura")
+        print("="*50 + "\n")
+        
+        # Espera 3 segundos antes de iniciar
+        print("Iniciando en 3 segundos...")
+        time.sleep(3)
+        
+        # Ejecuta el ciclo de flujo de agua continuamente
+        while running:
+            ciclo_flujo_agua()
+            if running:
+                print(f"\nEsperando 5 minutos antes del próximo ciclo...")
+                time.sleep(300)  # Espera 5 minutos entre ciclos
+        
+    except Exception as e:
+        print(f"\nError: {e}")
+    
+    finally:
+        # Limpieza al salir
+        cleanup()
+        print("\nPrograma finalizado")
+
+if __name__ == "__main__":
+    main()
