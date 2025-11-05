@@ -70,3 +70,58 @@ def cleanup():
     GPIO.cleanup()
     print("Sistema apagado y GPIO limpiado")
 
+def ciclo_flujo_agua():
+    """
+    Ejecuta un ciclo completo de flujo de agua:
+    1. Abre la válvula para permitir el paso del agua
+    2. Enciende la bomba con pausas para evitar sobrecalentamiento
+    3. Bombea agua por la manguera hacia la cama durante 20 minutos
+    4. Cierra todo al finalizar
+    """
+    global running
+    
+    print("\n" + "="*50)
+    print("INICIANDO FLUJO DE AGUA")
+    print("="*50)
+    
+    # Abrir válvula
+    abrir_valvula()
+    time.sleep(2)  # Espera 2 segundos para que la válvula se abra completamente
+    
+    # Tiempo total de operación
+    tiempo_total = 0
+    tiempo_objetivo = TIEMPO_TOTAL_FLUJO
+    
+    # Ciclo de bomba con pausas
+    while tiempo_total < tiempo_objetivo and running:
+        # Calcula cuánto tiempo queda
+        tiempo_restante = tiempo_objetivo - tiempo_total
+        
+        # Enciende la bomba
+        encender_bomba()
+        
+        # Determina el tiempo de operación (el menor entre el tiempo configurado y el tiempo restante)
+        tiempo_operacion = min(TIEMPO_BOMBA_ON, tiempo_restante)
+        minutos = int(tiempo_operacion / 60)
+        segundos = int(tiempo_operacion % 60)
+        print(f"Bombeando agua por {minutos}m {segundos}s...")
+        time.sleep(tiempo_operacion)
+        
+        # Actualiza el tiempo total
+        tiempo_total += tiempo_operacion
+        
+        # Apaga la bomba
+        apagar_bomba()
+        
+        # Si aún falta tiempo, hace una pausa
+        if tiempo_total < tiempo_objetivo and running:
+            print(f"Pausa de seguridad: {TIEMPO_BOMBA_OFF} segundos (evita sobrecalentamiento)")
+            time.sleep(TIEMPO_BOMBA_OFF)
+    
+    # Cerrar válvula
+    cerrar_valvula()
+    
+    print("="*50)
+    print("FLUJO DE AGUA COMPLETADO")
+    print("="*50 + "\n")
+
