@@ -15,6 +15,8 @@
 \usepackage{float} % Para posicionar figuras exactamente donde se colocan
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{siunitx}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, fit, calc}
 
 \usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
 
@@ -403,6 +405,14 @@ Además, la Raspberry Pi se comunica de forma inalámbrica mediante Wi-Fi con la
 \subsection{Pulsera}
 La pulsera cuenta con un módulo ESP32 Mini que se encarga de transmitir de manera inalámbrica la información hacia una Raspberry Pi utilizando conectividad Wi-Fi, estableciendo así una comunicación eficiente y continua entre ambos dispositivos. A la ESP32 Mini se encuentran conectados tres sensores mediante el bus de comunicación I²C, cada uno con una función específica dentro del sistema: un sensor de temperatura AHT10, encargado de registrar las variaciones térmicas del entorno y del cuerpo del usuario; un acelerómetro MMA845Q , utilizado para detectar y analizar los movimientos y la posición corporal; y un sensor de ritmo cardíaco Max30102, que permite medir la frecuencia cardíaca en tiempo real.
 Toda la información obtenida por estos sensores es procesada por la ESP32 Mini. Una vez procesados, los resultados son enviados a la Raspberry Pi, que se encarga de realizar el cálculo del estado de sueño del usuario y determinar la temperatura óptima requerida para mantener el confort durante el descanso, utilizando algoritmos de análisis de datos. garantizando un funcionamiento inteligente, autónomo y adaptable a las condiciones individuales de cada usuario.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=6cm]{Esquematicos/image.png}
+\caption{Esquemático del circuito de la pulsera}
+\label{fig:EsquematicoPulsera}
+\end{figure}
+
 \subsection{Bombas de agua}
 El circuito de bombeo está formado por dos módulos idénticos que permiten la conmutación y alimentación de las bombas mediante control digital desde la Raspberry Pi, cada módulo integra un relé electromecánico modelo SRD-12VDC-SL-C accionado a 12 V para aislar la carga de la lógica de control, un transistor BC337 empleado como interruptor de baja impedancia para manejar la bobina del relé desde un pin GPIO de la Raspberry Pi y los componentes de protección y polarización necesarios para un funcionamiento seguro y fiable, entre estos se consideran la resistencia de base para limitar la corriente hacia la base del BC337, un diodo 1N4007 conectado en paralelo con la bobina del relé para absorber picos inductivos y proteger el transistor.
 
@@ -604,7 +614,6 @@ Este formato estructurado facilita la integración con módulos superiores del s
 
 \newgeometry{left=1cm, right=0cm, top=2cm, bottom=2cm}
 \thispagestyle{empty}
-\section[large Diagrama presence\_detector]{\LARGE Diagrama presence\_detector}
 
 \vspace{1cm}
 
@@ -776,7 +785,7 @@ A continuación se describen las funciones principales implementadas en el módu
 El módulo sigue convenciones consistentes para el manejo de datos:
 
 \begin{itemize}
-  \item Las funciones aceptan secuencias numéricas en formato lista Python o \texttt{numpy.ndarray}; internamente se realiza conversión implícita cuando es necesario.
+  \item Las funciones aceptan secuencias numéricas en formato lista Python o{numpy.ndarray}; internamente se realiza conversión implícita cuando es necesario.
   \item Las funciones \texttt{calculate\_rmssd} y \texttt{calculate\_sdnn} retornan un valor \texttt{float} o \texttt{None} en caso de datos insuficientes.
   \item Las funciones \texttt{calculate\_stress\_score} y \texttt{calculate\_sleep\_quality} retornan un \texttt{float} en el intervalo $[0, 100]$.
   \item La función \texttt{analyze\_sleep\_transitions} retorna una tupla $(\text{int}, \text{float})$ o $(\text{None}, \text{None})$.
@@ -871,6 +880,368 @@ Para fundamentar las métricas y umbrales empleados en este módulo, se recomien
   \item Ohayon et al. ``National Sleep Foundation's sleep quality recommendations.'' \emph{Sleep Health}, 2017.
 \end{itemize}
 
-% Fin de la sección
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[
+    node distance=1.5cm and 0.8cm,
+    block/.style={rectangle, draw, fill=blue!20, text width=2.8cm, text centered, rounded corners, minimum height=1cm, font=\scriptsize},
+    input/.style={rectangle, draw, fill=green!20, text width=2.8cm, text centered, rounded corners, minimum height=0.9cm, font=\scriptsize},
+    output/.style={rectangle, draw, fill=orange!20, text width=2.8cm, text centered, rounded corners, minimum height=0.9cm, font=\scriptsize},
+    arrow/.style={-Stealth, thick}
+]
+
+% Fila 1 (izquierda a derecha)
+\node[input] (ibi) at (0,0) {Entrada: IBI\\{\tiny intervalos inter-latido}};
+\node[block, right=of ibi] (rmssd) {calculate\\rmssd()\\{\tiny raiz cuadratica}};
+\node[block, right=of rmssd] (sdnn) {calculate\\sdnn()\\{\tiny desv. estandar}};
+\node[input, right=of sdnn] (hr) {Entrada: HR\\{\tiny freq. cardiaca}};
+
+% Fila 2 (derecha a izquierda)
+\node[block, below=1.8cm of hr] (stress) {calculate\\stress score\\{\tiny indice 0-100}};
+\node[output, left=of stress] (stress_out) {Salida:\\Estres\\{\tiny score}};
+\node[input, left=of stress_out] (sleep_in) {Entrada:\\sleep states\\{\tiny 0=WAKE}\\{\tiny 1-3=SLEEP}};
+
+% Fila 3 (izquierda a derecha)
+\node[block, below=1.8cm of sleep_in] (quality) {calculate\\sleep quality\\{\tiny dist+HR+act}};
+\node[block, right=of quality] (transitions) {analyze sleep\\transitions\\{\tiny fragmentacion}};
+\node[block, right=of transitions] (onset) {detect sleep\\onset\\{\tiny ventana deslizante}};
+
+% Fila 4 (derecha a izquierda)
+\node[block, below=1.8cm of onset] (wake) {detect wake\\periods\\{\tiny seg. vigilia}};
+\node[output, left=of wake] (quality_out) {Salida:\\Calidad\\{\tiny 0-100}};
+\node[output, left=of quality_out] (trans_out) {Salida:\\Transiciones\\{\tiny count}};
+\node[output, left=of trans_out] (periods_out) {Salida:\\Periodos\\{\tiny tuplas}};
+
+% Conexiones fila 1
+\draw[arrow] (ibi) -- (rmssd);
+\draw[arrow] (rmssd) -- (sdnn);
+\draw[arrow] (sdnn) -- (hr);
+
+% Conexion hacia abajo
+\draw[arrow] (hr) -- (stress);
+
+% Conexiones fila 2
+\draw[arrow] (rmssd.south) |- ([yshift=-0.5cm]rmssd.south) -| (stress.north);
+\draw[arrow] (sdnn.south) |- ([yshift=-0.5cm]sdnn.south) -| (stress.north);
+\draw[arrow] (stress) -- (stress_out);
+\draw[arrow] (stress_out) -- (sleep_in);
+
+% Conexion hacia abajo
+\draw[arrow] (sleep_in) -- (quality);
+
+% Conexiones fila 3
+\draw[arrow] (quality) -- (transitions);
+\draw[arrow] (transitions) -- (onset);
+
+% Conexion hacia abajo
+\draw[arrow] (onset) -- (wake);
+
+% Conexiones fila 4
+\draw[arrow] (wake) -- (quality_out);
+\draw[arrow] (quality_out) -- (trans_out);
+\draw[arrow] (trans_out) -- (periods_out);
+
+% Conexiones de sleep_states a multiples funciones
+\draw[arrow] (sleep_in.south) -- ([yshift=-0.4cm]sleep_in.south) -| (quality.north);
+\draw[arrow] ([yshift=-0.4cm]sleep_in.south) -| (transitions.north);
+\draw[arrow] ([yshift=-0.4cm]sleep_in.south) -| (onset.north);
+
+% Entradas adicionales opcionales
+\node[input, below=0.3cm of quality] (hr_vals) {{\tiny (opcional)}\\hr values};
+\node[input, below=0.3cm of transitions] (activity) {{\tiny (opcional)}\\activity levels};
+
+\draw[arrow, dashed] (hr_vals) -- (quality);
+\draw[arrow, dashed] (activity) -- (quality);
+
+% Titulo
+\node[font=\large\bfseries, anchor=south] at ([yshift=0.2cm]ibi.north west -| current bounding box.center) {Modulo analyzer.py - Flujo de Procesamiento};
+
+\end{tikzpicture}
+\caption{Diagrama de bloques del modulo analyzer.py mostrando el flujo de datos tipo serpiente.}
+\label{fig:analyzer_diagram}
+\end{figure}
+
+\section{Explicación Detallada del Bed Controller}
+
+Este proyecto implementa un sistema de monitoreo y control automático inteligente para una cama ortopédica médica. El sistema está diseñado para mejorar la calidad del sueño mediante el ajuste dinámico de la temperatura del colchón basándose en el estado de sueño del usuario, sus signos vitales y principios científicos de termorregulación corporal. La arquitectura del sistema integra múltiples sensores médicos de grado profesional con actuadores controlados por GPIO en una Raspberry Pi, todo orquestado mediante algoritmos de análisis en tiempo real.
+
+\subsection{Fundamento Científico}
+
+El sistema se basa en investigaciones científicas que demuestran que durante el sueño, la temperatura corporal experimenta un descenso natural de aproximadamente \SI{0.8}{\celsius}. Este descenso térmico no es uniforme, sino que varía según la fase de sueño en la que se encuentre la persona. Durante el sueño ligero inicial, la temperatura desciende entre \SIrange{0.2}{0.4}{\celsius}. En la fase REM, donde la actividad cerebral se asemeja al estado de vigilia, la temperatura se mantiene relativamente estable. Durante el sueño profundo, se alcanza el descenso máximo de \SI{0.8}{\celsius}. El sistema aprovecha este conocimiento para anticipar y facilitar las transiciones naturales entre estados de sueño mediante el control preciso de la temperatura del microclima de la cama.
+
+Adicionalmente, estudios de variabilidad térmica han demostrado que existe una tolerancia natural de \SIrange{\pm 1}{\pm 2}{\celsius} en el microclima de la cama sin afectar el confort. El sistema utiliza estos parámetros para establecer rangos de confort personalizados según el estado de sueño detectado, evitando cambios bruscos que puedan interrumpir el descanso.
+
+\subsection{Arquitectura de Sensores}
+
+El sistema integra cuatro sensores principales que trabajan de manera coordinada para obtener una imagen completa del estado fisiológico del usuario y las condiciones ambientales.
+
+\subsubsection{Sensor MAX30102}
+
+El MAX30102 es un sensor óptico de oximetría de pulso que utiliza fotopletismografía para medir la frecuencia cardíaca y la saturación de oxígeno en sangre. Se comunica mediante protocolo I\textsuperscript{2}C en la dirección \texttt{0x57}. Este sensor es fundamental para la detección del estado de sueño, ya que la frecuencia cardíaca varía significativamente entre las diferentes fases del sueño. Durante el sueño profundo, la frecuencia cardíaca puede descender por debajo de 55~BPM, mientras que durante el sueño REM puede elevarse a niveles similares a los de vigilia (por encima de 70~BPM). El sensor también proporciona mediciones de saturación de oxígeno (SpO\textsubscript{2}), críticas para detectar posibles eventos de apnea del sueño. El sistema genera alertas cuando el SpO\textsubscript{2} cae por debajo del 90\%, indicando una posible condición de hipoxemia que requiere atención médica.
+
+La implementación incluye validación de datos, verificando que el sensor detecte correctamente la presencia del dedo del usuario. Cuando no se detecta un dedo válido, el sistema recurre a valores simulados para mantener la operación continua, aunque con capacidades de análisis reducidas.
+
+\subsubsection{Sensor HTU21D}
+
+El HTU21D es un sensor de temperatura y humedad digital de alta precisión que se instala directamente en el colchón de la cama, comunicándose por I\textsuperscript{2}C en la dirección \texttt{0x40}. Este sensor es el componente crítico del sistema de control térmico, proporcionando lecturas en tiempo real de la temperatura del microclima de la cama. El sistema valida que las lecturas estén dentro del rango operativo seguro de \SIrange{15}{30}{\celsius} antes de utilizarlas para el control de válvulas.
+
+El HTU21D también mide la humedad relativa del ambiente de la cama, un parámetro importante para el confort térmico general, aunque no se utiliza directamente en el algoritmo de control de temperatura. La combinación de temperatura y humedad proporciona información valiosa sobre las condiciones generales del microclima de la cama.
+
+\subsubsection{Sensor AHT10}
+
+El AHT10 es un sensor de temperatura corporal ubicado en una pulsera que lleva el usuario, comunicándose por I\textsuperscript{2}C en la dirección \texttt{0x38}. Este sensor es fundamental para detectar desviaciones de la temperatura corporal normal. El rango normal de temperatura corporal se establece entre \SIrange{35.0}{42.0}{\celsius}, con una temperatura basal promedio de \SI{36.8}{\celsius} según estudios clínicos.
+
+El sistema implementa lógica avanzada de compensación térmica basada en las lecturas del AHT10. Cuando se detecta una temperatura corporal elevada (hipertermia), superior a \SI{37.5}{\celsius}, el sistema ajusta automáticamente la temperatura objetivo de la cama hacia abajo para ayudar a la termorregulación natural del cuerpo. En casos de fiebre (temperatura corporal $\geq$ \SI{38.0}{\celsius}), el ajuste de enfriamiento es más agresivo, con un descenso progresivo que puede alcanzar hasta \SI{3}{\celsius} más el exceso sobre \SI{38}{\celsius} multiplicado por 0.5. Inversamente, cuando se detecta hipotermia leve (temperatura corporal $\leq$ \SI{35.5}{\celsius}), el sistema activa un calentamiento progresivo para ayudar al cuerpo a recuperar su temperatura normal.
+
+\subsubsection{Acelerómetro MMA8452Q}
+
+El MMA8452Q es un acelerómetro triaxial de alta sensibilidad que detecta los movimientos corporales del usuario durante el sueño. Se comunica por I\textsuperscript{2}C en la dirección \texttt{0x1D} y proporciona lecturas de aceleración en los tres ejes ($X$, $Y$, $Z$). El sistema procesa estas lecturas para calcular un índice de actividad que es fundamental para la clasificación del estado de sueño.
+
+El algoritmo de procesamiento de actividad implementa un modelo de integración temporal con decaimiento exponencial. Cada movimiento súbito incrementa el nivel de actividad instantáneamente, pero si no hay movimientos subsecuentes, la actividad decae gradualmente siguiendo una constante de tiempo configurable. Este comportamiento modela la forma en que percibimos la actividad física: un movimiento reciente tiene más relevancia que uno ocurrido hace varios segundos.
+
+El cálculo específico compara la diferencia promedio de aceleración en los tres ejes con un umbral de actividad configurable. Cuando la diferencia supera el umbral, se registra un ``pico'' de actividad y el nivel se incrementa según un factor de fuerza de pico. Entre picos, el sistema espera un tiempo de retardo antes de comenzar el decaimiento exponencial, lo que evita que movimientos rápidos consecutivos se interpreten como períodos de calma.
+
+\subsection{Detección de Estados de Sueño}
+
+La clasificación del estado de sueño es el algoritmo central del sistema, combinando datos de actividad física y frecuencia cardíaca en un modelo de fusión sensorial. El sistema reconoce cuatro estados principales: despierto (\texttt{WAKE}), sueño ligero (\texttt{LIGHT\_SLEEP}), sueño REM (\texttt{REM\_SLEEP}) y sueño profundo (\texttt{DEEP\_SLEEP}).
+
+\subsubsection{Clasificación por Actividad}
+
+El primer nivel de clasificación utiliza el índice de actividad calculado desde el acelerómetro. Se establecen tres umbrales principales: 
+
+\begin{itemize}[noitemsep]
+    \item Si la actividad es menor a 0.01, se clasifica como actividad compatible con sueño profundo.
+    \item Si está entre 0.01 y 0.008, se marca como ``\texttt{REM\_OR\_LIGHT}'' para análisis posterior.
+    \item Si la actividad está entre 0.008 y 0.7, se clasifica como sueño ligero.
+    \item Cualquier actividad superior a 0.7 indica estado de vigilia.
+\end{itemize}
+
+\subsubsection{Clasificación por Frecuencia Cardíaca}
+
+Paralelamente, el sistema clasifica el estado basándose exclusivamente en la frecuencia cardíaca:
+
+\begin{itemize}[noitemsep]
+    \item Una frecuencia cardíaca inferior a 55~BPM sugiere sueño profundo.
+    \item Frecuencias entre 55 y 75~BPM son compatibles con sueño ligero.
+    \item Frecuencias superiores a 75~BPM indican vigilia o sueño REM.
+\end{itemize}
+
+\subsubsection{Fusión de Datos}
+
+El algoritmo de fusión combina ambas clasificaciones mediante reglas lógicas basadas en el conocimiento fisiológico del sueño. Si tanto la actividad como la frecuencia cardíaca indican sueño profundo, el sistema clasifica con alta confianza como \texttt{DEEP\_SLEEP}. Este es el caso más inequívoco.
+
+La detección de sueño REM es más compleja y representa una de las características más avanzadas del sistema. El sueño REM se caracteriza por una paradoja fisiológica: alta actividad cerebral (reflejada en frecuencia cardíaca elevada, típicamente $\geq$ 65~BPM) combinada con atonía muscular (parálisis temporal de los músculos voluntarios). El sistema detecta REM cuando la actividad física es muy baja (micro-movimientos menores a 0.008) pero la frecuencia cardíaca es relativamente alta. Esto distingue el REM del sueño profundo (baja actividad Y baja frecuencia cardíaca) y del estado despierto (alta actividad Y alta frecuencia cardíaca).
+
+Cuando los indicadores son ambiguos o contradictorios, el sistema aplica reglas de desambiguación conservadoras. Por ejemplo, si la actividad sugiere sueño ligero pero la frecuencia cardíaca es muy alta, se clasifica como vigilia, asumiendo que la persona está despierta pero relativamente quieta.
+
+\subsection{Sistema de Control de Temperatura}
+
+El control de temperatura es el actuador principal del sistema, diseñado para mantener un microclima óptimo que facilite y preserve el sueño de calidad.
+
+\subsubsection{Cálculo de Temperatura Objetivo}
+
+El sistema mantiene zonas de confort diferenciadas para cada estado de sueño, basadas en investigación científica sobre termorregulación:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Vigilia:} \SIrange{21}{25}{\celsius}, reflejando la temperatura corporal basal alta típica del estado despierto.
+    \item \textbf{Sueño ligero:} \SIrange{19}{23}{\celsius} para facilitar el descenso térmico inicial.
+    \item \textbf{Sueño REM:} \SIrange{20}{24}{\celsius}, ligeramente más cálida debido a la actividad cerebral elevada.
+    \item \textbf{Sueño profundo:} \SIrange{17}{21}{\celsius}, facilitando el descenso térmico máximo de \SI{0.8}{\celsius}.
+\end{itemize}
+
+El algoritmo calcula primero una temperatura base como el punto medio de la zona de confort del estado actual. Luego aplica un offset térmico científico: \SI{-0.3}{\celsius} para sueño ligero, \SI{0}{\celsius} para REM, \SI{-0.8}{\celsius} para sueño profundo, y \SI{0}{\celsius} para vigilia.
+
+\subsubsection{Ajustes por Temperatura Ambiente}
+
+El sistema ajusta la temperatura objetivo según la temperatura ambiente medida por el MAX30102:
+
+\begin{itemize}[noitemsep]
+    \item Si la temperatura ambiente supera \SI{25}{\celsius}, se aplica un ajuste de enfriamiento de \SI{-1.0}{\celsius}.
+    \item Si la temperatura ambiente es inferior a \SI{15}{\celsius}, se aplica un ajuste de calentamiento de \SI{+1.0}{\celsius}.
+\end{itemize}
+
+\subsubsection{Compensación por Temperatura Corporal}
+
+El ajuste más sofisticado se basa en la temperatura corporal del AHT10. El sistema detecta desviaciones de la temperatura corporal normal (\SI{36.8}{\celsius}) y ajusta la cama para ayudar a la termorregulación:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Fiebre} ($\geq$ \SI{38.0}{\celsius}): Enfriamiento agresivo de hasta \SI{-3.0}{\celsius} más un componente proporcional.
+    \item \textbf{Hipertermia leve} (\SIrange{37.5}{38.0}{\celsius}): Ajuste moderado de \SI{-1.5}{\celsius} más un factor proporcional.
+    \item \textbf{Hipotermia leve} ($\leq$ \SI{35.5}{\celsius}): Calentamiento progresivo de \SI{+2.0}{\celsius} más un componente proporcional.
+\end{itemize}
+
+\subsubsection{Control Predictivo}
+
+Una característica avanzada del sistema es el control predictivo basado en el análisis de tendencias térmicas. El sistema mantiene un historial de las últimas 30 lecturas de temperatura (aproximadamente 10 minutos) y calcula la velocidad de cambio térmico en \si{\celsius\per\minute}. Con esta información, el algoritmo predice la temperatura en los próximos 5 minutos mediante extrapolación lineal.
+
+Si la predicción indica que se alcanzará una temperatura fuera de los límites seguros, el sistema actúa preventivamente antes de que ocurra el problema. Este enfoque anticipativo mejora significativamente la estabilidad térmica y evita que el usuario experimente temperaturas incómodas.
+
+\subsubsection{Análisis de Estabilidad Térmica}
+
+El sistema calcula continuamente la varianza de las últimas 10 lecturas de temperatura. Una varianza alta (superior a un umbral de tolerancia configurable) indica inestabilidad térmica y activa un modo de estabilización que utiliza tolerancias más estrictas para el control de válvulas. Cuando la varianza es muy baja (menor a \SI{0.1}{\celsius\squared}), el sistema reporta estabilidad térmica óptima.
+
+\subsubsection{Suavizado de Transiciones}
+
+Para evitar cambios térmicos bruscos que puedan interrumpir el sueño, el sistema implementa un algoritmo de suavizado que limita la velocidad máxima de cambio de la temperatura objetivo. El cambio máximo permitido por ciclo de control se calcula como una fracción de la tolerancia de varianza térmica. Si el cambio calculado excede este límite, se aplica solo el cambio máximo permitido, distribuyendo la transición térmica a lo largo de múltiples ciclos.
+
+\subsection{Control de Válvulas}
+
+El sistema controla dos válvulas eléctricas de 220~V mediante relés conectados a pines GPIO de la Raspberry Pi: una válvula de agua caliente y una válvula de agua fría. Existe también un relé de seguridad general.
+
+\subsubsection{Lógica de Control}
+
+El algoritmo de control de válvulas implementa un controlador de banda muerta (\textit{deadband controller}). Se define una tolerancia térmica (típicamente $\pm$\SI{0.5}{\celsius}) alrededor de la temperatura objetivo:
+
+\begin{itemize}[noitemsep]
+    \item Si la temperatura actual está dentro de esta banda de tolerancia, ambas válvulas se cierran.
+    \item Si la temperatura actual es inferior al límite inferior, se abre la válvula de agua caliente.
+    \item Si la temperatura actual supera el límite superior, se abre la válvula de agua fría.
+\end{itemize}
+
+\subsubsection{Ajuste Dinámico de Tolerancia}
+
+El sistema ajusta dinámicamente la tolerancia del controlador según el estado de sueño:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Sueño profundo:} Tolerancia ampliada en 50\% (de $\pm$\SI{0.5}{\celsius} a $\pm$\SI{0.75}{\celsius}).
+    \item \textbf{Sueño REM:} Tolerancia reducida en 20\% (a $\pm$\SI{0.4}{\celsius}).
+\end{itemize}
+
+\subsubsection{Medidas de Seguridad}
+
+El sistema implementa múltiples capas de seguridad críticas:
+
+\begin{enumerate}[noitemsep]
+    \item \textbf{Interlock de Válvulas:} Previene la apertura simultánea de ambas válvulas. Si se detecta esta condición, el sistema bloquea ambas válvulas y registra una alerta de seguridad.
+    
+    \item \textbf{Rangos de Temperatura Absolutos:} Todas las temperaturas objetivo se limitan a un rango absoluto de \SIrange{15}{30}{\celsius}.
+    
+    \item \textbf{Parada de Emergencia:} El método \texttt{emergency\_stop()} cierra inmediatamente todas las válvulas cuando se detectan condiciones críticas como frecuencias cardíacas peligrosamente altas ($>$120~BPM) o bajas ($<$40~BPM).
+    
+    \item \textbf{Validación de Sensores:} Antes de utilizar cualquier lectura de sensor, el sistema valida que el valor esté dentro de rangos físicamente plausibles.
+\end{enumerate}
+
+\subsubsection{Algoritmo de Confianza}
+
+Cada indicador aporta un porcentaje de confianza al cálculo final. La confianza total se calcula como la suma ponderada de todos los indicadores activos. El sistema implementa histéresis en la detección:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Umbral para detectar entrada:} 60\% de confianza.
+    \item \textbf{Umbral para detectar salida:} 20\% de confianza.
+\end{itemize}
+
+Esta asimetría reduce falsos positivos en la detección de entrada.
+
+\subsection{Análisis Avanzado de Sueño}
+
+El sistema implementa un conjunto sofisticado de algoritmos de análisis que proporcionan métricas cuantitativas de calidad de sueño y estrés fisiológico.
+
+\subsubsection{Variabilidad de Frecuencia Cardíaca (HRV)}
+
+El sistema calcula métricas estándar de HRV:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{RMSSD} (\textit{Root Mean Square of Successive Differences}): Mide la variabilidad de corto plazo entre latidos consecutivos. Un RMSSD alto indica buena capacidad de adaptación del sistema nervioso autónomo.
+    
+    \item \textbf{SDNN} (\textit{Standard Deviation of NN intervals}): Mide la variabilidad general de todos los intervalos entre latidos. Valores más altos se asocian con mejor salud cardiovascular.
+\end{itemize}
+
+\subsubsection{Puntuación de Estrés}
+
+El sistema calcula una puntuación de estrés de 0--100 combinando frecuencia cardíaca actual y métricas de HRV. Una frecuencia cardíaca elevada con HRV reducido indica alto estrés fisiológico:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Estrés alto:} Puntuación $>$ 70
+    \item \textbf{Estrés medio:} Puntuación 40--70
+    \item \textbf{Estrés bajo:} Puntuación $<$ 40
+\end{itemize}
+
+\subsubsection{Calidad de Sueño}
+
+La métrica de calidad de sueño se calcula cuando hay suficiente historial de datos (al menos 30 muestras, equivalente a 1 hora de monitoreo). El algoritmo analiza la distribución de estados de sueño y compara con patrones ideales:
+
+\begin{itemize}[noitemsep]
+    \item Aproximadamente 20\% de sueño profundo
+    \item 20--25\% de sueño REM
+    \item El resto en sueño ligero
+    \item Menos del 5\% de vigilia
+\end{itemize}
+
+La puntuación final de 0--100 se clasifica como:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Excelente:} $>$ 80
+    \item \textbf{Buena:} 60--80
+    \item \textbf{Regular:} 40--60
+    \item \textbf{Deficiente:} $<$ 40
+\end{itemize}
+
+\subsubsection{Detección de Inicio de Sueño}
+
+El sistema detecta automáticamente el momento en que el usuario transiciona de vigilia a sueño. La latencia de inicio de sueño (tiempo desde acostarse hasta dormirse) es un indicador importante:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Normal:} $<$ 15 minutos
+    \item \textbf{Elevada:} 15--30 minutos
+    \item \textbf{Muy elevada:} $>$ 30 minutos (posible insomnio)
+\end{itemize}
+
+\subsubsection{Análisis de Fragmentación de Sueño}
+
+Cada 5 minutos, el sistema analiza las transiciones entre estados de sueño. El algoritmo calcula un índice de fragmentación normalizado por hora:
+
+\begin{itemize}[noitemsep]
+    \item \textbf{Muy consolidado:} $<$ 10 transiciones/hora
+    \item \textbf{Consolidado:} 10--15 transiciones/hora
+    \item \textbf{Ligeramente fragmentado:} 15--25 transiciones/hora
+    \item \textbf{Muy fragmentado:} $>$ 25 transiciones/hora
+\end{itemize}
+
+\subsubsection{Detección de Despertares Nocturnos}
+
+El sistema identifica períodos de vigilia durante el sueño que excedan una duración mínima configurable (típicamente 6--10 segundos). Se registra el número de despertares y el tiempo total en estado de vigilia. Más de 2 despertares o más de 30 minutos acumulados despierto se consideran indicadores de sueño interrumpido.
+
+\subsubsection{Reporte Final de Sueño}
+
+Al finalizar una sesión de monitoreo, el sistema genera un reporte completo que incluye:
+
+\begin{enumerate}[noitemsep]
+    \item \textbf{Duración Total:} Tiempo total de monitoreo desde que se detectó presencia.
+    \item \textbf{Distribución de Estados:} Porcentajes y tiempos absolutos en cada estado.
+    \item \textbf{Calidad Final de Sueño:} Puntuación 0--100 con interpretación cualitativa.
+    \item \textbf{Análisis de Fragmentación:} Número total de transiciones e índice por hora.
+    \item \textbf{Latencia de Sueño:} Tiempo hasta el inicio del sueño con evaluación.
+    \item \textbf{Despertares Nocturnos:} Número de despertares y tiempo total despierto.
+    \item \textbf{Recomendaciones Personalizadas:} Basadas en los resultados del análisis.
+\end{enumerate}
+
+\subsection{Integración y Flujo de Ejecución}
+
+El sistema opera mediante un bucle asíncrono principal que se ejecuta cada 2 segundos. En cada iteración:
+
+\begin{enumerate}[noitemsep]
+    \item Se leen todos los sensores (MAX30102, HTU21D, AHT10, MMA8452Q).
+    \item Se validan las lecturas y se filtran valores espurios.
+    \item Se calcula el nivel de actividad integrado desde el acelerómetro.
+    \item Se actualiza el detector de presencia con los datos actuales.
+    \item Si se detecta presencia, se clasifica el estado de sueño actual.
+    \item Se actualizan los historiales de datos para análisis temporal.
+    \item Se calcula la temperatura objetivo basada en estado de sueño y compensaciones.
+    \item Se ejecuta el controlador de válvulas para alcanzar la temperatura objetivo.
+    \item Cada 30 segundos se ejecuta el análisis avanzado (HRV, estrés, calidad).
+    \item Se muestra en consola el estado actual completo del sistema.
+\end{enumerate}
+
+Este ciclo continúa hasta que el usuario interrumpe el programa o se detecta una condición de error crítica. Al finalizar, se ejecuta el procedimiento de limpieza que cierra todas las válvulas, libera los recursos GPIO y genera el reporte final.
+
+\subsection{Manejo de Errores y Robustez}
+
+El sistema implementa múltiples capas de manejo de errores para garantizar operación continua incluso con fallos parciales de hardware:
+
+\begin{itemize}[noitemsep]
+    \item Cada sensor está envuelto en bloques \texttt{try-except} que capturan excepciones y permiten que el sistema continúe con valores simulados o el último valor válido conocido.
+    \item Los pines GPIO se configuran con manejo de advertencias desactivado para evitar mensajes espurios en reconfiguración.
+    \item El destructor de la clase asegura que incluso si el programa termina abruptamente, se ejecute la limpieza de recursos y la parada de emergencia de válvulas.
+\end{itemize}
 
 \end{document}
