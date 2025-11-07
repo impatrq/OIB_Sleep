@@ -199,3 +199,4 @@ El método `detect_presence()` retorna un diccionario completo con:
 - `presence_changed`: bandera indicando si hubo transición de estado en esta iteración
 
 Este formato estructurado facilita la integración con módulos superiores del sistema de cama inteligente
+
