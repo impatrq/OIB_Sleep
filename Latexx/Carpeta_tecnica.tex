@@ -1,0 +1,876 @@
+\documentclass{report}
+\usepackage{graphicx} % Para imágenes
+\usepackage{fancyhdr}
+\usepackage[top=2cm]{geometry}
+\usepackage{tikz}
+\usepackage{etoolbox}
+\usepackage[spanish]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+\usepackage{textgreek} % Para soporte de letras griegas en texto
+\usepackage{listings} % Para incluir código fuente
+\usepackage{float} % Para posicionar figuras exactamente donde se colocan
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc}
+
+\tikzstyle{startstop} = [ellipse, minimum width=2cm, minimum height=0.8cm, text centered, draw=black, fill=blue!20, font=\small\bfseries]
+\tikzstyle{process} = [rectangle, minimum width=2.5cm, minimum height=0.8cm, text centered, draw=black, fill=purple!15, font=\scriptsize]
+\tikzstyle{decision} = [diamond, minimum width=2cm, minimum height=0.8cm, text centered, draw=black, fill=orange!20, font=\scriptsize, aspect=2]
+\tikzstyle{score} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, text centered, draw=black, fill=green!15, font=\scriptsize]
+\tikzstyle{indicator} = [rectangle, rounded corners, minimum width=2cm, minimum height=0.8cm, text centered, draw=black, fill=yellow!20, font=\scriptsize\bfseries]
+\tikzstyle{arrow} = [thick,->,>=Stealth]
+
+\setlength{\fboxsep}{0pt}  % elimina el espacio interno
+\setlength{\fboxrule}{1pt} % grosor del borde
+
+\renewcommand{\contentsname}{\Huge Índice General}
+\renewcommand{\listfigurename}{\Huge Índice de Figuras}
+\definecolor{C}{HTML}{2A4190}
+\definecolor{Y}{HTML}{FC9B32}
+
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyhead[c]{\includegraphics[height=0.4cm]{logo.png}}%
+  \fancyhead[L]{\textbf{\footnotesize OIB Sleep 2025}}%
+  \fancyhead[R]{\textbf{\footnotesize E.E.S.T N°7 IMPA "T.R.Q."}}%
+  \renewcommand{\footrulewidth}{0.4pt}
+  \fancyfoot[C]{\thepage}%
+}
+
+% Aplicar el estilo a todas las páginas
+\pagestyle{plain}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\begin{document}
+\begin{center}
+    \includegraphics[width=11cm]{logo_OIB_croped.PNG}
+    \\[1cm]
+    {\Huge Carpeta Técnica} \\[0.5cm]
+    {\huge 7mo 2da Comision A \\[0.5cm] Año 2025} \\
+    \LARGE Bourlot Ezequiel \\
+    Fernandez Lorenzo \\
+    Domoñi Federico\\
+    Vignetta Joaquin\\
+\end{center}
+
+\newpage
+
+\tableofcontents 
+
+\newpage
+\listoffigures
+
+\newpage
+\chapter[\Large Preámbulo]{Preámbulo}
+
+\section[large Nuestro contacto]{\LARGE Nuestro Contacto}
+\noindent
+\\
+\href{https://www.instagram.com/oibsleep}{%
+    \includegraphics[width=3cm]{Contacto/instagram.png}%
+} \raisebox{1.25cm}{\Huge\ \ @oibsleep}
+\\[0.3cm]
+\href{mailto:oibsleep@gmail.com}{%
+    \includegraphics[width=3cm]{Contacto/gmail.png}%
+}\raisebox{1.25cm}{\Huge\ \ oibsleep@gmail.com}
+\\[0.3cm]
+\href{https://oib-sleep.vercel.app}{%
+    \includegraphics[width=3cm]{Contacto/chrome.png}%
+}\raisebox{1.25cm}{\Huge\ \ oib-sleep.vercel.app}
+\\[0.3cm]
+\href{https://github.com/impatrq/OIB_Sleep}{%
+    \includegraphics[width=3cm]{Contacto/github.png}%
+}\raisebox{1.25cm}{\Huge\ \ github.com/impatrq/OIB\_Sleep}%
+\\
+
+\section[large ¿Quienes somo?]{\LARGE Quienes somos?}
+
+
+\setlength{\parskip}{1.5em}
+
+% ---------- Integrante 1 ----------
+\begin{minipage}{0.45\linewidth}
+    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/chrome.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+    \textbf{\Large Bourlot Ezequiel} \\[4pt]
+    \includegraphics[height=0.8cm]{Contacto/instagram.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/chrome.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/gmail.png} \\[10pt]
+    \textit{\large Encargado del diseño electrónico, programación y control térmico del sistema.}
+\end{minipage}
+
+% ---------- Integrante 2 ----------
+\begin{minipage}{0.45\linewidth}
+    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/chrome.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+    \textbf{\Large Federico Domoñi} \\[4pt]
+    \includegraphics[height=0.8cm]{Contacto/instagram.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/chrome.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/gmail.png} \\[10pt]
+    \textit{\large Responsable del diseño mecánico y estructura del sistema de tanques.}
+\end{minipage}
+
+\newpage
+
+% ---------- Integrante 3 ----------
+\begin{minipage}{0.45\linewidth}
+    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/chrome.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+    \textbf{\Large Fernández Lorenzo} \\[4pt]
+    \includegraphics[height=0.8cm]{Contacto/instagram.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/chrome.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/gmail.png} \\[10pt]
+    \textit{\large Encargado de documentación técnica, cálculos térmicos y presentación.}
+\end{minipage}
+
+% ---------- Integrante 4 ----------
+\begin{minipage}{0.45\linewidth}
+    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/chrome.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
+    \textbf{\Large Vignetta Joaquín} \\[4pt]
+    \includegraphics[height=0.8cm]{Contacto/instagram.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/chrome.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/gmail.png} \\[10pt]
+    \textit{\large Responsable del diseño visual, edición de video y comunicación del proyecto.}
+\end{minipage}
+
+\newpage
+\thispagestyle{empty} % sin número ni encabezado
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=\paperheight]{Contacto/chrome.png}
+\end{figure}
+
+\section[large Docentes a cargo]{\LARGE Docentes a cargo}
+\begin{itemize} [label=$\star$]
+\Large
+    \item Medina Sergio
+    \item Carlassara Fabrizio
+    \item Palmier Diego
+    \item Bianco Carlos 
+    \item Arguello Gabriel
+    \item Solomiewicz Federico
+\end{itemize}
+
+\section[\large Agradecimientos]{\Large agradecimientos}
+\noindent
+\large
+Agradecemos a la Asociación Cooperadora del IMPA.\\
+Agradecemos a Simmons Por el colchón, que fue lo principal en nuestro proyecto\\
+Agradecemos a layer by layer por los acoples para las mangueras\\
+Agradecemos al personal docente de la institución por el inmenso apoyo que nos brindaron.
+
+
+\section[\large Lenguajes usados]{\Large Lenguajes usados}
+\begin{itemize} [label=$\bullet$]
+    \item HTML5 \raisebox{-0.1cm} {\includegraphics[height=0.4cm] {lenguajes/html-5}}
+    \item CSS3 \raisebox{-0.06cm} {\includegraphics[height=0.4cm] {lenguajes/css-3}}
+    \item JavaSCript \raisebox{-0.1cm} {\includegraphics[height=0.4cm]{lenguajes/js}}
+    \item Python \raisebox{-0.1cm} {\includegraphics[height=0.4cm] {lenguajes/python}}
+    \item C++ \raisebox{-0.1cm} {\includegraphics[height=0.4cm] {lenguajes/c-}}
+    \item LaTeX \raisebox{-0.1cm} {\includegraphics[height=0.4cm] {lenguajes/LaTeX_logo.svg}}
+\end{itemize}
+
+\section[\large Programas utilizados]{\Large Programas utilizados}
+\begin{itemize} [label=$\bullet$]
+    \item Visual Studio Code \raisebox{-0.1cm} {\includegraphics[height=0.4cm] {programas/vscode.png}}
+    \item OverLeaf \raisebox{-0.06cm} {\includegraphics[height=0.4cm] {programas/overleaf}}
+    \item PlatformIO \raisebox{-0.06cm} {\includegraphics[height=0.4cm] {programas/PlatformIO}}
+    \item Raspberry PI Imager \raisebox{-0.07cm} {\includegraphics[height=0.4cm] {programas/PI}}
+    \item PowerShell \raisebox{-0.07cm} {\includegraphics[height=0.4cm] {programas/PowerShell}}
+    \item Ubuntu WSL \raisebox{-0.07cm} {\includegraphics[height=0.4cm] {programas/Ubuntu}}
+    \item KiCad \raisebox{-0.07cm} {\includegraphics[height=0.4cm] {programas/KiCad}}
+    \item Blender \raisebox{-0.1cm} {\includegraphics[height=0.4cm] {programas/Blender}}
+    \item AutoCAD \raisebox{-0.07cm} {\includegraphics[height=0.4cm] {programas/AutoCAD}}
+    \item Ultimaker cura \raisebox{-0.15cm}{\includegraphics[width=0.6cm]{programas/Ultimaker_cura.png}}
+    \item Fusion3D \raisebox{-0.07cm} {\includegraphics[height=0.4cm] {programas/Fusion}}
+    \item Word \raisebox{-0.07cm} {\includegraphics[height=0.4cm] {programas/Word}}
+    \item Figma \raisebox{-0.07cm} {\includegraphics[height=0.4cm] {programas/Figma}}
+    \item Ibis Paint \raisebox{-0.05cm} {\includegraphics[height=0.4cm] {programas/Ibis}}
+\end{itemize}
+
+\newpage
+
+\chapter[\Large Introducción]{Introducción}
+
+
+\section[\large ¿Que es OIBsleep?]{\Huge ¿Que es \textcolor{C}{OIB}\textcolor{Y}{sleep}?}
+\large{
+La cama ortopédica OIB sleep Es un colchón de uso hospital o personal que cuenta con sistema de calefacción/refrigeración que se regula mediante diferentes mediciones del paciente.
+ Esta cama sirve para mejorar la calidad de sueño y prevenir enfermedades como la migraña al regular la temperatura en búsqueda de mantener el sueño REM (profundo) la mayor cantidad de tiempo posible. También se busca solucionar diferentes problemas de salud mediante esta regulación como, por ejemplo:
+ \begin{itemize} [label=$\bullet$]
+\item Pacientes con problemas de circulación entre ellos diabéticos o personas con problema de artritis suelen tener manos y pies fríos, y pueden no notar bien si están demasiado fríos o calientes (especialmente en el caso de la neuropatía diabética).
+\item Adultos mayores, ya que la regulación de la temperatura disminuye con la edad.
+\item Personas con fibromialgia o dolor crónico, el calor puede aliviar el dolor muscular y articular mientras que el frío reduce la inflamación.
+\item Personas con problemas de sueño como insomnio o despertares nocturnos debido a la temperatura
+ \end{itemize}
+Se puede conseguir regular la temperatura del colchón mediante un sistema con tubos de agua que se regule con mediciones que se hacen con el colchón mismo o con una pulsera. Esto le ayudaría a los hospitales a mantener a varios pacientes en una misma habitación con las temperaturas necesarias para cada uno.
+}
+
+\section[\large Utilidades del proyecto]{\Huge Utilidades del proyecto}
+Utilidades del proyecto:
+OIB sleep es un proyecto planteado para hospitales que busca ayudar a las personas que tienen problemas debido a la falta de sueño y también a quienes la temperatura puede ayudar con sus respectivas enfermedades.
+Tomamos la temperatura como base, ya que El entorno térmico es uno de los factores más importantes que pueden afectar el sueño humano''. Los efectos típicos de la exposición al calor o al frío son un aumento del estado de vigilia y una disminución del sueño de movimientos oculares rápidos (REM) y del sueño de ondas lentas.
+
+
+\section[\large Impacto en Argentina]{\Huge Impacto en Argentina}
+En Argentina, los problemas relacionados con el sueño representan un desafío creciente para la salud pública. 
+Según un estudio de la Universidad Favaloro, \textbf{el 75\% de la población presenta algún tipo de alteración del sueño}, lo cual evidencia la necesidad de soluciones innovadoras que contribuyan a mejorar el descanso y la calidad de vida.  
+
+\subsection{Impacto en la salud pública}
+\begin{itemize} [label=$\bullet$]
+    \item Mejora la calidad del sueño, reduciendo riesgos asociados a insomnio, migrañas y problemas cardiovasculares.  
+    \item Favorece a pacientes con enfermedades crónicas como artritis, fibromialgia, diabetes y problemas de circulación, donde la regulación térmica es un factor clave.  
+    \item Contribuye al bienestar de adultos mayores, un grupo poblacional que representa más del 11\% de los argentinos y que suele tener dificultades para regular la temperatura corporal durante el descanso.  
+\end{itemize}
+
+\subsection{Impacto en hospitales y centros de salud}
+\begin{itemize} [label=$\bullet$]
+    \item Permite la \textbf{regulación de la temperatura individual en habitaciones compartidas}, lo cual mejora la atención personalizada y optimiza el uso de recursos.  
+    \item Potencial ahorro energético al evitar climatizar espacios completos, reduciendo los costos operativos.  
+\end{itemize}
+
+\subsection{Impacto en el mercado argentino}
+\begin{itemize} [label=$\bullet$]
+    \item Dada la alta prevalencia de trastornos del sueño, existe un \textbf{mercado amplio} para este tipo de tecnologías tanto en hospitales como en el uso domiciliario.  
+    \item La producción nacional del sistema puede fomentar la \textbf{industria tecnológica local}, generando empleo y reduciendo costos de importación.  
+\end{itemize}
+
+
+\section[\large ¿Por qué OIBsleep?]{\Huge ¿Por qué \textcolor{C}{OIB}\textcolor{Y}{sleep}?}
+
+\subsection{Usuarios que ayuda}
+OIB Sleep está diseñado para mejorar la salud del sueño tanto en entornos hospitalarios como domésticos. Esto se logra a través de la regulación inteligente de la temperatura, ayudando a grupos como:
+\begin{itemize}
+    \item adutlos mayores
+    \item Personas diabéticas
+    \item Personas con insomnio
+    \item Personas con fibromialgia
+\end{itemize}
+
+\subsection{Limitaciones de los métodos tradicionales}
+El aire acondicionado, la estufa y otros métodos permiten modificar la temperatura del ambiente, pero ninguno de estos sistemas se adapta a las necesidades térmicas específicas de tu cuerpo ni responde a los cambios que experimentás mientras dormís. Estos métodos actúan de forma general sobre toda la habitación, sin tener en cuenta las variaciones naturales de la temperatura corporal a lo largo de la noche.
+Además, al climatizar todo el espacio en lugar de centrarse únicamente en la persona, generan un consumo energético considerablemente mayor, lo que se traduce en un uso ineficiente de la energía y en un impacto ambiental más alto.
+
+\subsection{La importancia del confort térmico durante el sueño}
+La temperatura corporal no permanece constante durante el sueño: tiende a descender durante las fases más profundas y vuelve a elevarse de manera natural al acercarse el momento del despertar. Este ciclo térmico cumple un rol fundamental en la regulación del descanso y en la transición entre las distintas etapas del sueño.
+Cuando el entorno no acompaña estos cambios —por ejemplo, si la habitación se mantiene demasiado cálida o demasiado fría—, el cuerpo debe esforzarse para compensar esa diferencia, lo que puede provocar microdespertares e interrumpir el descanso, reduciendo así la calidad y la continuidad del sueño.
+
+\subsection{Una solución personalizada y directa}
+OIB Sleep actúa directamente sobre la cama, en contacto con tu cuerpo, ajustando la temperatura del colchón en tiempo real según tus necesidades. De esta forma, el sistema responde de manera inteligente a los cambios térmicos que se producen durante el sueño, brindando una sensación de confort constante y personalizada.
+Al intervenir únicamente sobre el colchón y no sobre el ambiente completo, permite alcanzar el confort térmico ideal con un consumo energético significativamente menor y sin alterar la temperatura del entorno.
+
+\subsection{Confort desde el primer momento}
+Más allá de su control inteligente, OIB Sleep ofrece funciones pensadas para maximizar el confort desde el primer momento. Permite precalentar la cama en invierno o enfriarla en verano antes de acostarte, logrando así que el colchón alcance la temperatura ideal incluso antes de que te recuestes.
+De esta manera, transforma el momento de ir a dormir en una experiencia más placentera y personalizada, adaptándose a tus preferencias y al clima de cada estación.
+
+
+
+\chapter[\Large Estructura]{Estructura}
+\section[\large ¿Como esta estructurada la cama?]{\Huge ¿Como esta estructurada la cama?}
+La cama cuenta con un colchón especialmente modificado en cuyo interior se instalaron Caños de cobre de 1/4 x 1 m esmaltados.Para colocarlos, utilizamos una plegadora que nos permitió insertar los tubos dentro del colchón realizando una serie de dobleces estratégicos, asegurando así una distribución uniforme del calor a lo largo de toda la superficie.
+El sistema está compuesto por dos circuitos independientes: uno por el que circula agua caliente y otro por el que circula agua fría. Ambos tubos están conectados a sus respectivos tanques, lo que permite regular la temperatura del colchón de manera precisa y eficiente.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=9cm]{Modelos 3D/bedmodel_bottom.png}
+\caption{Vista inferior del modelo 3D de la cama con sistema de tubos}
+\label{fig:cama_inferior}
+\end{figure}
+
+\section[\large ¿Como esta estructurado el brazalete?]{\Huge ¿Como esta estructurado el brazalete?}
+El brazalete fue diseñado mediante un modelo 3D desarrollado en Blender y fabricado con material PLA, elegido por su equilibrio entre solidez, ligereza y flexibilidad.
+El diseño incluye una serie de perforaciones distribuidas estratégicamente para permitir una adecuada ventilación y el paso del aire, garantizando así mayor comodidad durante su uso. En la siguiente imagen se puede observar la estructura y disposición de dichos orificios.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=15.8cm]{Modelos 3D/Brazalete1.png}
+\caption{Diseño 3D del brazalete - Vista frontal con perforaciones de ventilación}
+\label{fig:brazalete_frontal}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=20cm]{Modelos 3D/Brazalete2.png}
+\caption{Diseño 3D del brazalete - Vista lateral detallada}
+\label{fig:brazalete_lateral}
+\end{figure}
+
+\newpage
+Además, el brazalete está recubierto con una capa de goma espuma, lo que mejora la sensibilidad al tacto y aporta una sensación más cómoda al contacto con la piel.
+Una vez impreso, el modelo fue lijado cuidadosamente para eliminar imperfecciones y lograr una superficie uniforme, optimizando tanto su estética como su funcionalidad.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=10cm]{fotos/Brazaletes.png}
+\caption{Brazaletes impresos y terminados}
+\label{fig:brazaletes_terminados}
+\end{figure}
+
+El brazalete cuenta con un compartimiento destinado a alojar los diferentes sensores, diseñado para mantenerlos firmemente en su lugar y facilitar su conexión. Este compartimiento se fija al brazalete mediante abrojos (velcro), lo que permite retirarlo o ajustarlo fácilmente según sea necesario, garantizando al mismo tiempo estabilidad y comodidad durante el uso.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=6.5cm]{fotos/brazalete.png}
+\caption{Brazalete con compartimiento para sensores}
+\label{fig:brazalete_sensores}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=10cm]{Modelos 3D/brazalete3.png}
+\caption{Modelo 3D del compartimiento de sensores del brazalete}
+\label{fig:brazalete_compartimiento}
+\end{figure}
+
+
+\section[\large ¿Como están estructurados los tanques?]{\Huge ¿Como están estructurados los tanques?}
+En este proyecto se utilizan dos tanques principales, uno destinado al agua fría y otro al agua caliente, los cuales desempeñan un papel fundamental en el sistema de regulación térmica. Ambos tanques están aislados térmicamente con espuma de poliuretano, un material de alta densidad que permite mantener la temperatura interna estable, reduciendo significativamente las pérdidas de calor o de frío hacia el exterior.
+
+El tanque de agua fría está equipado con seis celdas Peltier, cada una acompañada de su disipador de calor y su correspondiente cooler, también tienen una placa de metal del la parte del tanque para que se pase mejor el calor. Estas celdas funcionan mediante un principio termoeléctrico: al recibir corriente, una de sus caras absorbe el calor del interior del tanque (enfriando el agua), mientras que la otra lo disipa hacia afuera con la ayuda de los coolers. De esta forma, se logra un proceso de refrigeración activa y controlada, manteniendo la temperatura del agua dentro de los rangos deseados.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\includegraphics[width=0.8\linewidth]{fotos/tanque.png}}
+    \caption{Tanque frío sin las celdas}
+    \label{fig:tanquefrio}
+\end{figure}
+
+
+
+Por otro lado, el tanque de agua caliente cuenta con una resistencia eléctrica encargada de elevar la temperatura del agua. Este sistema está supervisado por un sensor de temperatura sumergible, que mide de manera continua el valor térmico del agua y permite pausar automáticamente el calentamiento cuando se alcanza una temperatura preestablecida, evitando sobrecalentamientos y optimizando el consumo energético.
+
+En conjunto, ambos tanques trabajan de forma complementaria dentro del sistema, proporcionando un control térmico eficiente y preciso, esencial para garantizar el confort y la estabilidad del entorno en el que se implementa el proyecto.
+
+\subsection{¿Como están colocados?}
+
+\subsection{Cálculos de temperatura para el agua fría}
+
+El sistema de enfriamiento del tanque de agua fría se basa en la utilización de celdas Peltier TEC1-12706, cada una con una capacidad aproximada de transferencia de calor ($Q_c$) de 60 W cuando opera con una diferencia de temperatura de 10 °C y alimentada a 12 V con un consumo de 6 A (potencia total 72 W). En el diseño propuesto se contempla un tanque con una capacidad total de 20 litros, debidamente aislado con espuma de poliuretano para minimizar las pérdidas térmicas. La temperatura ambiente promedio se considera de 30 °C, y el objetivo es reducir la temperatura del agua a 10 °C.
+
+El agua, con una masa de aproximadamente 20 kg (considerando una densidad de 1 kg/L), requiere una extracción de energía térmica calculada mediante la ecuación:
+
+\[
+Q = m \cdot c \cdot \Delta T
+\]
+
+donde $c$ es el calor específico del agua (4186 J/kg·°C) y $\Delta T = 20$ °C (de 30 °C a 10 °C). De esta manera, la cantidad total de energía a retirar del sistema es de aproximadamente:
+
+\[
+Q = 20\,\text{kg} \times 4186\,\frac{\text{J}}{\text{kg}\cdot{}^\circ\text{C}} \times 20\,^\circ\text{C} = 1{,}674{,}400\,\text{J}
+\]
+
+Cada celda Peltier TEC1-12706 puede retirar alrededor de 60 W (60 J/s) en condiciones óptimas; sin embargo, considerando las ineficiencias y pérdidas térmicas del sistema, se estima una eficiencia real del 40 %, lo que reduce la capacidad efectiva de enfriamiento a unos 24 W por celda.
+
+Para el sistema implementado, se utilizan \textbf{6 celdas Peltier TEC1-12706}, por lo que la potencia total efectiva de enfriamiento es:
+
+\[
+P = 6 \times 24\,\text{W} = 144\,\text{W} = 144\,\text{J/s}
+\]
+
+En estas condiciones, el tiempo teórico requerido para reducir la temperatura del agua de 30 °C a 10 °C sería:
+
+\[
+t = \frac{1\,674\,400\,\text{J}}{144\,\text{J/s}} \approx 11\,625\,\text{s} \approx 3\,\text{h}\,13\,\text{min}.
+\]
+
+No obstante, en la práctica, debido a pérdidas adicionales por conducción, eficiencia variable de las celdas y disipación incompleta del calor en la cara caliente, el tiempo real estimado de enfriamiento se sitúa entre \textbf{3,5 y 4 horas}. Con esta configuración, el sistema logra no solo enfriar el agua desde 30 °C hasta los 10 °C, sino también mantenerla estable a esa temperatura, incluso con una temperatura ambiente de 30 °C, gracias al aislamiento térmico del tanque.
+
+Para el control térmico, el sistema utiliza sensores de temperatura \textbf{DS18B20} sumergidos en el tanque de agua fría y otro sensor en la parte interna del tanque de agua caliente para compensar el control térmico global del circuito hidráulico. Los sensores DS18B20 permiten una precisión de $\pm 0.5$ °C, facilitando una regulación exacta de la temperatura. La lectura de los sensores y el control de activación de las celdas Peltier se realiza mediante una \textbf{Raspberry Pi}, que además activa los relés asociados a cada grupo de celdas según las condiciones térmicas programadas.
+
+\chapter[\Large Circuitos]{Circuitos}
+\section[\large Resumen]{\Huge Resumen}
+Para el correcto funcionamiento del proyecto fue necesario implementar distintos circuitos electrónicos encargados de controlar los diversos sistemas que lo componen. El centro de control principal está basado en una Raspberry Pi Zero 2 W, la cual coordina y administra el comportamiento de todos los componentes del sistema.
+
+Esta placa actúa como el cerebro del proyecto, gestionando la activación de las bombas de agua, el control de las válvulas y el funcionamiento de los módulos de refrigeración y calefacción del colchón. Su tarea es asegurar que cada elemento se encienda o apague en el momento que se necesite, de acuerdo con las necesidades de temperatura determinadas por el algoritmo de control.
+
+Además, la Raspberry Pi se comunica de forma inalámbrica mediante Wi-Fi con la pulsera inteligente del usuario, desde la cual recibe datos en tiempo real sobre parámetros relevantes. Esta información es utilizada por el sistema para ajustar dinámicamente la temperatura del colchón, logrando así un mayor confort y eficiencia energética durante el descanso.
+\subsection{Pulsera}
+La pulsera cuenta con un módulo ESP32 Mini que se encarga de transmitir de manera inalámbrica la información hacia una Raspberry Pi utilizando conectividad Wi-Fi, estableciendo así una comunicación eficiente y continua entre ambos dispositivos. A la ESP32 Mini se encuentran conectados tres sensores mediante el bus de comunicación I²C, cada uno con una función específica dentro del sistema: un sensor de temperatura AHT10, encargado de registrar las variaciones térmicas del entorno y del cuerpo del usuario; un acelerómetro MMA845Q , utilizado para detectar y analizar los movimientos y la posición corporal; y un sensor de ritmo cardíaco Max30102, que permite medir la frecuencia cardíaca en tiempo real.
+Toda la información obtenida por estos sensores es procesada por la ESP32 Mini. Una vez procesados, los resultados son enviados a la Raspberry Pi, que se encarga de realizar el cálculo del estado de sueño del usuario y determinar la temperatura óptima requerida para mantener el confort durante el descanso, utilizando algoritmos de análisis de datos. garantizando un funcionamiento inteligente, autónomo y adaptable a las condiciones individuales de cada usuario.
+\subsection{Bombas de agua}
+El circuito de bombeo está formado por dos módulos idénticos que permiten la conmutación y alimentación de las bombas mediante control digital desde la Raspberry Pi, cada módulo integra un relé electromecánico modelo SRD-12VDC-SL-C accionado a 12 V para aislar la carga de la lógica de control, un transistor BC337 empleado como interruptor de baja impedancia para manejar la bobina del relé desde un pin GPIO de la Raspberry Pi y los componentes de protección y polarización necesarios para un funcionamiento seguro y fiable, entre estos se consideran la resistencia de base para limitar la corriente hacia la base del BC337, un diodo 1N4007 conectado en paralelo con la bobina del relé para absorber picos inductivos y proteger el transistor.
+
+
+\chapter[\Large Código]{Código}
+
+\section[\large Resumen]{\Huge Resumen}
+Una de las partes más vitales del proyecto es el desarrollo del código, ya que representa el núcleo lógico que permite la comunicación, el procesamiento de datos y la toma de decisiones dentro del sistema. La arquitectura del software se divide en cuatro módulos principales, cada uno con una función específica y complementaria que, en conjunto, garantizan el correcto funcionamiento de la cama inteligente.
+
+El primer módulo es el Presence Detector, encargado de analizar en tiempo real si hay una persona sobre la cama. Para ello, realiza una fusión de datos provenientes de distintos sensores —como temperatura, movimiento y ritmo cardíaco— con el fin de estimar de manera precisa la presencia o ausencia del usuario. Este componente es fundamental, ya que su salida condiciona el funcionamiento de los demás módulos.
+
+El segundo módulo, denominado analyzer.py, es responsable de ejecutar todos los cálculos del algoritmo principal. A partir de la información recibida del Presence Detector y de los sensores, este componente determina las acciones a tomar para mantener la temperatura del colchón dentro del rango de confort del usuario. En función de las condiciones detectadas, el módulo decide si se debe activar el sistema de enfriamiento o el de calentamiento del agua, buscando siempre optimizar la experiencia de descanso.
+
+El tercer módulo es el Smart Bed Controller, el cual actúa como intermediario entre el software lógico y el hardware físico. Su función es enviar señales de control —en forma de valores binarios (1 o 0)— hacia los tanques de agua fría y caliente y a sus valvulas electricas, activando o desactivando los relés correspondientes, tambien apaga las bombas a cada cierto tiempo para que no se quemen. Gracias a este controlador, las decisiones tomadas por el algoritmo pueden traducirse en acciones concretas sobre el sistema hidráulico.
+
+Por último, se encuentra el módulo correspondiente a la pulsera inteligente, que cumple un rol clave en la adquisición de datos fisiológicos del usuario. Este dispositivo portátil recopila información proveniente de sus sensores (como frecuencia cardíaca, temperatura y movimiento) y la transmite a la Raspberry Pi mediante el protocolo MQTT, utilizando una conexión Wi-Fi local. De esta forma, la cama inteligente dispone de datos actualizados y precisos para alimentar el algoritmo de control térmico.
+
+En conjunto, estos cuatro módulos conforman un sistema integral capaz de detectar la presencia del usuario, analizar su estado, tomar decisiones autónomas y ejecutar las acciones necesarias para ajustar la temperatura del colchón. Esta estructura modular permite un desarrollo escalable, fácil de mantener y adaptable a futuras mejoras del proyecto.
+
+\section[\large Explicación Técnica Detallada - Presence Detector]{\Huge Explicación Técnica Detallada - Presence Detector}
+
+\subsection{Arquitectura General del Sistema}
+
+El módulo \texttt{presence\_detector.py} implementa un sistema de detección de presencia en cama inteligente mediante fusión multi-sensor, utilizando cinco indicadores independientes que se combinan para generar un nivel de confianza global.
+
+\subsection{Clase Principal: BedPresenceDetector}
+
+\subsubsection*{Atributos de Estado}
+
+\textbf{Estado de presencia actual:}
+\begin{itemize}
+  \item \texttt{bed\_occupied (bool)}: Indica si la cama está ocupada actualmente.
+  \item \texttt{presence\_confidence (float)}: Nivel de confianza de presencia en porcentaje (0-100).
+  \item \texttt{presence\_history (list)}: Buffer circular que almacena los últimos N valores de confianza.
+  \item \texttt{presence\_start\_time (float)}: Timestamp Unix del momento en que se detectó entrada a la cama.
+\end{itemize}
+
+\textbf{Valores de referencia (baseline):}
+\begin{itemize}
+  \item \texttt{baseline\_temperature (float)}: Temperatura de referencia de la cama vacía, actualizable dinámicamente.
+  \item \texttt{baseline\_activity (float)}: Nivel de actividad de referencia (actualmente no utilizado).
+\end{itemize}
+
+\textbf{Parámetros configurables:}
+\begin{itemize}
+  \item \texttt{confidence\_threshold\_enter}: Umbral para detectar entrada (60\% por defecto).
+  \item \texttt{confidence\_threshold\_exit}: Umbral para detectar salida (20\% por defecto).
+  \item \texttt{thermal\_threshold}: Incremento térmico sobre baseline (1.5°C por defecto).
+  \item \texttt{activity\_threshold}: Nivel mínimo de actividad (0.001 por defecto).
+  \item \texttt{hr\_min} y \texttt{hr\_max}: Rango válido de frecuencia cardíaca (40–150 BPM).
+  \item \texttt{history\_size}: Tamaño del buffer de historial (30 muestras).
+  \item \texttt{confirmation\_time}: Muestras consecutivas necesarias para confirmar salida (15 muestras).
+\end{itemize}
+
+Todos los parámetros se cargan desde el módulo \texttt{bed\_config}, permitiendo ajuste sin modificar el código.
+
+\subsection{Método Principal: \texttt{detect\_presence()}}
+
+\subsubsection*{Flujo de Procesamiento}
+
+El método recibe un diccionario \texttt{sensor\_data} con:
+\begin{itemize}
+  \item \texttt{bed\_temperature}: Lectura del sensor HTU21D.
+  \item \texttt{activity}: Magnitud del vector del acelerómetro MMA8451.
+  \item \texttt{heart\_rate}: Frecuencia cardíaca calculada por el MAX30102.
+  \item \texttt{hr\_valid}: Booleano que indica si la medición de HR es confiable.
+  \item \texttt{finger\_present}: Booleano indicando contacto físico con el sensor óptico.
+\end{itemize}
+
+\subsubsection*{Sistema de Puntuación Multi-Indicador}
+
+\paragraph{1. Indicador Térmico (máximo 40 puntos)}
+\begin{verbatim}
+temp_elevation = bed_temp - baseline_temperature
+\end{verbatim}
+
+\textbf{Criterios:}
+\begin{itemize}
+  \item Si \texttt{temp\_elevation > thermal\_threshold}: +30 puntos.
+  \item Si \texttt{temp\_elevation > thermal\_threshold * 2}: +10 puntos adicionales.
+\end{itemize}
+
+\textbf{Fundamento:} La presencia humana eleva la temperatura de la cama entre 1.5°C y 4°C.
+
+\paragraph{2. Indicador de Movimiento (máximo 25 puntos)}
+\begin{verbatim}
+activity_score = min(25, int(activity * 25 / 0.1))
+\end{verbatim}
+
+\textbf{Fundamento:} Los micro-movimientos durante el sueño generan actividad detectable.
+
+\paragraph{3. Indicador Cardiovascular (máximo 40 puntos)}
+
+\textbf{Criterios:}
+\begin{itemize}
+  \item Si HR válida y en rango 40–150 BPM: +35 puntos.
+  \item Si HR en rango de sueño (50–80 BPM): +5 puntos adicionales.
+\end{itemize}
+
+\textbf{Fundamento:} La frecuencia cardíaca válida confirma presencia humana con alta certeza.
+
+\paragraph{4. Indicador de Contacto (máximo 20 puntos)}
+
+\textbf{Criterios:}
+\begin{itemize}
+  \item Si \texttt{finger\_present == True}: +20 puntos.
+\end{itemize}
+
+\textbf{Fundamento:} Detecta contacto físico mediante señal infrarroja reflejada.
+
+\paragraph{5. Indicador Temporal (máximo 10 puntos)}
+\begin{verbatim}
+avg_confidence = sum(presence_history[-5:]) / 5
+\end{verbatim}
+
+\textbf{Criterio:} Si el promedio de las últimas 5 muestras > 50\%, +10 puntos.
+
+\textbf{Fundamento:} La presencia real genera señales consistentes en el tiempo.
+
+\subsubsection*{Cálculo de Confianza Global}
+\begin{verbatim}
+confidence = min(sum(all_indicators), 100)
+\end{verbatim}
+
+La suma ponderada de indicadores se limita a 100\%, siendo tolerante a fallos parciales.
+
+\subsection{Mecanismo de Histéresis}
+
+\subsubsection*{Propósito}
+Evita transiciones rápidas entre estados de presencia.
+
+\subsubsection*{Implementación en \texttt{\_update\_presence\_state()}}
+
+\textbf{Entrada (vacía → ocupada):}
+\begin{itemize}
+  \item Condición: \texttt{confidence >= threshold\_enter}
+  \item Acción inmediata: activa ocupación y registra timestamp
+\end{itemize}
+
+\textbf{Salida (ocupada → vacía):}
+\begin{itemize}
+  \item Condición: \texttt{confidence <= threshold\_exit}
+\item Confirmación: últimos \texttt{confirmation\_time} valores $\leq 30\%$
+
+  \item Acción: cambia a vacía tras baja confianza sostenida
+\end{itemize}
+
+\textbf{Nota:} La asimetría evita falsas salidas durante quietud prolongada.
+
+\subsection{Gestión del Baseline Térmico}
+
+\subsubsection*{Inicialización}
+El baseline se toma automáticamente con la primera lectura térmica.
+
+\subsubsection*{Actualización Dinámica}
+Cuando la cama está vacía:
+\[
+baseline = (1 - \alpha) \times baseline_{old} + \alpha \times temp_{current}
+\]
+con $\alpha = 0.05$.
+
+\subsubsection*{Calibración Manual}
+\begin{itemize}
+  \item Toma N lecturas en 5 minutos.
+  \item Calcula la mediana para eliminar outliers.
+  \item Reemplaza el baseline actual.
+\end{itemize}
+
+\subsection{Métodos de Utilidad y Debugging}
+
+\begin{itemize}
+  \item \texttt{get\_presence\_summary()}: Retorna estado global.
+  \item \texttt{get\_detailed\_indicators()}: Análisis granular de indicadores.
+  \item \texttt{reset\_presence\_state()}: Limpia historial y banderas.
+  \item \texttt{\_get\_time\_occupied()}: Calcula minutos desde detección de entrada.
+\end{itemize}
+
+\subsection{Consideraciones de Diseño}
+
+\textbf{Fusión de Sensores:} Suma ponderada de sensores heterogéneos.\\
+\textbf{Tolerancia a Fallos:} El sistema sigue operativo ante fallos parciales.\\
+\textbf{Adaptabilidad Temporal:} Baseline térmico adaptable a cambios ambientales.\\
+\textbf{Escalabilidad:} Parámetros configurables vía \texttt{bed\_config}.
+
+\subsection{Retorno del Método Principal}
+
+El método \texttt{detect\_presence()} retorna:
+\begin{itemize}
+  \item \texttt{occupied}: estado binario actual.
+  \item \texttt{confidence}: nivel de confianza (\%).
+  \item \texttt{indicators}: detalle de cada indicador.
+  \item \texttt{time\_occupied}: minutos desde entrada.
+  \item \texttt{temp\_elevation}: incremento térmico sobre baseline.
+  \item \texttt{presence\_changed}: bandera de transición de estado.
+\end{itemize}
+
+Este formato estructurado facilita la integración con módulos superiores del sistema de cama inteligente.
+
+
+\newgeometry{left=1cm, right=0cm, top=2cm, bottom=2cm}
+\thispagestyle{empty}
+\section[large Diagrama presence\_detector]{\LARGE Diagrama presence\_detector}
+
+\vspace{1cm}
+
+\begin{tikzpicture}[node distance=1.2cm and 1cm]
+
+% FILA 1 (Izquierda a Derecha)
+\node (start) [startstop] {INICIO};
+\node (init) [process, right=of start] {Inicializar\\Variables};
+\node (detect) [process, right=of init] {detect\\presence};
+\node (getdata) [process, right=of detect] {Obtener\\Datos Sensores};
+
+% FILA 2 (Derecha a Izquierda)
+\node (checkbase) [decision, below=of getdata] {Baseline\\establecido?};
+\node (setbase) [score, left=of checkbase] {Establecer\\baseline};
+\node (analyze) [process, left=of setbase] {Analizar 5\\Indicadores};
+\node (thermal) [indicator, left=of analyze] {INDICADOR\\TÉRMICO};
+
+% FILA 3 (Izquierda a Derecha)
+\node (tempcheck) [decision, below=of thermal] {Elevación\\temp?};
+\node (tempscore) [score, right=of tempcheck] {+30 puntos\\+10 bonus};
+\node (movement) [indicator, right=of tempscore] {INDICADOR\\MOVIMIENTO};
+\node (actcheck) [decision, right=of movement] {Actividad\\>threshold?};
+
+% FILA 4 (Derecha a Izquierda)
+\node (actscore) [score, below=of actcheck] {+0 a 25\\puntos};
+\node (cardio) [indicator, left=of actscore] {INDICADOR\\CARDIOVASCULAR};
+\node (hrcheck) [decision, left=of cardio] {HR válida\\40-150?};
+\node (hrscore) [score, left=of hrcheck] {+35 puntos\\+5 bonus};
+
+% FILA 5 (Izquierda a Derecha)
+\node (contact) [indicator, below=of hrscore] {INDICADOR\\CONTACTO};
+\node (fingercheck) [decision, right=of contact] {Dedo\\presente?};
+\node (fingerscore) [score, right=of fingercheck] {+20\\puntos};
+\node (temporal) [indicator, right=of fingerscore] {INDICADOR\\TEMPORAL};
+
+% FILA 6 (Derecha a Izquierda)
+\node (histcheck) [decision, below=of temporal] {Confianza\\promedio\\>50\%?};
+\node (tempscore2) [score, left=of histcheck] {+10\\puntos};
+\node (calculate) [process, left=of tempscore2] {Calcular\\Confianza\\Total};
+\node (update) [process, left=of calculate] {update\\presence\\state};
+
+% FILA 7 (Izquierda a Derecha)
+\node (occcheck) [decision, below=of update] {Cama\\ocupada?};
+\node (entrycheck) [decision, right=of occcheck] {Confianza\\>=entrada?};
+\node (enter) [process, right=of entrycheck] {\textcolor{green}{$\checkmark$} PRESENCIA\\DETECTADA};
+\node (exitcheck) [decision, right=of enter] {Confianza\\<=salida?};
+
+% FILA 8 (Derecha a Izquierda)
+\node (confirm) [decision, below=of exitcheck] {Últimas 15\\<30\%?};
+\node (exit) [process, left=of confirm] {\textcolor{red}{$\times$} AUSENCIA\\DETECTADA};
+\node (return) [process, left=of exit] {Retornar\\Resultado};
+\node (end) [startstop, left=of return] {FIN};
+
+% CONEXIONES FILA 1
+\draw [arrow] (start) -- (init);
+\draw [arrow] (init) -- (detect);
+\draw [arrow] (detect) -- (getdata);
+
+% BAJADA A FILA 2
+\draw [arrow] (getdata) -- (checkbase);
+\draw [arrow] (checkbase) -- node[anchor=south, font=\tiny] {No} (setbase);
+\draw [arrow] (checkbase.south) -- ++(0,-0.3) -| node[near start, anchor=south, font=\tiny] {Sí} (analyze);
+\draw [arrow] (setbase) -- (analyze);
+\draw [arrow] (analyze) -- (thermal);
+
+% BAJADA A FILA 3
+\draw [arrow] (thermal) -- (tempcheck);
+\draw [arrow] (tempcheck) -- node[anchor=south, font=\tiny] {Sí/No} (tempscore);
+\draw [arrow] (tempscore) -- (movement);
+\draw [arrow] (movement) -- (actcheck);
+
+% BAJADA A FILA 4
+\draw [arrow] (actcheck) -- (actscore);
+\draw [arrow] (actscore) -- (cardio);
+\draw [arrow] (cardio) -- (hrcheck);
+\draw [arrow] (hrcheck) -- node[anchor=south, font=\tiny] {Sí/No} (hrscore);
+
+% BAJADA A FILA 5
+\draw [arrow] (hrscore) -- (contact);
+\draw [arrow] (contact) -- (fingercheck);
+\draw [arrow] (fingercheck) -- node[anchor=south, font=\tiny] {Sí/No} (fingerscore);
+\draw [arrow] (fingerscore) -- (temporal);
+
+% BAJADA A FILA 6
+\draw [arrow] (temporal) -- (histcheck);
+\draw [arrow] (histcheck) -- node[anchor=south, font=\tiny] {Sí/No} (tempscore2);
+\draw [arrow] (tempscore2) -- (calculate);
+\draw [arrow] (calculate) -- (update);
+
+% BAJADA A FILA 7
+\draw [arrow] (update) -- (occcheck);
+\draw [arrow] (occcheck) -- node[anchor=south, font=\tiny] {No} (entrycheck);
+\draw [arrow] (entrycheck) -- node[anchor=south, font=\tiny] {Sí/No} (enter);
+\draw [arrow] (enter) -- (exitcheck);
+
+% BAJADA A FILA 8
+\draw [arrow] (occcheck.south) -- ++(0,-0.3) -| node[near start, anchor=south, font=\tiny] {Sí} (exitcheck);
+\draw [arrow] (exitcheck) -- node[anchor=west, font=\tiny] {Sí/No} (confirm);
+\draw [arrow] (confirm) -- node[anchor=south, font=\tiny] {Sí/No} (exit);
+\draw [arrow] (exit) -- (return);
+\draw [arrow] (return) -- (end);
+
+% CONEXIÓN DESDE ENTER A RETURN
+\draw [arrow] (enter.south) -- ++(0,-0.3) -| (return);
+
+\end{tikzpicture}
+    \restoregeometry
+    
+\newpage
+
+% Sección LaTeX para la documentación técnica del módulo analyzer.py
+\section{Módulo de análisis de señales fisiológicas: \texttt{analyzer.py}}
+\label{sec:analyzer}
+
+\subsection{Arquitectura general}
+El módulo \texttt{analyzer.py} constituye el núcleo de procesamiento analítico del sistema, centralizando las funciones encargadas del análisis de señales fisiológicas y series temporales de estados de sueño. Este módulo se diseñó siguiendo el principio de separación de responsabilidades: no implementa clases de estado ni gestiona operaciones de entrada/salida, limitándose exclusivamente a recibir datos previamente muestreados y preprocesados para devolver métricas cuantificables y eventos de interés clínico.
+
+La única dependencia externa es la biblioteca NumPy, empleada para cálculo vectorizado y operaciones estadísticas básicas, lo que garantiza eficiencia computacional y portabilidad del código.
+
+\subsection{Funciones principales}
+A continuación se describen las funciones principales implementadas en el módulo, detallando sus parámetros de entrada, comportamiento esperado y fundamento teórico cuando aplique.
+
+\begin{description}
+  \item[\texttt{calculate\_rmssd(ibi)}] Calcula el RMSSD (\emph{root mean square of successive differences}) a partir de una secuencia de intervalos inter-latido (IBI). Esta métrica cuantifica la variabilidad de corto plazo del ritmo cardíaco y es un indicador reconocido de la actividad del sistema nervioso parasimpático~\cite{hrv_standards}. 
+  
+  La función retorna \texttt{None} si la ventana temporal no contiene suficientes muestras para el cálculo. Matemáticamente, el RMSSD se define como:
+  \vspace{1cm}
+  \begin{center}
+      \[
+    \mathrm{RMSSD} = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N-1} (IBI_{i+1} - IBI_i)^2 }
+      \]
+  \end{center}
+  \vspace{1cm}
+
+  La implementación utiliza diferencias sucesivas (\texttt{np.diff}), elevación al cuadrado y cálculo de la raíz de la media aritmética.
+
+  \item[\texttt{calculate\_sdnn(ibi)}] Calcula la desviación estándar (SDNN, \emph{standard deviation of NN intervals}) de la serie completa de IBI. Esta métrica describe la variabilidad global del ritmo cardíaco en la ventana temporal considerada y se obtiene mediante \texttt{np.std}. La función retorna \texttt{None} si la ventana contiene menos de dos muestras válidas.
+
+  \item[\texttt{calculate\_stress\_score(hr, rmssd, sdnn, \ldots)}] Construye un índice heurístico de estrés en escala 0--100 mediante la integración ponderada de tres componentes fisiológicos: frecuencia cardíaca instantánea (\texttt{hr}), RMSSD y SDNN. El proceso de normalización se estructura así:
+  \begin{itemize}
+    \item \textbf{Frecuencia cardíaca (HR):} Se normaliza respecto a un umbral inferior fijo y un tope configurable, asumiendo una relación monotónica entre FC y nivel de estrés.
+    \item \textbf{RMSSD y SDNN:} Se normalizan frente a valores máximos esperados. La contribución al índice de estrés se calcula como $1 - \text{valor normalizado}$, de modo que una mayor variabilidad cardíaca (asociada a mejor regulación autonómica) reduce la puntuación de estrés.
+  \end{itemize}
+  
+  Los pesos por defecto asignados son 0.4 para HR, 0.3 para RMSSD y 0.3 para SDNN. Las normalizaciones se recortan al intervalo $[0, 1]$ para evitar valores fuera de rango. 
+  
+  \textbf{Nota:} Este índice es una aproximación heurística útil para sistemas de alerta temprana, pero requiere calibración experimental con población objetivo y validación clínica antes de su uso en entornos de producción.
+
+  \item[\texttt{calculate\_sleep\_quality(sleep\_states, hr\_values=None, activity\_levels=None)}] Genera una puntuación de calidad del sueño en escala 0--100 mediante la integración de tres dimensiones fisiológicas y conductuales:
+  
+  \begin{enumerate}
+    \item \textbf{Distribución de estados de sueño:} Se asume una codificación estándar (0=WAKE, 1=LIGHT\_SLEEP, 2=REM\_SLEEP, 3=DEEP\_SLEEP) con resolución temporal de un minuto por muestra. La función compara la distribución observada contra proporciones heurísticas óptimas documentadas en la literatura del sueño (aproximadamente 20\% sueño profundo, 25\% REM, 50\% sueño ligero, $<$5\% vigilia)~\cite{sleep_standards}.
+    
+    \item \textbf{Consistencia de frecuencia cardíaca:} Si se proporciona el vector \texttt{hr\_values}, se calcula la variabilidad (desviación estándar) durante las fases de sueño. Una menor variabilidad se interpreta como indicador de sueño consolidado y se mapea a una puntuación favorable.
+    
+    \item \textbf{Nivel de actividad motora:} Si se proporciona \texttt{activity\_levels}, se penaliza la actividad media elevada durante periodos de sueño, dado que refleja fragmentación o inquietud nocturna.
+  \end{enumerate}
+  
+  La puntuación final combina estos tres componentes con pesos de 0.5, 0.25 y 0.25 respectivamente, y se recorta al intervalo $[0, 100]$. En caso de ausencia de datos de HR o actividad, la función emplea valores neutros para mantener la computabilidad con información parcial.
+
+  \item[\texttt{analyze\_sleep\_transitions(sleep\_states)}] Cuantifica las transiciones entre estados de sueño consecutivos y retorna una tupla $(\text{transitions}, \text{fragmentation\_index})$, donde el índice de fragmentación se expresa como transiciones por hora de sueño (asumiendo 1 muestra = 1 minuto). Un índice elevado sugiere sueño fragmentado o inestable. La función retorna $(\text{None}, \text{None})$ si la entrada contiene menos de dos muestras.
+
+  \item[\texttt{detect\_sleep\_onset(sleep\_states, window\_size=10, threshold=0.8)}] Identifica el índice temporal correspondiente al inicio del sueño mediante un algoritmo de ventana deslizante. Se considera iniciado el sueño cuando al menos el 80\% de las muestras en una ventana de tamaño configurable (por defecto 10 minutos) corresponden a estados de sueño (valor $>0$). Retorna el índice de inicio o \texttt{None} si no se satisface el criterio en toda la serie.
+
+  \item[\texttt{detect\_wake\_periods(sleep\_states, min\_duration=5)}] Detecta segmentos contiguos de vigilia (estado WAKE = 0) y retorna una lista de tuplas $(start\_index, duration)$ para aquellos periodos cuya duración supera el umbral mínimo configurable (por defecto 5 minutos). Esta información es útil para caracterizar despertares nocturnos y estimar eficiencia del sueño.
+\end{description}
+
+\subsection{Entradas y salidas}
+El módulo sigue convenciones consistentes para el manejo de datos:
+
+\begin{itemize}
+  \item Las funciones aceptan secuencias numéricas en formato lista Python o \texttt{numpy.ndarray}; internamente se realiza conversión implícita cuando es necesario.
+  \item Las funciones \texttt{calculate\_rmssd} y \texttt{calculate\_sdnn} retornan un valor \texttt{float} o \texttt{None} en caso de datos insuficientes.
+  \item Las funciones \texttt{calculate\_stress\_score} y \texttt{calculate\_sleep\_quality} retornan un \texttt{float} en el intervalo $[0, 100]$.
+  \item La función \texttt{analyze\_sleep\_transitions} retorna una tupla $(\text{int}, \text{float})$ o $(\text{None}, \text{None})$.
+  \item La función \texttt{detect\_sleep\_onset} retorna un índice entero o \texttt{None}.
+  \item La función \texttt{detect\_wake\_periods} retorna una lista de tuplas $(start\_index, duration)$.
+\end{itemize}
+
+\textbf{Importante:} El módulo no implementa funcionalidades de lectura de sensores ni parsing de protocolos. Se asume que los datos de entrada están previamente alineados temporalmente, libres de valores no numéricos y han pasado por etapas de preprocesamiento básico.
+
+\subsection{Supuestos y consideraciones temporales}
+El diseño del módulo se basa en los siguientes supuestos operacionales:
+
+\begin{itemize}
+  \item La serie \texttt{sleep\_states} está uniformemente muestreada con resolución de un minuto por muestra.
+  \item Los umbrales, pesos de ponderación y valores máximos empleados en las normalizaciones son aproximaciones heurísticas derivadas de la literatura científica disponible. Estos parámetros requieren calibración específica con datos reales del hardware implementado y características de la población objetivo.
+  \item Las funciones no aplican filtrado de artefactos de forma automática. Señales con picos espurios o artefactos de medición en los IBI pueden introducir sesgos significativos en las métricas RMSSD y SDNN.
+\end{itemize}
+
+\subsection{Casos límite y estrategias de validación}
+El módulo implementa manejo básico de casos límite mediante retorno de valores \texttt{None} o puntuaciones neutras cuando los datos son insuficientes. No obstante, no se realizan operaciones de interpolación, imputación ni recuperación de series corruptas.
+
+Para garantizar robustez en entornos de producción, se recomienda:
+
+\begin{itemize}
+  \item Validar las entradas antes de invocar las funciones: verificar tipo numérico (\texttt{dtype}), longitudes mínimas y eliminar outliers en secuencias de IBI mediante criterios fisiológicos (por ejemplo, rechazar IBI $<$ 300\,ms o $>$ 2000\,ms).
+  \item Desarrollar un conjunto de pruebas unitarias que incluya:
+  \begin{itemize}
+    \item Ventanas con datos insuficientes.
+    \item Episodios de sueño continuo sin interrupciones.
+    \item Despertares breves y frecuentes.
+    \item Ausencia de señales opcionales (HR, actividad).
+    \item Valores extremos de HR para verificar la saturación correcta en \texttt{calculate\_stress\_score}.
+  \end{itemize}
+\end{itemize}
+
+\subsection{Recomendaciones para uso en producción}
+Para la transición del módulo a entornos operacionales se sugieren las siguientes mejoras:
+
+\begin{enumerate}
+  \item \textbf{Validación explícita de entradas:} Implementar funciones auxiliares que verifiquen tipo numérico, rangos fisiológicamente plausibles y conversión forzada a \texttt{np.array} con manejo de excepciones informativo.
+  
+  \item \textbf{Filtrado de artefactos:} Incorporar un filtrado ligero o truncado estadístico (por ejemplo, Tukey's fences) en las secuencias de IBI previo al cálculo de RMSSD, reduciendo así la sensibilidad a artefactos de medición.
+  
+  \item \textbf{Parametrización configurable:} Externalizar umbrales y pesos a un archivo de configuración (por ejemplo, \texttt{config/bed\_config.py}) para facilitar ajustes por entorno sin modificación del código fuente.
+  
+  \item \textbf{Documentación ejecutable:} Incluir un script demostrativo en \texttt{examples/demo\_analyzer.py} y un conjunto de pruebas con \texttt{pytest} en \texttt{tests/test\_analyzer.py} que cubra tanto casos de uso típicos como escenarios límite.
+\end{enumerate}
+
+\subsection{Formato de salida y consumo de resultados}
+Los módulos consumidores del análisis pueden esperar los siguientes formatos de retorno:
+
+\begin{itemize}
+  \item \textbf{Métricas escalares:} Valor \texttt{float} o \texttt{None} (para RMSSD, SDNN, índice de estrés, calidad del sueño).
+  \item \textbf{Análisis de transiciones:} Tupla $(\text{int}, \text{float})$ representando conteo de transiciones e índice de fragmentación.
+  \item \textbf{Periodos de vigilia:} Lista de tuplas $(start\_index, duration)$ con índices temporales y duraciones en minutos.
+\end{itemize}
+
+Estos valores son directamente integrables en pipelines de logging, sistemas de visualización en tiempo real y algoritmos de fusión multimodal implementados en módulos superiores de la arquitectura.
+
+\subsection{Ejemplo de uso}
+A continuación se presenta un fragmento de código ilustrativo del uso típico del módulo:
+
+\begin{lstlisting}[language=Python, caption={Ejemplo de invocación de funciones del módulo analyzer.py}, label={lst:analyzer_example}]
+from analyzer import (
+    calculate_rmssd, calculate_sdnn, calculate_stress_score,
+    calculate_sleep_quality, analyze_sleep_transitions,
+    detect_sleep_onset, detect_wake_periods
+)
+
+# Datos de ejemplo: IBI en milisegundos
+ibi = [800, 810, 795, 805, 790]
+rmssd = calculate_rmssd(ibi)
+sdnn = calculate_sdnn(ibi)
+stress = calculate_stress_score(hr=72, rmssd=rmssd, sdnn=sdnn)
+
+sleep_states = [0, 0, 1, 1, 3, 3, 2, 2, 1, 0]
+onset = detect_sleep_onset(sleep_states)
+wake_periods = detect_wake_periods(sleep_states)
+quality = calculate_sleep_quality(sleep_states)
+
+print(f"RMSSD: {rmssd:.2f} ms")
+print(f"Stress Score: {stress:.1f}/100")
+print(f"Sleep Onset: minuto {onset}")
+print(f"Sleep Quality: {quality:.1f}/100")
+\end{lstlisting}
+
+\subsection{Referencias sugeridas}
+Para fundamentar las métricas y umbrales empleados en este módulo, se recomienda consultar:
+
+\begin{itemize}
+  \item Task Force of the European Society of Cardiology and the North American Society of Pacing and Electrophysiology. ``Heart rate variability: standards of measurement, physiological interpretation and clinical use.'' \emph{Circulation}, 1996.
+  \item Ohayon et al. ``National Sleep Foundation's sleep quality recommendations.'' \emph{Sleep Health}, 2017.
+\end{itemize}
+
+% Fin de la sección
+
+\end{document}
