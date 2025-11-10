@@ -1251,4 +1251,116 @@ El sistema implementa múltiples capas de manejo de errores para garantizar oper
     \item El destructor de la clase asegura que incluso si el programa termina abruptamente, se ejecute la limpieza de recursos y la parada de emergencia de válvulas.
 \end{itemize}
 
+\newgeometry{left=1cm, right=0cm, top=2cm, bottom=2cm}
+\thispagestyle{empty}
+
+\begin{figure}[htbp]
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[
+    node distance=1.0cm and 0.6cm,
+    block/.style={rectangle, draw, fill=blue!18, text width=2.2cm, text centered, rounded corners, minimum height=0.8cm, font=\scriptsize},
+    input/.style={rectangle, draw, fill=green!18, text width=2.2cm, text centered, rounded corners, minimum height=0.7cm, font=\scriptsize},
+    output/.style={rectangle, draw, fill=orange!18, text width=2.2cm, text centered, rounded corners, minimum height=0.7cm, font=\scriptsize},
+    arrow/.style={-Stealth, line width=0.7pt}
+]
+
+% Fila 1 (sensores, izquierda a derecha)
+\node[input] (max) at (0,0) {MAX30102\\{\tiny HR / SpO2 / Ambient}};
+\node[input, right=of max] (mma) {MMA8452Q\\{\tiny Acelerómetro}};
+\node[input, right=of mma] (htu) {HTU21D\\{\tiny Temp cama / Humedad}};
+\node[input, right=of htu] (aht) {AHT10 (opt.)\\{\tiny Temp corporal}};
+\node[input, right=of aht] (presence) {presence\_detector\\{\tiny Presencia}};
+
+% Fila 2 (fusión)
+\node[block, below=1.6cm of mma] (fusion) {process\_sensor\_data\\{\tiny fusión + presencia + historiales}};
+
+% Conexiones sensores -> fusión
+\draw[arrow] (max) -- (fusion);
+\draw[arrow] (mma) -- (fusion);
+\draw[arrow] (htu) -- (fusion);
+\draw[arrow] (aht) -- (fusion);
+\draw[arrow] (presence) -- (fusion);
+
+% Historiales (izquierda centro)
+\node[output, left=1.0cm of fusion] (store) {Historiales\\{\tiny hr / activity / sleep / temps}};
+\draw[arrow] (fusion.west) -- (store.east);
+
+% Detección de sueño (izq medio, serpiente)
+\node[block, below=1.6cm of store, xshift=-0.6cm] (sleepdet) {detect\_sleep\_state\\{\tiny actividad + HR}};
+\draw[arrow] (fusion) |- (sleepdet);
+
+% Análisis avanzado (centro derecha)
+\node[block, right=2.9cm of sleepdet] (analyzer) {perform\_advanced\_analysis\\{\tiny HRV / stress / quality}};
+\draw[arrow] (sleepdet) -- ++(0.4cm,0) |- (analyzer.west);
+\draw[arrow] (store.south) -- ++(0,-0.5cm) -| (analyzer.west);
+
+% Cálculo temperatura objetivo (abajo-centro)
+\node[block, below=1.6cm of analyzer, xshift=-0.1cm] (target) {calculate\_target\_temperature\\{\tiny comfort + ambient + body}};
+\draw[arrow] (analyzer) -- (target);
+
+% Tendencias térmicas (derecha de target)
+\node[block, right=2.1cm of target] (trend) {analyze\_thermal\_trends\\{\tiny predicción / varianza}};
+\draw[arrow] (target) -- (trend);
+
+% Control científico (centro inferior)
+\node[block, below=1.6cm of trend, xshift=-0.4cm] (apply) {apply\_scientific\_thermal\_control\\{\tiny predictivo + tolerancias}};
+\draw[arrow] (trend) -- (apply);
+\draw[arrow] (target) |- (apply);
+
+% Decisión de válvulas (derecha)
+\node[block, right=3.2cm of apply] (control) {control\_valves\\{\tiny heat / cool / maintain}};
+\draw[arrow] (apply) -- (control);
+
+% Set valves -> actuadores
+\node[block, right=of control] (setvalve) {set\_valve\_states\\{\tiny safety: no ambas}};
+\draw[arrow] (control) -- (setvalve);
+
+\node[block, below=0.7cm of setvalve] (gpio) {GPIO / Relés\\{\tiny HOT / COLD / SAFETY}};
+\draw[arrow] (setvalve) -- (gpio);
+
+\node[output, below=0.7cm of gpio] (actuators) {Actuadores\\{\tiny Válvulas / Seguridad}};
+\draw[arrow] (gpio) -- (actuators);
+
+% Emergency stop (izq de actuadores)
+\node[block, left=2.0cm of actuators] (emergency) {emergency\_stop\\{\tiny cerrar todo}};
+\draw[arrow] (fusion.south) |- (emergency.north);
+\draw[arrow, red, thick] (emergency.east) -- ++(0.6cm,0) |- (gpio.west);
+
+% Reporte final (abajo-izq)
+\node[block, below=1.8cm of sleepdet, xshift=-0.1cm] (report) {generate\_sleep\_report\\{\tiny resumen / fragmentación / recomendaciones}};
+\draw[arrow] (analyzer.south) -- ++(0,-0.4cm) -| (report.north);
+\draw[arrow] (store.south) -- ++(0,-0.6cm) -| (report.east);
+
+% Bucle de monitoreo (arriba-izq)
+\node[input, above=0.6cm of max, xshift=-0.3cm] (start) {start\_monitoring\\{\tiny bucle 2s}};
+\draw[arrow] (start) -- ++(0.6cm,0) |- (fusion.north);
+
+% Conexiones auxiliares (discretas, en línea)
+\node[input, below=0.4cm of target] (bodytemp) {{\tiny (opt)}\\AHT10 body};
+\draw[arrow, dashed] (bodytemp) -- (target);
+
+\node[input, below=0.4cm of analyzer] (hrvals) {{\tiny (opt)}\\HR history};
+\draw[arrow, dashed] (hrvals) -- (analyzer);
+
+% Leyenda compacta
+\node[font=\footnotesize, anchor=north] at ([yshift=-1.1cm]actuators.south) {
+  \begin{tabular}{l}
+    Azul = Módulos / funciones \\
+    Verde = Sensores / Entradas \\
+    Naranja = Salidas / Historiales
+  \end{tabular}
+};
+
+% Título muy compacto
+\node[font=\normalsize\bfseries, anchor=south] at ([yshift=0.25cm]max.north -| current bounding box.center) {Smart Bed -- Diagrama (estrecho)};
+
+\end{tikzpicture}%
+}
+\caption{Diagrama compacto (serpiente) del sistema de cama inteligente — versión ajustada para ancho de página.}
+\label{fig:smartbed_diagram_narrow}
+\end{figure}
+\restoregeometry
+
+
 \end{document}

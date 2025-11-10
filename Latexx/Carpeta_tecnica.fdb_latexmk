@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1762794453.37863 "c:/Users/ezequ/OneDrive/Documentos/2025_722A_g1/Latexx/Carpeta_tecnica.tex" "Carpeta_tecnica.pdf" "Carpeta_tecnica" 1762794461.19824 0
+["pdflatex"] 1762796221.74355 "c:/Users/ezequ/OneDrive/Documentos/2025_722A_g1/Latexx/Carpeta_tecnica.tex" "Carpeta_tecnica.pdf" "Carpeta_tecnica" 1762796228.77731 0
   "C:/Users/ezequ/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1762545211 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/ezequ/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0700.pk" 1762534082 17380 ff0c9402c3fe7fd6e61dd361b08e9eb0 ""
   "C:/Users/ezequ/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/ecbx0800.pk" 1762534120 19872 e3460d2a3a9d1bd6af858083e85da536 ""
@@ -227,11 +227,11 @@
   "C:/Users/ezequ/AppData/Local/Programs/MiKTeX/tex/latex/translations/translations.sty" 1644048522 44247 2188b95d0ee74e31eca4d316263c58a7 ""
   "C:/Users/ezequ/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/ezequ/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Carpeta_tecnica.aux" 1762794460 15682 7bd2570c771bb87e7b5bfc9f4c5d16b4 "pdflatex"
-  "Carpeta_tecnica.lof" 1762794460 1391 c87545c4efd6acf2ad73577f6e681289 "pdflatex"
-  "Carpeta_tecnica.out" 1762794460 11936 e30e66d38ffccdc84ab651cc1b4e8242 "pdflatex"
-  "Carpeta_tecnica.tex" 1762794452 82260 b9a07a94aa87afa4b5581b2af90b12a2 ""
-  "Carpeta_tecnica.toc" 1762794460 8053 984430fdeebac8edd977fffc9a24c47c "pdflatex"
+  "Carpeta_tecnica.aux" 1762796227 16075 d76e2d97cda0ac144abfd48b7607ff3d "pdflatex"
+  "Carpeta_tecnica.lof" 1762796227 1572 80cf941d211b6c43eae4549729015725 "pdflatex"
+  "Carpeta_tecnica.out" 1762796227 11936 e30e66d38ffccdc84ab651cc1b4e8242 "pdflatex"
+  "Carpeta_tecnica.tex" 1762796213 87268 06f863c10e43bfa17cefa8d12c82b2b5 ""
+  "Carpeta_tecnica.toc" 1762796227 8053 984430fdeebac8edd977fffc9a24c47c "pdflatex"
   "Contacto/chrome.png" 1762545180 24560 1ed931e0335b2d4f8f80d427078d0c28 ""
   "Contacto/github.png" 1762545180 14902 316bbfd36d47e479bf3ecc19f79b8835 ""
   "Contacto/gmail.png" 1762545180 7267 077bfac090afbd4755061ae792409510 ""
@@ -243,7 +243,7 @@
   "Modelos 3D/Brazalete2.png" 1762545180 327665 055362f5d161f3104a8fd023b3cbd944 ""
   "Modelos 3D/bedmodel_bottom.png" 1762545180 347166 ab111ad4f4a811194e2c43b51799770a ""
   "Modelos 3D/brazalete3.png" 1762545180 481105 26f9dd2ded0c0a7b0304fc485bc742c9 ""
-  "c:/Users/ezequ/OneDrive/Documentos/2025_722A_g1/Latexx/Carpeta_tecnica.tex" 1762794452 82260 b9a07a94aa87afa4b5581b2af90b12a2 ""
+  "c:/Users/ezequ/OneDrive/Documentos/2025_722A_g1/Latexx/Carpeta_tecnica.tex" 1762796213 87268 06f863c10e43bfa17cefa8d12c82b2b5 ""
   "fotos/Brazaletes.png" 1762545180 887231 03ba5fee5a28fb7b77060c9b54be267e ""
   "fotos/brazalete.png" 1762545180 950314 e7edb3570b0b00165a78d78419e333e5 ""
   "fotos/tanque.png" 1762545180 614943 1cd4da37a22c82b4330cacfa5cb7d62b ""
