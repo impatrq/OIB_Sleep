@@ -1,5 +1,5 @@
 \documentclass{report}
-\usepackage{graphicx} % Para imágenes
+\usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage[top=2cm]{geometry}
 \usepackage{tikz}
@@ -10,9 +10,9 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{xcolor}
-\usepackage{textgreek} % Para soporte de letras griegas en texto
-\usepackage{listings} % Para incluir código fuente
-\usepackage{float} % Para posicionar figuras exactamente donde se colocan
+\usepackage{textgreek}
+\usepackage{listings}
+\usepackage{float}
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{siunitx}
@@ -97,26 +97,26 @@
 
 % ---------- Integrante 1 ----------
 \begin{minipage}{0.45\linewidth}
-    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/chrome.png}
+    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/linkedin.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
     \textbf{\Large Bourlot Ezequiel} \\[4pt]
     \includegraphics[height=0.8cm]{Contacto/instagram.png} \hspace{0.3cm}
-    \includegraphics[height=0.8cm]{Contacto/chrome.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/linkedin.png} \hspace{0.3cm}
     \includegraphics[height=0.8cm]{Contacto/gmail.png} \\[10pt]
     \textit{\large Encargado del diseño electrónico, programación y control térmico del sistema.}
 \end{minipage}
 
 % ---------- Integrante 2 ----------
 \begin{minipage}{0.45\linewidth}
-    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/chrome.png}
+    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/linkedin.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
     \textbf{\Large Federico Domoñi} \\[4pt]
     \includegraphics[height=0.8cm]{Contacto/instagram.png} \hspace{0.3cm}
-    \includegraphics[height=0.8cm]{Contacto/chrome.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/linkedin.png} \hspace{0.3cm}
     \includegraphics[height=0.8cm]{Contacto/gmail.png} \\[10pt]
     \textit{\large Responsable del diseño mecánico y estructura del sistema de tanques.}
 \end{minipage}
@@ -125,26 +125,26 @@
 
 % ---------- Integrante 3 ----------
 \begin{minipage}{0.45\linewidth}
-    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/chrome.png}
+    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/linkedin.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
     \textbf{\Large Fernández Lorenzo} \\[4pt]
     \includegraphics[height=0.8cm]{Contacto/instagram.png} \hspace{0.3cm}
-    \includegraphics[height=0.8cm]{Contacto/chrome.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/linkedin.png} \hspace{0.3cm}
     \includegraphics[height=0.8cm]{Contacto/gmail.png} \\[10pt]
     \textit{\large Encargado de documentación técnica, cálculos térmicos y presentación.}
 \end{minipage}
 
 % ---------- Integrante 4 ----------
 \begin{minipage}{0.45\linewidth}
-    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/chrome.png}
+    \includegraphics[width=\linewidth, height=0.6\textheight, keepaspectratio]{Contacto/linkedin.png}
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
     \textbf{\Large Vignetta Joaquín} \\[4pt]
     \includegraphics[height=0.8cm]{Contacto/instagram.png} \hspace{0.3cm}
-    \includegraphics[height=0.8cm]{Contacto/chrome.png} \hspace{0.3cm}
+    \includegraphics[height=0.8cm]{Contacto/linkedin.png} \hspace{0.3cm}
     \includegraphics[height=0.8cm]{Contacto/gmail.png} \\[10pt]
     \textit{\large Responsable del diseño visual, edición de video y comunicación del proyecto.}
 \end{minipage}
@@ -416,8 +416,15 @@ Toda la información obtenida por estos sensores es procesada por la ESP32 Mini.
 \subsection{Bombas de agua}
 El circuito de bombeo está formado por dos módulos idénticos que permiten la conmutación y alimentación de las bombas mediante control digital desde la Raspberry Pi, cada módulo integra un relé electromecánico modelo SRD-12VDC-SL-C accionado a 12 V para aislar la carga de la lógica de control, un transistor BC337 empleado como interruptor de baja impedancia para manejar la bobina del relé desde un pin GPIO de la Raspberry Pi y los componentes de protección y polarización necesarios para un funcionamiento seguro y fiable, entre estos se consideran la resistencia de base para limitar la corriente hacia la base del BC337, un diodo 1N4007 conectado en paralelo con la bobina del relé para absorber picos inductivos y proteger el transistor.
 
+\begin{figure}[H]
+\centering
+\includegraphics[height=12cm]{Esquematicos/bombarele.png}
+\caption{Esquemático del circuito de las bombas de agua}
+\label{fig:Esquematicobombarele}
+\end{figure}
 
-\chapter[\Large Código]{Código}
+
+\chapter[\Large Código]{Código}      
 
 \section[\large Resumen]{\Huge Resumen}
 Una de las partes más vitales del proyecto es el desarrollo del código, ya que representa el núcleo lógico que permite la comunicación, el procesamiento de datos y la toma de decisiones dentro del sistema. La arquitectura del software se divide en cuatro módulos principales, cada uno con una función específica y complementaria que, en conjunto, garantizan el correcto funcionamiento de la cama inteligente.

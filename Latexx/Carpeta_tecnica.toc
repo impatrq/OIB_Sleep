@@ -29,62 +29,62 @@
 \contentsline {section}{\numberline {4.1}\large Resumen}{24}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Pulsera}{24}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Bombas de agua}{25}{subsection.4.1.2}%
-\contentsline {chapter}{\numberline {5}\Large Código}{26}{chapter.5}%
-\contentsline {section}{\numberline {5.1}\large Resumen}{26}{section.5.1}%
-\contentsline {section}{\numberline {5.2}\large Explicación Técnica Detallada - Presence Detector}{27}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Arquitectura General del Sistema}{27}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Clase Principal: BedPresenceDetector}{27}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}Método Principal: \texttt {detect\_presence()}}{28}{subsection.5.2.3}%
-\contentsline {paragraph}{1. Indicador Térmico (máximo 40 puntos)}{29}{section*.6}%
-\contentsline {paragraph}{2. Indicador de Movimiento (máximo 25 puntos)}{29}{section*.7}%
-\contentsline {paragraph}{3. Indicador Cardiovascular (máximo 40 puntos)}{29}{section*.8}%
-\contentsline {paragraph}{4. Indicador de Contacto (máximo 20 puntos)}{29}{section*.9}%
-\contentsline {paragraph}{5. Indicador Temporal (máximo 10 puntos)}{30}{section*.10}%
-\contentsline {subsection}{\numberline {5.2.4}Mecanismo de Histéresis}{30}{subsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.2.5}Gestión del Baseline Térmico}{31}{subsection.5.2.5}%
-\contentsline {subsection}{\numberline {5.2.6}Métodos de Utilidad y Debugging}{31}{subsection.5.2.6}%
-\contentsline {subsection}{\numberline {5.2.7}Consideraciones de Diseño}{31}{subsection.5.2.7}%
-\contentsline {subsection}{\numberline {5.2.8}Retorno del Método Principal}{32}{subsection.5.2.8}%
-\contentsline {section}{\numberline {5.3}Módulo de análisis de señales fisiológicas: \texttt {analyzer.py}}{34}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Arquitectura general}{34}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Funciones principales}{34}{subsection.5.3.2}%
-\contentsline {subsection}{\numberline {5.3.3}Entradas y salidas}{36}{subsection.5.3.3}%
-\contentsline {subsection}{\numberline {5.3.4}Supuestos y consideraciones temporales}{36}{subsection.5.3.4}%
-\contentsline {subsection}{\numberline {5.3.5}Casos límite y estrategias de validación}{37}{subsection.5.3.5}%
-\contentsline {subsection}{\numberline {5.3.6}Recomendaciones para uso en producción}{37}{subsection.5.3.6}%
-\contentsline {subsection}{\numberline {5.3.7}Formato de salida y consumo de resultados}{37}{subsection.5.3.7}%
-\contentsline {subsection}{\numberline {5.3.8}Ejemplo de uso}{38}{subsection.5.3.8}%
-\contentsline {subsection}{\numberline {5.3.9}Referencias sugeridas}{38}{subsection.5.3.9}%
-\contentsline {section}{\numberline {5.4}Explicación Detallada del Bed Controller}{39}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Fundamento Científico}{40}{subsection.5.4.1}%
-\contentsline {subsection}{\numberline {5.4.2}Arquitectura de Sensores}{40}{subsection.5.4.2}%
-\contentsline {subsubsection}{Sensor MAX30102}{40}{section*.17}%
-\contentsline {subsubsection}{Sensor HTU21D}{41}{section*.18}%
-\contentsline {subsubsection}{Sensor AHT10}{41}{section*.19}%
-\contentsline {subsubsection}{Acelerómetro MMA8452Q}{41}{section*.20}%
-\contentsline {subsection}{\numberline {5.4.3}Detección de Estados de Sueño}{42}{subsection.5.4.3}%
-\contentsline {subsubsection}{Clasificación por Actividad}{42}{section*.21}%
-\contentsline {subsubsection}{Clasificación por Frecuencia Cardíaca}{42}{section*.22}%
-\contentsline {subsubsection}{Fusión de Datos}{42}{section*.23}%
-\contentsline {subsection}{\numberline {5.4.4}Sistema de Control de Temperatura}{43}{subsection.5.4.4}%
-\contentsline {subsubsection}{Cálculo de Temperatura Objetivo}{43}{section*.24}%
-\contentsline {subsubsection}{Ajustes por Temperatura Ambiente}{43}{section*.25}%
-\contentsline {subsubsection}{Compensación por Temperatura Corporal}{44}{section*.26}%
-\contentsline {subsubsection}{Control Predictivo}{44}{section*.27}%
-\contentsline {subsubsection}{Análisis de Estabilidad Térmica}{44}{section*.28}%
-\contentsline {subsubsection}{Suavizado de Transiciones}{44}{section*.29}%
-\contentsline {subsection}{\numberline {5.4.5}Control de Válvulas}{45}{subsection.5.4.5}%
-\contentsline {subsubsection}{Lógica de Control}{45}{section*.30}%
-\contentsline {subsubsection}{Ajuste Dinámico de Tolerancia}{45}{section*.31}%
-\contentsline {subsubsection}{Medidas de Seguridad}{45}{section*.32}%
-\contentsline {subsubsection}{Algoritmo de Confianza}{46}{section*.33}%
-\contentsline {subsection}{\numberline {5.4.6}Análisis Avanzado de Sueño}{46}{subsection.5.4.6}%
-\contentsline {subsubsection}{Variabilidad de Frecuencia Cardíaca (HRV)}{46}{section*.34}%
-\contentsline {subsubsection}{Puntuación de Estrés}{46}{section*.35}%
-\contentsline {subsubsection}{Calidad de Sueño}{47}{section*.36}%
-\contentsline {subsubsection}{Detección de Inicio de Sueño}{47}{section*.37}%
-\contentsline {subsubsection}{Análisis de Fragmentación de Sueño}{47}{section*.38}%
-\contentsline {subsubsection}{Detección de Despertares Nocturnos}{48}{section*.39}%
-\contentsline {subsubsection}{Reporte Final de Sueño}{48}{section*.40}%
-\contentsline {subsection}{\numberline {5.4.7}Integración y Flujo de Ejecución}{48}{subsection.5.4.7}%
-\contentsline {subsection}{\numberline {5.4.8}Manejo de Errores y Robustez}{49}{subsection.5.4.8}%
+\contentsline {chapter}{\numberline {5}\Large Código}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}\large Resumen}{27}{section.5.1}%
+\contentsline {section}{\numberline {5.2}\large Explicación Técnica Detallada - Presence Detector}{28}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Arquitectura General del Sistema}{28}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Clase Principal: BedPresenceDetector}{28}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Método Principal: \texttt {detect\_presence()}}{29}{subsection.5.2.3}%
+\contentsline {paragraph}{1. Indicador Térmico (máximo 40 puntos)}{30}{section*.6}%
+\contentsline {paragraph}{2. Indicador de Movimiento (máximo 25 puntos)}{30}{section*.7}%
+\contentsline {paragraph}{3. Indicador Cardiovascular (máximo 40 puntos)}{30}{section*.8}%
+\contentsline {paragraph}{4. Indicador de Contacto (máximo 20 puntos)}{30}{section*.9}%
+\contentsline {paragraph}{5. Indicador Temporal (máximo 10 puntos)}{31}{section*.10}%
+\contentsline {subsection}{\numberline {5.2.4}Mecanismo de Histéresis}{31}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Gestión del Baseline Térmico}{32}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Métodos de Utilidad y Debugging}{32}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Consideraciones de Diseño}{32}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}Retorno del Método Principal}{33}{subsection.5.2.8}%
+\contentsline {section}{\numberline {5.3}Módulo de análisis de señales fisiológicas: \texttt {analyzer.py}}{35}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Arquitectura general}{35}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Funciones principales}{35}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Entradas y salidas}{37}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}Supuestos y consideraciones temporales}{37}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}Casos límite y estrategias de validación}{38}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5.3.6}Recomendaciones para uso en producción}{38}{subsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.3.7}Formato de salida y consumo de resultados}{38}{subsection.5.3.7}%
+\contentsline {subsection}{\numberline {5.3.8}Ejemplo de uso}{39}{subsection.5.3.8}%
+\contentsline {subsection}{\numberline {5.3.9}Referencias sugeridas}{39}{subsection.5.3.9}%
+\contentsline {section}{\numberline {5.4}Explicación Detallada del Bed Controller}{40}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Fundamento Científico}{41}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Arquitectura de Sensores}{41}{subsection.5.4.2}%
+\contentsline {subsubsection}{Sensor MAX30102}{41}{section*.17}%
+\contentsline {subsubsection}{Sensor HTU21D}{42}{section*.18}%
+\contentsline {subsubsection}{Sensor AHT10}{42}{section*.19}%
+\contentsline {subsubsection}{Acelerómetro MMA8452Q}{42}{section*.20}%
+\contentsline {subsection}{\numberline {5.4.3}Detección de Estados de Sueño}{43}{subsection.5.4.3}%
+\contentsline {subsubsection}{Clasificación por Actividad}{43}{section*.21}%
+\contentsline {subsubsection}{Clasificación por Frecuencia Cardíaca}{43}{section*.22}%
+\contentsline {subsubsection}{Fusión de Datos}{43}{section*.23}%
+\contentsline {subsection}{\numberline {5.4.4}Sistema de Control de Temperatura}{44}{subsection.5.4.4}%
+\contentsline {subsubsection}{Cálculo de Temperatura Objetivo}{44}{section*.24}%
+\contentsline {subsubsection}{Ajustes por Temperatura Ambiente}{44}{section*.25}%
+\contentsline {subsubsection}{Compensación por Temperatura Corporal}{45}{section*.26}%
+\contentsline {subsubsection}{Control Predictivo}{45}{section*.27}%
+\contentsline {subsubsection}{Análisis de Estabilidad Térmica}{45}{section*.28}%
+\contentsline {subsubsection}{Suavizado de Transiciones}{45}{section*.29}%
+\contentsline {subsection}{\numberline {5.4.5}Control de Válvulas}{46}{subsection.5.4.5}%
+\contentsline {subsubsection}{Lógica de Control}{46}{section*.30}%
+\contentsline {subsubsection}{Ajuste Dinámico de Tolerancia}{46}{section*.31}%
+\contentsline {subsubsection}{Medidas de Seguridad}{46}{section*.32}%
+\contentsline {subsubsection}{Algoritmo de Confianza}{47}{section*.33}%
+\contentsline {subsection}{\numberline {5.4.6}Análisis Avanzado de Sueño}{47}{subsection.5.4.6}%
+\contentsline {subsubsection}{Variabilidad de Frecuencia Cardíaca (HRV)}{47}{section*.34}%
+\contentsline {subsubsection}{Puntuación de Estrés}{47}{section*.35}%
+\contentsline {subsubsection}{Calidad de Sueño}{48}{section*.36}%
+\contentsline {subsubsection}{Detección de Inicio de Sueño}{48}{section*.37}%
+\contentsline {subsubsection}{Análisis de Fragmentación de Sueño}{48}{section*.38}%
+\contentsline {subsubsection}{Detección de Despertares Nocturnos}{49}{section*.39}%
+\contentsline {subsubsection}{Reporte Final de Sueño}{49}{section*.40}%
+\contentsline {subsection}{\numberline {5.4.7}Integración y Flujo de Ejecución}{49}{subsection.5.4.7}%
+\contentsline {subsection}{\numberline {5.4.8}Manejo de Errores y Robustez}{50}{subsection.5.4.8}%
