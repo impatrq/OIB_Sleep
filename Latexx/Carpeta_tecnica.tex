@@ -479,6 +479,19 @@ Este diseño garantiza una integración completa entre la etapa de sensado y la 
 \label{fig:PCBRaspberryPi}
 \end{figure}
 
+\subsection{Celdas de Peltier y Coolers}
+
+El sistema de enfriamiento del tanque de agua fría se basa en el uso de \textbf{celdas Peltier} combinadas con \textbf{coolers} que actúan como disipadores de calor para evitar el sobrecalentamiento de los módulos. Este conjunto permite mantener una temperatura baja y estable dentro del tanque, garantizando un rendimiento eficiente y seguro durante el funcionamiento.
+
+En total, el sistema cuenta con \textbf{seis celdas Peltier modelo TEC1-12706}, seleccionadas por su capacidad de enfriar de manera efectiva mediante el principio termoeléctrico. Estas celdas están dispuestas estratégicamente para maximizar la transferencia térmica y optimizar la distribución del frío dentro del tanque.
+
+Cada celda se encuentra acompañada por su respectivo \textbf{cooler y disipador de aluminio}, cuya función principal es evacuar el calor generado en la cara caliente de la Peltier, asegurando así su correcto desempeño y prolongando su vida útil.
+
+La alimentación eléctrica del sistema se realiza mediante una \textbf{fuente de 12V y 40Ah}, modelo \textbf{FG-40M}, la cual provee la corriente necesaria para el funcionamiento simultáneo de las seis celdas. Las conexiones se establecen en \textbf{paralelo}, lo que permite mantener una tensión constante en cada módulo y equilibrar el consumo total del sistema, garantizando estabilidad y eficiencia energética.
+
+Este diseño proporciona un método de refrigeración controlado, confiable y adaptable, ideal para mantener las condiciones térmicas requeridas por el sistema principal del proyecto.
+
+
 \chapter[\Large Código]{Código}      
 
 \section[\large Resumen]{\Huge Resumen}
