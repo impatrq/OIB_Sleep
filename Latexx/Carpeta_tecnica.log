@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.7)  10 NOV 2025 14:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.7)  12 NOV 2025 11:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1050,14 +1050,14 @@ Package hyperref Info: Link coloring OFF on input line 51.
 File: translations-basic-dictionary-spanish.trsl (spanish translation file `translations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' for `spanish'. on input line 51.
-<logo_OIB_croped.PNG, id=246, 309.155pt x 396.48125pt>
+<logo_OIB_croped.PNG, id=254, 309.155pt x 396.48125pt>
 File: logo_OIB_croped.PNG Graphic file (type png)
 <use logo_OIB_croped.PNG>
 Package pdftex.def Info: logo_OIB_croped.PNG  used on input line 53.
 (pdftex.def)             Requested size: 312.9803pt x 401.42296pt.
 
 
-<logo.png, id=248, 678.535pt x 192.72pt>
+<logo.png, id=256, 678.535pt x 192.72pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
 Package pdftex.def Info: logo.png  used on input line 63.
@@ -1137,22 +1137,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Cap\'{\i }tulo 1.
-<Contacto/instagram.png, id=365, 385.44pt x 385.44pt>
+<Contacto/instagram.png, id=387, 385.44pt x 385.44pt>
 File: Contacto/instagram.png Graphic file (type png)
 <use Contacto/instagram.png>
 Package pdftex.def Info: Contacto/instagram.png  used on input line 78.
 (pdftex.def)             Requested size: 85.35826pt x 85.35579pt.
-<Contacto/gmail.png, id=367, 385.44pt x 385.44pt>
+<Contacto/gmail.png, id=389, 385.44pt x 385.44pt>
 File: Contacto/gmail.png Graphic file (type png)
 <use Contacto/gmail.png>
 Package pdftex.def Info: Contacto/gmail.png  used on input line 82.
 (pdftex.def)             Requested size: 85.35826pt x 85.35579pt.
-<Contacto/chrome.png, id=369, 385.44pt x 385.44pt>
+<Contacto/chrome.png, id=391, 385.44pt x 385.44pt>
 File: Contacto/chrome.png Graphic file (type png)
 <use Contacto/chrome.png>
 Package pdftex.def Info: Contacto/chrome.png  used on input line 86.
 (pdftex.def)             Requested size: 85.35826pt x 85.35579pt.
-<Contacto/github.png, id=371, 385.44pt x 385.44pt>
+<Contacto/github.png, id=393, 385.44pt x 385.44pt>
 File: Contacto/github.png Graphic file (type png)
 <use Contacto/github.png>
 Package pdftex.def Info: Contacto/github.png  used on input line 90.
@@ -1162,7 +1162,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--92
 
  []
 
-<Contacto/linkedin.png, id=372, 225.84375pt x 225.84375pt>
+<Contacto/linkedin.png, id=394, 225.84375pt x 225.84375pt>
 File: Contacto/linkedin.png Graphic file (type png)
 <use Contacto/linkedin.png>
 Package pdftex.def Info: Contacto/linkedin.png  used on input line 100.
@@ -1291,57 +1291,57 @@ Overfull \vbox (152.30287pt too high) has occurred while \output is active []
 
 
 [8]
-<lenguajes/html-5.png, id=398, 411.136pt x 411.136pt>
+<lenguajes/html-5.png, id=420, 411.136pt x 411.136pt>
 File: lenguajes/html-5.png Graphic file (type png)
 <use lenguajes/html-5.png>
 Package pdftex.def Info: lenguajes/html-5.png  used on input line 183.
 (pdftex.def)             Requested size: 11.37997pt x 11.38092pt.
-<lenguajes/css-3.png, id=399, 411.136pt x 411.136pt>
+<lenguajes/css-3.png, id=421, 411.136pt x 411.136pt>
 File: lenguajes/css-3.png Graphic file (type png)
 <use lenguajes/css-3.png>
 Package pdftex.def Info: lenguajes/css-3.png  used on input line 184.
 (pdftex.def)             Requested size: 11.37997pt x 11.38092pt.
-<lenguajes/js.png, id=400, 385.44pt x 385.44pt>
+<lenguajes/js.png, id=422, 385.44pt x 385.44pt>
 File: lenguajes/js.png Graphic file (type png)
 <use lenguajes/js.png>
 Package pdftex.def Info: lenguajes/js.png  used on input line 185.
 (pdftex.def)             Requested size: 11.38037pt x 11.38092pt.
-<lenguajes/python.png, id=401, 1204.5pt x 1204.5pt>
+<lenguajes/python.png, id=423, 1204.5pt x 1204.5pt>
 File: lenguajes/python.png Graphic file (type png)
 <use lenguajes/python.png>
 Package pdftex.def Info: lenguajes/python.png  used on input line 186.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<lenguajes/c-.png, id=402, 385.44pt x 385.44pt>
+<lenguajes/c-.png, id=424, 385.44pt x 385.44pt>
 File: lenguajes/c-.png Graphic file (type png)
 <use lenguajes/c-.png>
 Package pdftex.def Info: lenguajes/c-.png  used on input line 187.
 (pdftex.def)             Requested size: 11.38037pt x 11.38092pt.
-<lenguajes/LaTeX_logo.svg.png, id=403, 1204.5pt x 501.875pt>
+<lenguajes/LaTeX_logo.svg.png, id=425, 1204.5pt x 501.875pt>
 File: lenguajes/LaTeX_logo.svg.png Graphic file (type png)
 <use lenguajes/LaTeX_logo.svg.png>
 Package pdftex.def Info: lenguajes/LaTeX_logo.svg.png  used on input line 188.
 (pdftex.def)             Requested size: 27.31143pt x 11.38092pt.
-<programas/vscode.png, id=404, 1204.5pt x 1204.5pt>
+<programas/vscode.png, id=426, 1204.5pt x 1204.5pt>
 File: programas/vscode.png Graphic file (type png)
 <use programas/vscode.png>
 Package pdftex.def Info: programas/vscode.png  used on input line 193.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<programas/overleaf.png, id=405, 1204.5pt x 1204.5pt>
+<programas/overleaf.png, id=427, 1204.5pt x 1204.5pt>
 File: programas/overleaf.png Graphic file (type png)
 <use programas/overleaf.png>
 Package pdftex.def Info: programas/overleaf.png  used on input line 194.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<programas/PlatformIO.png, id=406, 1204.5pt x 1204.5pt>
+<programas/PlatformIO.png, id=428, 1204.5pt x 1204.5pt>
 File: programas/PlatformIO.png Graphic file (type png)
 <use programas/PlatformIO.png>
 Package pdftex.def Info: programas/PlatformIO.png  used on input line 195.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<programas/PI.png, id=407, 942.52126pt x 1204.5pt>
+<programas/PI.png, id=429, 942.52126pt x 1204.5pt>
 File: programas/PI.png Graphic file (type png)
 <use programas/PI.png>
 Package pdftex.def Info: programas/PI.png  used on input line 196.
 (pdftex.def)             Requested size: 8.90227pt x 11.38092pt.
-<programas/PowerShell.png, id=408, 250.9375pt x 250.9375pt>
+<programas/PowerShell.png, id=430, 250.9375pt x 250.9375pt>
 File: programas/PowerShell.png Graphic file (type png)
 <use programas/PowerShell.png>
 Package pdftex.def Info: programas/PowerShell.png  used on input line 197.
@@ -1360,47 +1360,47 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
 [9 <./lenguajes/html-5.png> <./lenguajes/css-3.png> <./lenguajes/js.png> <./lenguajes/python.png> <./lenguajes/c-.png> <./lenguajes/LaTeX_logo.svg.png> <./programas/vscode.png> <./programas/overleaf.png> <./programas/PlatformIO.png>]
-<programas/Ubuntu.png, id=425, 1027.84pt x 1027.84pt>
+<programas/Ubuntu.png, id=447, 1027.84pt x 1027.84pt>
 File: programas/Ubuntu.png Graphic file (type png)
 <use programas/Ubuntu.png>
 Package pdftex.def Info: programas/Ubuntu.png  used on input line 198.
 (pdftex.def)             Requested size: 11.37057pt x 11.38092pt.
-<programas/KiCad.png, id=426, 2569.6pt x 1050.92625pt>
+<programas/KiCad.png, id=448, 2569.6pt x 1050.92625pt>
 File: programas/KiCad.png Graphic file (type png)
 <use programas/KiCad.png>
 Package pdftex.def Info: programas/KiCad.png  used on input line 199.
 (pdftex.def)             Requested size: 27.79909pt x 11.38092pt.
-<programas/Blender.png, id=427, 250.9375pt x 204.765pt>
+<programas/Blender.png, id=449, 250.9375pt x 204.765pt>
 File: programas/Blender.png Graphic file (type png)
 <use programas/Blender.png>
 Package pdftex.def Info: programas/Blender.png  used on input line 200.
 (pdftex.def)             Requested size: 13.94519pt x 11.38092pt.
-<programas/AutoCAD.png, id=428, 152.06813pt x 161.10187pt>
+<programas/AutoCAD.png, id=450, 152.06813pt x 161.10187pt>
 File: programas/AutoCAD.png Graphic file (type png)
 <use programas/AutoCAD.png>
 Package pdftex.def Info: programas/AutoCAD.png  used on input line 201.
 (pdftex.def)             Requested size: 10.74098pt x 11.38092pt.
-<programas/Ultimaker_cura.png, id=429, 301.125pt x 301.125pt>
+<programas/Ultimaker_cura.png, id=451, 301.125pt x 301.125pt>
 File: programas/Ultimaker_cura.png Graphic file (type png)
 <use programas/Ultimaker_cura.png>
 Package pdftex.def Info: programas/Ultimaker_cura.png  used on input line 202.
 (pdftex.def)             Requested size: 17.07182pt x 17.06964pt.
-<programas/Fusion.png, id=430, 1204.5pt x 1204.5pt>
+<programas/Fusion.png, id=452, 1204.5pt x 1204.5pt>
 File: programas/Fusion.png Graphic file (type png)
 <use programas/Fusion.png>
 Package pdftex.def Info: programas/Fusion.png  used on input line 203.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<programas/Word.png, id=431, 1204.5pt x 1121.18875pt>
+<programas/Word.png, id=453, 1204.5pt x 1121.18875pt>
 File: programas/Word.png Graphic file (type png)
 <use programas/Word.png>
 Package pdftex.def Info: programas/Word.png  used on input line 204.
 (pdftex.def)             Requested size: 12.22214pt x 11.38092pt.
-<programas/Figma.png, id=432, 183.68625pt x 276.03125pt>
+<programas/Figma.png, id=454, 183.68625pt x 276.03125pt>
 File: programas/Figma.png Graphic file (type png)
 <use programas/Figma.png>
 Package pdftex.def Info: programas/Figma.png  used on input line 205.
 (pdftex.def)             Requested size: 7.57321pt x 11.38092pt.
-<programas/Ibis.jpg, id=433, 225.84375pt x 225.84375pt>
+<programas/Ibis.jpg, id=455, 225.84375pt x 225.84375pt>
 File: programas/Ibis.jpg Graphic file (type jpg)
 <use programas/Ibis.jpg>
 Package pdftex.def Info: programas/Ibis.jpg  used on input line 206.
@@ -1476,7 +1476,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 Cap\'{\i }tulo 3.
-<Modelos 3D/bedmodel_bottom.png, id=466, 712.6625pt x 487.8225pt>
+<Modelos 3D/bedmodel_bottom.png, id=488, 712.6625pt x 487.8225pt>
 File: Modelos 3D/bedmodel_bottom.png Graphic file (type png)
 <use Modelos 3D/bedmodel_bottom.png>
 Package pdftex.def Info: Modelos 3D/bedmodel_bottom.png  used on input line 293.
@@ -1497,7 +1497,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [15
 
 ]
-<Modelos 3D/Brazalete1.png, id=471, 548.0475pt x 857.2025pt>
+<Modelos 3D/Brazalete1.png, id=493, 548.0475pt x 857.2025pt>
 File: Modelos 3D/Brazalete1.png Graphic file (type png)
 <use Modelos 3D/Brazalete1.png>
 Package pdftex.def Info: Modelos 3D/Brazalete1.png  used on input line 304.
@@ -1521,7 +1521,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) h
                                                   \__shipout_drop_firstpage_...
 l.308 
        <./Modelos 3D/bedmodel_bottom.png>]
-<Modelos 3D/Brazalete2.png, id=477, 566.115pt x 900.36375pt>
+<Modelos 3D/Brazalete2.png, id=499, 566.115pt x 900.36375pt>
 File: Modelos 3D/Brazalete2.png Graphic file (type png)
 <use Modelos 3D/Brazalete2.png>
 Package pdftex.def Info: Modelos 3D/Brazalete2.png  used on input line 311.
@@ -1563,12 +1563,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) h
                                                   \__shipout_drop_firstpage_...
 l.316 \newpage
                <./Modelos 3D/Brazalete2.png>]
-<fotos/Brazaletes.png, id=488, 1049.9225pt x 1109.14375pt>
+<fotos/Brazaletes.png, id=510, 1049.9225pt x 1109.14375pt>
 File: fotos/Brazaletes.png Graphic file (type png)
 <use fotos/Brazaletes.png>
 Package pdftex.def Info: fotos/Brazaletes.png  used on input line 322.
 (pdftex.def)             Requested size: 269.33675pt x 284.52756pt.
-<fotos/brazalete.png, id=489, 963.6pt x 722.7pt>
+<fotos/brazalete.png, id=511, 963.6pt x 722.7pt>
 File: fotos/brazalete.png Graphic file (type png)
 <use fotos/brazalete.png>
 Package pdftex.def Info: fotos/brazalete.png  used on input line 331.
@@ -1592,7 +1592,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) h
                                                   \__shipout_drop_firstpage_...
 l.335 
        <./fotos/Brazaletes.png>]
-<Modelos 3D/brazalete3.png, id=496, 928.46875pt x 558.085pt>
+<Modelos 3D/brazalete3.png, id=518, 928.46875pt x 558.085pt>
 File: Modelos 3D/brazalete3.png Graphic file (type png)
 <use Modelos 3D/brazalete3.png>
 Package pdftex.def Info: Modelos 3D/brazalete3.png  used on input line 338.
@@ -1631,7 +1631,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) h
                                                   \__shipout_drop_firstpage_...
 l.346 
        <./fotos/brazalete.png> <./Modelos 3D/brazalete3.png>]
-<fotos/tanque.png, id=503, 1284.8pt x 963.6pt>
+<fotos/tanque.png, id=525, 1284.8pt x 963.6pt>
 File: fotos/tanque.png Graphic file (type png)
 <use fotos/tanque.png>
 Package pdftex.def Info: fotos/tanque.png  used on input line 351.
@@ -1698,35 +1698,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [24
 
 ]
-<Esquematicos/image.png, id=525, 636.87938pt x 279.29344pt>
+<Esquematicos/image.png, id=547, 636.87938pt x 279.29344pt>
 File: Esquematicos/image.png Graphic file (type png)
 <use Esquematicos/image.png>
 Package pdftex.def Info: Esquematicos/image.png  used on input line 411.
-(pdftex.def)             Requested size: 389.30244pt x 170.71652pt.
-<Esquematicos/bombarele.png, id=526, 533.74406pt x 544.28343pt>
-File: Esquematicos/bombarele.png Graphic file (type png)
-<use Esquematicos/bombarele.png>
-Package pdftex.def Info: Esquematicos/bombarele.png  used on input line 421.
-(pdftex.def)             Requested size: 334.819pt x 341.43306pt.
+(pdftex.def)             Requested size: 398.33858pt x 174.68582pt.
+<PCBs/PulseraPCB.jpg, id=548, 1106.1325pt x 791.95876pt>
+File: PCBs/PulseraPCB.jpg Graphic file (type jpg)
+<use PCBs/PulseraPCB.jpg>
+Package pdftex.def Info: PCBs/PulseraPCB.jpg  used on input line 420.
+(pdftex.def)             Requested size: 284.52756pt x 203.70508pt.
 
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 425.
-(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.98096pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.98096pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
-
-[25
-pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.425 
-       <./Esquematicos/image.png>]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
@@ -1739,18 +1721,50 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[26
+[25
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.427 
+      
 pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.427 \chapter
-              [\Large CÃ³digo]{CÃ³digo} <./Esquematicos/bombarele.png>]
-Cap\'{\i }tulo 5.
+l.427 
+       <./Esquematicos/image.png> <./PCBs/PulseraPCB.jpg>]
+<Esquematicos/bombarele.png, id=555, 533.74406pt x 544.28343pt>
+File: Esquematicos/bombarele.png Graphic file (type png)
+<use Esquematicos/bombarele.png>
+Package pdftex.def Info: Esquematicos/bombarele.png  used on input line 430.
+(pdftex.def)             Requested size: 390.62352pt x 398.33858pt.
+<PCBs/BombaPCB.jpg, id=556, 906.38625pt x 800.9925pt>
+File: PCBs/BombaPCB.jpg Graphic file (type jpg)
+<use PCBs/BombaPCB.jpg>
+Package pdftex.def Info: PCBs/BombaPCB.jpg  used on input line 437.
+(pdftex.def)             Requested size: 386.36389pt x 341.43306pt.
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 437.
+Package pdftex.def Info: logo.png  used on input line 441.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[26
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.3}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.441 
+       <./Esquematicos/bombarele.png>]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 446.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1760,17 +1774,26 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
 [27
-
-]
-Overfull \hbox (19.26457pt too wide) in paragraph at lines 442--442
-[]\T1/cmr/bx/n/24.88 Explicación Téc-ni-ca De-ta-lla-da - Pre-
- []
-
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.446 
+       <./PCBs/BombaPCB.jpg>]
+<Esquematicos/valvula.jpg, id=567, 863.225pt x 642.4pt>
+File: Esquematicos/valvula.jpg Graphic file (type jpg)
+<use Esquematicos/valvula.jpg>
+Package pdftex.def Info: Esquematicos/valvula.jpg  used on input line 449.
+(pdftex.def)             Requested size: 344.1116pt x 256.0748pt.
+<PCBs/valvulaPCB.jpg, id=568, 704.6325pt x 486.81876pt>
+File: PCBs/valvulaPCB.jpg Graphic file (type jpg)
+<use PCBs/valvulaPCB.jpg>
+Package pdftex.def Info: PCBs/valvulaPCB.jpg  used on input line 456.
+(pdftex.def)             Requested size: 370.64723pt x 256.0748pt.
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 458.
+Package pdftex.def Info: logo.png  used on input line 463.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1779,14 +1802,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[28]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 479.
+[28
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.5}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.463 
+      
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.463 
+       <./Esquematicos/valvula.jpg> <./PCBs/valvulaPCB.jpg>]
+<Esquematicos/Raspberry.jpg, id=573, 1155.31625pt x 680.5425pt>
+File: Esquematicos/Raspberry.jpg Graphic file (type jpg)
+<use Esquematicos/Raspberry.jpg>
+Package pdftex.def Info: Esquematicos/Raspberry.jpg  used on input line 470.
+(pdftex.def)             Requested size: 434.72334pt x 256.0748pt.
+
+Overfull \hbox (4.71872pt too wide) in paragraph at lines 470--471
+ [][] 
+ []
+
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 495.
+Package pdftex.def Info: logo.png  used on input line 474.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1796,10 +1837,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
 [29]
+<PCBs/RaspberryPCB.jpg, id=578, 462.72874pt x 747.79375pt>
+File: PCBs/RaspberryPCB.jpg Graphic file (type jpg)
+<use PCBs/RaspberryPCB.jpg>
+Package pdftex.def Info: PCBs/RaspberryPCB.jpg  used on input line 477.
+(pdftex.def)             Requested size: 176.06468pt x 284.52756pt.
+
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 536.
+Package pdftex.def Info: logo.png  used on input line 482.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1808,14 +1855,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[30]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 554.
+[30
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.7}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.482 \chapter
+              [\Large CÃ³digo]{CÃ³digo}
+pdfTeX warning (ext4): destination with the same identifier (name{figure.4.8}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.482 \chapter
+              [\Large CÃ³digo]{CÃ³digo} <./Esquematicos/Raspberry.jpg> <./PCBs/RaspberryPCB.jpg>]
+Cap\'{\i }tulo 5.
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 577.
+Package pdftex.def Info: logo.png  used on input line 492.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1824,11 +1880,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[31]
+[31
+
+]
+Overfull \hbox (19.26457pt too wide) in paragraph at lines 497--497
+[]\T1/cmr/bx/n/24.88 Explicación Téc-ni-ca De-ta-lla-da - Pre-
+ []
+
+
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 611.
+Package pdftex.def Info: logo.png  used on input line 513.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1838,10 +1901,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
 [32]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 534.
+
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 622.
+Package pdftex.def Info: logo.png  used on input line 550.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1851,6 +1917,61 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
 [33]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 591.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[34]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 609.
+
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 632.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[35]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 666.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[36]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 677.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[37]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -1885,20 +2006,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
 
-[34
+[38
 
 ]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 735.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 790.
 
 
-LaTeX Warning: Citation `hrv_standards' on page 35 undefined on input line 747.
+LaTeX Warning: Citation `hrv_standards' on page 39 undefined on input line 802.
 
 
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 764.
+Package pdftex.def Info: logo.png  used on input line 819.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1907,33 +2028,33 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[35
+[39
 
 ]
-Overfull \hbox (38.00731pt too wide) in paragraph at lines 772--773
+Overfull \hbox (38.00731pt too wide) in paragraph at lines 827--828
 []
  []
 
 
-LaTeX Warning: Citation `sleep_standards' on page 36 undefined on input line 775.
+LaTeX Warning: Citation `sleep_standards' on page 40 undefined on input line 830.
 
 
-Overfull \hbox (19.66339pt too wide) in paragraph at lines 777--778
+Overfull \hbox (19.66339pt too wide) in paragraph at lines 832--833
 []\T1/cmr/bx/n/12 Consistencia de fre-cuen-cia car-día-ca: \T1/cmr/m/n/12 Si se pro-por-cio-na el vec-tor \T1/cmtt/m/n/12 hr_values\T1/cmr/m/n/12 ,
  []
 
 
-Overfull \hbox (17.0234pt too wide) in paragraph at lines 784--785
+Overfull \hbox (17.0234pt too wide) in paragraph at lines 839--840
 \T1/cmr/m/n/12 ta-dos de sue-ño con-se-cu-ti-vos y re-tor-na una tu-pla $\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 ,
  []
 
 
-Overfull \hbox (11.56235pt too wide) in paragraph at lines 786--787
+Overfull \hbox (11.56235pt too wide) in paragraph at lines 841--842
 []\T1/cmr/m/n/12 Identifica
  []
 
 
-Overfull \hbox (47.11427pt too wide) in paragraph at lines 788--789
+Overfull \hbox (47.11427pt too wide) in paragraph at lines 843--844
 \T1/cmr/m/n/12 ti-guos de vi-gi-lia (es-ta-do WA-KE = 0) y re-tor-na una lis-ta de tu-plas $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 start[]index; duration\OT1/cmr/m/n/12 )$
  []
 
@@ -1941,7 +2062,7 @@ Overfull \hbox (47.11427pt too wide) in paragraph at lines 788--789
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 789.
+Package pdftex.def Info: logo.png  used on input line 844.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1950,18 +2071,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[36]
-Overfull \hbox (24.47932pt too wide) in paragraph at lines 795--796
+[40]
+Overfull \hbox (24.47932pt too wide) in paragraph at lines 850--851
 []\T1/cmr/m/n/12 Las fun-cio-nes acep-tan se-cuen-cias nu-mé-ri-cas en for-ma-to lis-ta Python onumpy.ndarray;
  []
 
 
-Overfull \hbox (31.50673pt too wide) in paragraph at lines 798--799
+Overfull \hbox (31.50673pt too wide) in paragraph at lines 853--854
 []\T1/cmr/m/n/12 La fun-ción \T1/cmtt/m/n/12 analyze_sleep_transitions \T1/cmr/m/n/12 re-tor-na una tu-pla $\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )$ \T1/cmr/m/n/12 o $\OT1/cmr/m/n/12 ([]\OML/cmm/m/it/12 ; []\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 . 
  []
 
 
-Overfull \hbox (32.1387pt too wide) in paragraph at lines 800--801
+Overfull \hbox (32.1387pt too wide) in paragraph at lines 855--856
 []\T1/cmr/m/n/12 La fun-ción \T1/cmtt/m/n/12 detect_wake_periods \T1/cmr/m/n/12 re-tor-na una lis-ta de tu-plas $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 start[]index; duration\OT1/cmr/m/n/12 )$\T1/cmr/m/n/12 . 
  []
 
@@ -1969,83 +2090,7 @@ Overfull \hbox (32.1387pt too wide) in paragraph at lines 800--801
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 816.
-(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.98096pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.98096pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
-
-[37]
-Overfull \hbox (73.59514pt too wide) in paragraph at lines 827--828
-[]\T1/cmr/m/n/12 Valores ex-tre-mos de HR pa-ra ve-ri-fi-car la sa-tu-ra-ción co-rrec-ta en \T1/cmtt/m/n/12 calculate_stress_score\T1/cmr/m/n/12 . 
- []
-
-
-Overfull \hbox (76.01508pt too wide) in paragraph at lines 841--842
-[]\T1/cmr/bx/n/12 Documentación eje-cu-ta-ble: \T1/cmr/m/n/12 In-cluir un script de-mos-tra-ti-vo en \T1/cmtt/m/n/12 examples/demo_analyzer.py
- []
-
-
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 849.
-(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.98096pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.98096pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
-
-[38] (C:\Users\ezequ\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
-File: lstlang1.sty 2024/09/23 1.10c listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 858.
-
-Overfull \hbox (6.99245pt too wide) in paragraph at lines 869--871
-[][][][][][][][][][][][][][][][][][][][][] 
- []
-
-
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 887.
-(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.98096pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.98096pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
-
-[39]
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 978.
-(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.98096pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.98096pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
-
-[40
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
-<argument> ...shipout:D \box_use:N \l_shipout_box 
-                                                  \__shipout_drop_firstpage_...
-l.978 
-      ]
-
-File: logo.png Graphic file (type png)
-<use logo.png>
-Package pdftex.def Info: logo.png  used on input line 994.
+Package pdftex.def Info: logo.png  used on input line 871.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2055,10 +2100,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
 [41]
+Overfull \hbox (73.59514pt too wide) in paragraph at lines 882--883
+[]\T1/cmr/m/n/12 Valores ex-tre-mos de HR pa-ra ve-ri-fi-car la sa-tu-ra-ción co-rrec-ta en \T1/cmtt/m/n/12 calculate_stress_score\T1/cmr/m/n/12 . 
+ []
+
+
+Overfull \hbox (76.01508pt too wide) in paragraph at lines 896--897
+[]\T1/cmr/bx/n/12 Documentación eje-cu-ta-ble: \T1/cmr/m/n/12 In-cluir un script de-mos-tra-ti-vo en \T1/cmtt/m/n/12 examples/demo_analyzer.py
+ []
+
+
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1010.
+Package pdftex.def Info: logo.png  used on input line 904.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2067,11 +2122,20 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[42]
+[42] (C:\Users\ezequ\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 913.
+
+Overfull \hbox (6.99245pt too wide) in paragraph at lines 924--926
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1041.
+Package pdftex.def Info: logo.png  used on input line 942.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2084,7 +2148,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1068.
+Package pdftex.def Info: logo.png  used on input line 1033.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2093,11 +2157,16 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[44]
+[44
+pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1}) has been already used, duplicate ignored
+<argument> ...shipout:D \box_use:N \l_shipout_box 
+                                                  \__shipout_drop_firstpage_...
+l.1033 
+       ]
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1093.
+Package pdftex.def Info: logo.png  used on input line 1049.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2110,7 +2179,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1127.
+Package pdftex.def Info: logo.png  used on input line 1065.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2123,7 +2192,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1164.
+Package pdftex.def Info: logo.png  used on input line 1096.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2136,7 +2205,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1210.
+Package pdftex.def Info: logo.png  used on input line 1123.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2149,7 +2218,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1249.
+Package pdftex.def Info: logo.png  used on input line 1148.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2162,7 +2231,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 1254.
+Package pdftex.def Info: logo.png  used on input line 1182.
 (pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -2172,6 +2241,58 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
 [50]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1219.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[51]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1265.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[52]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1304.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[53]
+
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 1309.
+(pdftex.def)             Requested size: 40.06842pt x 11.38092pt.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.98096pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.98096pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
+
+[54]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -2205,54 +2326,54 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Overfull \hbox (1.32037pt too wide) in paragraph at lines 1359--1359
+Overfull \hbox (1.32037pt too wide) in paragraph at lines 1414--1414
  [][]\T1/cmr/m/n/7 presence_detector 
  []
 
 
-Overfull \hbox (11.78726pt too wide) in paragraph at lines 1359--1359
+Overfull \hbox (11.78726pt too wide) in paragraph at lines 1414--1414
  [][]\T1/cmr/m/n/7 process_sensor_data 
  []
 
 
-Overfull \hbox (4.9181pt too wide) in paragraph at lines 1359--1359
+Overfull \hbox (4.9181pt too wide) in paragraph at lines 1414--1414
  [][]\T1/cmr/m/n/7 detect_sleep_state 
  []
 
 
-Overfull \hbox (36.68813pt too wide) in paragraph at lines 1359--1359
+Overfull \hbox (36.68813pt too wide) in paragraph at lines 1414--1414
  [][]\T1/cmr/m/n/7 perform_advanced_analysis 
  []
 
 
-Overfull \hbox (44.03772pt too wide) in paragraph at lines 1359--1359
+Overfull \hbox (44.03772pt too wide) in paragraph at lines 1414--1414
  [][]\T1/cmr/m/n/7 calculate_target_temperature 
  []
 
 
-Overfull \hbox (24.47444pt too wide) in paragraph at lines 1359--1359
+Overfull \hbox (24.47444pt too wide) in paragraph at lines 1414--1414
  [][]\T1/cmr/m/n/7 analyze_thermal_trends 
  []
 
 
-Overfull \hbox (56.57771pt too wide) in paragraph at lines 1359--1359
+Overfull \hbox (56.57771pt too wide) in paragraph at lines 1414--1414
  [][]\T1/cmr/m/n/7 apply_scientific_thermal_control 
  []
 
 
-Overfull \hbox (17.47615pt too wide) in paragraph at lines 1359--1359
+Overfull \hbox (17.47615pt too wide) in paragraph at lines 1414--1414
  [][]\T1/cmr/m/n/7 generate_sleep_report 
  []
 
 
 
-[51
+[55
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2}) has been already used, duplicate ignored
 <argument> ...shipout:D \box_use:N \l_shipout_box 
                                                   \__shipout_drop_firstpage_...
-l.1363 \restoregeometry
+l.1418 \restoregeometry
                        ] (Carpeta_tecnica.aux
 LaTeX Info: Redefining \. on input line 11.
 LaTeX Info: Redefining \% on input line 11.
@@ -2266,20 +2387,20 @@ L3 programming layer <2025-10-09>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Carpeta_tecnica.out' has not changed.
-(rerunfilecheck)             Checksum: E30E66D38FFCCDC84AB651CC1B4E8242;11936.
+(rerunfilecheck)             Checksum: E328EA83FE94B852F0A28F18E1899E0F;12277.
  ) 
 Here is how much of TeX's memory you used:
- 32275 strings out of 468080
- 641683 string characters out of 5425772
- 1182650 words of memory out of 5000000
- 60274 multiletter control sequences out of 15000+600000
- 654363 words of font info for 100 fonts, out of 8000000 for 9000
+ 32340 strings out of 468080
+ 643186 string characters out of 5425772
+ 1183403 words of memory out of 5000000
+ 60326 multiletter control sequences out of 15000+600000
+ 655051 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,91p,1032b,1376s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0700.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx0800.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Carpeta_tecnica.pdf (51 pages, 5415079 bytes).
+ <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0700.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx0800.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmn1200.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on Carpeta_tecnica.pdf (55 pages, 6199708 bytes).
 PDF statistics:
- 1731 PDF objects out of 2073 (max. 8388607)
- 213 named destinations out of 1000 (max. 500000)
- 673 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1791 PDF objects out of 2073 (max. 8388607)
+ 225 named destinations out of 1000 (max. 500000)
+ 719 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -11,7 +11,13 @@
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Tanque frío sin las celdas}}{21}{figure.3.7}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Esquemático del circuito de la pulsera}}{25}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Esquemático del circuito de las bombas de agua}}{26}{figure.4.2}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces PCB del circuito de la pulsera}}{25}{figure.4.2}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Esquemático del circuito de las bombas de agua}}{26}{figure.4.3}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces PCB del circuito de las bombas de agua}}{27}{figure.4.4}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Esquemático del circuito de las valvulas y resistencia}}{28}{figure.4.5}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces PCB del circuito de las valvulas y resistencia}}{28}{figure.4.6}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces PCB del circuito de la Raspberry Pi Zero 2 W}}{30}{figure.4.7}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces PCB del circuito de la Raspberry Pi Zero 2 W}}{30}{figure.4.8}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama de bloques del modulo analyzer.py mostrando el flujo de datos tipo serpiente.}}{40}{figure.5.1}%
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagrama compacto (serpiente) del sistema de cama inteligente — versión ajustada para ancho de página.}}{51}{figure.5.2}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagrama de bloques del modulo analyzer.py mostrando el flujo de datos tipo serpiente.}}{44}{figure.5.1}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagrama compacto (serpiente) del sistema de cama inteligente — versión ajustada para ancho de página.}}{55}{figure.5.2}%

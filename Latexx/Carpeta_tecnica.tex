@@ -408,9 +408,18 @@ Toda la información obtenida por estos sensores es procesada por la ESP32 Mini.
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=6cm]{Esquematicos/image.png}
+\includegraphics[width=14cm]{Esquematicos/image.png}
 \caption{Esquemático del circuito de la pulsera}
 \label{fig:EsquematicoPulsera}
+\end{figure}
+
+\vspace{1cm}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm]{PCBs/PulseraPCB.jpg}
+\caption{PCB del circuito de la pulsera}
+\label{fig:PCBPulsera}
 \end{figure}
 
 \subsection{Bombas de agua}
@@ -418,11 +427,57 @@ El circuito de bombeo está formado por dos módulos idénticos que permiten la 
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=12cm]{Esquematicos/bombarele.png}
+\includegraphics[height=14cm]{Esquematicos/bombarele.png}
 \caption{Esquemático del circuito de las bombas de agua}
 \label{fig:Esquematicobombarele}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[height=12cm]{PCBs/BombaPCB.jpg}
+\caption{PCB del circuito de las bombas de agua}
+\label{fig:PCBBombas}
+\end{figure}
+
+\subsection{Valvulas/Resistencia}
+El circuito encargado del control de las válvulas y de la resistencia del calefón está diseñado bajo el mismo principio de funcionamiento que el utilizado en el sistema de bombas, empleando un relé y un transistor como elementos principales de conmutación y control. Sin embargo, a diferencia del circuito anterior, en este caso los dispositivos controlados operan con tensión de red de 220 V, por lo que la llave de conmutación del relé trabaja directamente sobre la línea de 220 V en lugar de hacerlo sobre una de 12 V, garantizando así la capacidad de manejar las cargas de mayor potencia que requieren estos componentes.
+
+El relé es accionado mediante un transistor BC337, que actúa como interfaz entre la lógica de control de la Raspberry Pi y el circuito de potencia, permitiendo aislar eléctricamente la señal de control de los niveles de tensión elevados. En la entrada de control proveniente de la Raspberry Pi se incorpora una resistencia de 1 kΩ, cuya función principal es limitar la corriente hacia la base del transistor y proteger tanto al microcontrolador como al propio circuito de conmutación y un diodo en paralelo a la bobina del rele, asegurando un funcionamiento estable y seguro en todo momento.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=9cm]{Esquematicos/valvula.jpg}
+\caption{Esquemático del circuito de las valvulas y resistencia}
+\label{fig:EsquematicoValvulasResistencia}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=9cm]{PCBs/valvulaPCB.jpg}
+\caption{PCB del circuito de las valvulas y resistencia}
+\label{fig:PCBvalvulasResistencia}
+\end{figure}
+
+\subsection{Raspberry Pi Zero 2 W}
+Esta placa constituye el núcleo principal de control de todos los sistemas, siendo el elemento encargado de coordinar, procesar y ejecutar las distintas funciones automatizadas del conjunto. Su diseño integra una serie de salidas de 3.3 V y de tierra (GND) destinadas a la alimentación de los módulos y sensores periféricos, además de contar con pines GPIO programables, utilizados para emitir señales de control hacia los diferentes actuadores del sistema, entre ellos las bombas, válvulas y mecanismos de regulación térmica. Asimismo, dispone de una interfaz de comunicación I²C, mediante la cual se establecen las conexiones con los sensores de temperatura distribuidos en las distintas secciones del sistema, permitiendo una adquisición de datos precisa y sincronizada.
+
+La placa tiene como función principal ejecutar el algoritmo de control de sueño, el cual recibe y procesa la información proveniente del módulo ESP32 Mini instalado en la pulsera del usuario. A partir de los datos recopilados por los sensores de temperatura, ritmo cardíaco y movimiento, el algoritmo realiza un análisis integral que permite determinar la temperatura ideal del entorno para optimizar el descanso del usuario. Una vez obtenida esta temperatura objetivo, la placa se encarga de activar y regular los diferentes sistemas asociados, tales como calefacción, refrigeración o circulación de agua, enviando las órdenes correspondientes a cada componente mediante las salidas de control.
+
+Este diseño garantiza una integración completa entre la etapa de sensado y la de actuación, logrando una operación eficiente, segura y adaptable a las condiciones variables del entorno y las necesidades del usuario. Además, su arquitectura modular facilita futuras actualizaciones o ampliaciones del sistema, permitiendo incorporar nuevos sensores o funciones sin modificar la estructura general del hardware.
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=9cm]{Esquematicos/Raspberry.jpg}
+\caption{PCB del circuito de la Raspberry Pi Zero 2 W}
+\label{fig:EsquematicoRaspberryPi}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[height=10cm]{PCBs/RaspberryPCB.jpg}
+\caption{PCB del circuito de la Raspberry Pi Zero 2 W}
+\label{fig:PCBRaspberryPi}
+\end{figure}
 
 \chapter[\Large Código]{Código}      
 
