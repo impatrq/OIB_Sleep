@@ -1,6 +1,6 @@
 """
 Sistema de Control de Flujo de Agua para Raspberry Pi Zero 2 W
-Controla una bomba eléctrica (GPIO 22) y una válvula eléctrica (GPIO 5)
+Controla una bomba eléctrica (GPIO 13) y una válvula eléctrica (GPIO 23)
 para bombear agua a través de una manguera hacia una cama.
 La bomba opera con pausas programadas para evitar sobrecalentamiento.
 """
@@ -11,8 +11,8 @@ import signal
 import sys
 
 # Configuración de pines GPIO
-PIN_BOMBA = 22      # GPIO 22 - Bomba eléctrica
-PIN_VALVULA = 5    # GPIO 5 - Válvula eléctrica
+PIN_BOMBA = 13     # GPIO 13 - Bomba eléctrica
+PIN_VALVULA = 23    # GPIO 23 - Válvula eléctrica
 # Alimentación: Pin 1 (3.3V o 5V según tu circuito)
 # Ground: Pin 6
 
