@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.7)  12 NOV 2025 15:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.11.7)  18 NOV 2025 14:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1162,15 +1162,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 74--92
 
  []
 
-<Contacto/linkedin.png, id=399, 225.84375pt x 225.84375pt>
-File: Contacto/linkedin.png Graphic file (type png)
-<use Contacto/linkedin.png>
-Package pdftex.def Info: Contacto/linkedin.png  used on input line 100.
-(pdftex.def)             Requested size: 193.51193pt x 193.51193pt.
+<Nosotros/Bourlot.jpg, id=399, 1163.34625pt x 1210.5225pt>
+File: Nosotros/Bourlot.jpg Graphic file (type jpg)
+<use Nosotros/Bourlot.jpg>
+Package pdftex.def Info: Nosotros/Bourlot.jpg  used on input line 100.
+(pdftex.def)             Requested size: 193.4882pt x 201.33458pt.
 File: Contacto/instagram.png Graphic file (type png)
 <use Contacto/instagram.png>
 Package pdftex.def Info: Contacto/instagram.png  used on input line 105.
 (pdftex.def)             Requested size: 22.76076pt x 22.76228pt.
+<Contacto/linkedin.png, id=400, 225.84375pt x 225.84375pt>
 File: Contacto/linkedin.png Graphic file (type png)
 <use Contacto/linkedin.png>
 Package pdftex.def Info: Contacto/linkedin.png  used on input line 106.
@@ -1195,10 +1196,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [5
 
  <./Contacto/instagram.png> <./Contacto/gmail.png> <./Contacto/chrome.png> <./Contacto/github.png>]
-File: Contacto/linkedin.png Graphic file (type png)
-<use Contacto/linkedin.png>
-Package pdftex.def Info: Contacto/linkedin.png  used on input line 113.
-(pdftex.def)             Requested size: 193.51193pt x 193.51193pt.
+<Nosotros/Domoñi.jpg, id=411, 1606.0pt x 1601.985pt>
+File: Nosotros/Domoñi.jpg Graphic file (type jpg)
+<use Nosotros/Domoñi.jpg>
+Package pdftex.def Info: Nosotros/Domoñi.jpg  used on input line 113.
+(pdftex.def)             Requested size: 193.49586pt x 193.01212pt.
 File: Contacto/instagram.png Graphic file (type png)
 <use Contacto/instagram.png>
 Package pdftex.def Info: Contacto/instagram.png  used on input line 118.
@@ -1224,11 +1226,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[6 <./Contacto/linkedin.png>]
-File: Contacto/linkedin.png Graphic file (type png)
-<use Contacto/linkedin.png>
-Package pdftex.def Info: Contacto/linkedin.png  used on input line 128.
-(pdftex.def)             Requested size: 193.51193pt x 193.51193pt.
+[6 <./Nosotros/Bourlot.jpg> <./Contacto/linkedin.png> <./Nosotros/Domoñi.jpg>]
+<Nosotros/Fernandez.jpg, id=418, 963.6pt x 1284.8pt>
+File: Nosotros/Fernandez.jpg Graphic file (type jpg)
+<use Nosotros/Fernandez.jpg>
+Package pdftex.def Info: Nosotros/Fernandez.jpg  used on input line 128.
+(pdftex.def)             Requested size: 193.49586pt x 257.99448pt.
 File: Contacto/instagram.png Graphic file (type png)
 <use Contacto/instagram.png>
 Package pdftex.def Info: Contacto/instagram.png  used on input line 133.
@@ -1246,10 +1249,11 @@ Underfull \hbox (badness 7759) in paragraph at lines 132--137
 \T1/cmr/m/it/12 En-car-ga-do de do-cu-men-ta-ci�n t�c-ni-ca,
  []
 
-File: Contacto/linkedin.png Graphic file (type png)
-<use Contacto/linkedin.png>
-Package pdftex.def Info: Contacto/linkedin.png  used on input line 141.
-(pdftex.def)             Requested size: 193.51193pt x 193.51193pt.
+<Nosotros/Vignetta.jpg, id=419, 1146.2825pt x 1182.4175pt>
+File: Nosotros/Vignetta.jpg Graphic file (type jpg)
+<use Nosotros/Vignetta.jpg>
+Package pdftex.def Info: Nosotros/Vignetta.jpg  used on input line 141.
+(pdftex.def)             Requested size: 193.50116pt x 199.60101pt.
 File: Contacto/instagram.png Graphic file (type png)
 <use Contacto/instagram.png>
 Package pdftex.def Info: Contacto/instagram.png  used on input line 146.
@@ -1275,7 +1279,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller:
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
-[7]
+[7 <./Nosotros/Fernandez.jpg> <./Nosotros/Vignetta.jpg>]
 *geometry* verbose mode - [ newgeometry ] result:
 * driver: pdftex
 * paper: <default>
@@ -1308,7 +1312,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-<fotos/grupal.png, id=421, 614.295pt x 540.51938pt>
+<fotos/grupal.png, id=425, 614.295pt x 540.51938pt>
 File: fotos/grupal.png Graphic file (type png)
 <use fotos/grupal.png>
 Package pdftex.def Info: fotos/grupal.png  used on input line 158.
@@ -1323,57 +1327,57 @@ Overfull \hbox (11.66562pt too wide) in paragraph at lines 158--159
 [8
 
  <./fotos/grupal.png>]
-<lenguajes/html-5.png, id=427, 411.136pt x 411.136pt>
+<lenguajes/html-5.png, id=431, 411.136pt x 411.136pt>
 File: lenguajes/html-5.png Graphic file (type png)
 <use lenguajes/html-5.png>
 Package pdftex.def Info: lenguajes/html-5.png  used on input line 184.
 (pdftex.def)             Requested size: 11.37997pt x 11.38092pt.
-<lenguajes/css-3.png, id=428, 411.136pt x 411.136pt>
+<lenguajes/css-3.png, id=432, 411.136pt x 411.136pt>
 File: lenguajes/css-3.png Graphic file (type png)
 <use lenguajes/css-3.png>
 Package pdftex.def Info: lenguajes/css-3.png  used on input line 185.
 (pdftex.def)             Requested size: 11.37997pt x 11.38092pt.
-<lenguajes/js.png, id=429, 385.44pt x 385.44pt>
+<lenguajes/js.png, id=433, 385.44pt x 385.44pt>
 File: lenguajes/js.png Graphic file (type png)
 <use lenguajes/js.png>
 Package pdftex.def Info: lenguajes/js.png  used on input line 186.
 (pdftex.def)             Requested size: 11.38037pt x 11.38092pt.
-<lenguajes/python.png, id=430, 1204.5pt x 1204.5pt>
+<lenguajes/python.png, id=434, 1204.5pt x 1204.5pt>
 File: lenguajes/python.png Graphic file (type png)
 <use lenguajes/python.png>
 Package pdftex.def Info: lenguajes/python.png  used on input line 187.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<lenguajes/c-.png, id=431, 385.44pt x 385.44pt>
+<lenguajes/c-.png, id=435, 385.44pt x 385.44pt>
 File: lenguajes/c-.png Graphic file (type png)
 <use lenguajes/c-.png>
 Package pdftex.def Info: lenguajes/c-.png  used on input line 188.
 (pdftex.def)             Requested size: 11.38037pt x 11.38092pt.
-<lenguajes/LaTeX_logo.svg.png, id=432, 1204.5pt x 501.875pt>
+<lenguajes/LaTeX_logo.svg.png, id=436, 1204.5pt x 501.875pt>
 File: lenguajes/LaTeX_logo.svg.png Graphic file (type png)
 <use lenguajes/LaTeX_logo.svg.png>
 Package pdftex.def Info: lenguajes/LaTeX_logo.svg.png  used on input line 189.
 (pdftex.def)             Requested size: 27.31143pt x 11.38092pt.
-<programas/vscode.png, id=433, 1204.5pt x 1204.5pt>
+<programas/vscode.png, id=437, 1204.5pt x 1204.5pt>
 File: programas/vscode.png Graphic file (type png)
 <use programas/vscode.png>
 Package pdftex.def Info: programas/vscode.png  used on input line 194.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<programas/overleaf.png, id=434, 1204.5pt x 1204.5pt>
+<programas/overleaf.png, id=438, 1204.5pt x 1204.5pt>
 File: programas/overleaf.png Graphic file (type png)
 <use programas/overleaf.png>
 Package pdftex.def Info: programas/overleaf.png  used on input line 195.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<programas/PlatformIO.png, id=435, 1204.5pt x 1204.5pt>
+<programas/PlatformIO.png, id=439, 1204.5pt x 1204.5pt>
 File: programas/PlatformIO.png Graphic file (type png)
 <use programas/PlatformIO.png>
 Package pdftex.def Info: programas/PlatformIO.png  used on input line 196.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<programas/PI.png, id=436, 942.52126pt x 1204.5pt>
+<programas/PI.png, id=440, 942.52126pt x 1204.5pt>
 File: programas/PI.png Graphic file (type png)
 <use programas/PI.png>
 Package pdftex.def Info: programas/PI.png  used on input line 197.
 (pdftex.def)             Requested size: 8.90227pt x 11.38092pt.
-<programas/PowerShell.png, id=437, 250.9375pt x 250.9375pt>
+<programas/PowerShell.png, id=441, 250.9375pt x 250.9375pt>
 File: programas/PowerShell.png Graphic file (type png)
 <use programas/PowerShell.png>
 Package pdftex.def Info: programas/PowerShell.png  used on input line 198.
@@ -1394,47 +1398,47 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [9
 
  <./lenguajes/html-5.png> <./lenguajes/css-3.png> <./lenguajes/js.png> <./lenguajes/python.png> <./lenguajes/c-.png> <./lenguajes/LaTeX_logo.svg.png> <./programas/vscode.png> <./programas/overleaf.png> <./programas/PlatformIO.png>]
-<programas/Ubuntu.png, id=454, 1027.84pt x 1027.84pt>
+<programas/Ubuntu.png, id=458, 1027.84pt x 1027.84pt>
 File: programas/Ubuntu.png Graphic file (type png)
 <use programas/Ubuntu.png>
 Package pdftex.def Info: programas/Ubuntu.png  used on input line 199.
 (pdftex.def)             Requested size: 11.37057pt x 11.38092pt.
-<programas/KiCad.png, id=455, 2569.6pt x 1050.92625pt>
+<programas/KiCad.png, id=459, 2569.6pt x 1050.92625pt>
 File: programas/KiCad.png Graphic file (type png)
 <use programas/KiCad.png>
 Package pdftex.def Info: programas/KiCad.png  used on input line 200.
 (pdftex.def)             Requested size: 27.79909pt x 11.38092pt.
-<programas/Blender.png, id=456, 250.9375pt x 204.765pt>
+<programas/Blender.png, id=460, 250.9375pt x 204.765pt>
 File: programas/Blender.png Graphic file (type png)
 <use programas/Blender.png>
 Package pdftex.def Info: programas/Blender.png  used on input line 201.
 (pdftex.def)             Requested size: 13.94519pt x 11.38092pt.
-<programas/AutoCAD.png, id=457, 152.06813pt x 161.10187pt>
+<programas/AutoCAD.png, id=461, 152.06813pt x 161.10187pt>
 File: programas/AutoCAD.png Graphic file (type png)
 <use programas/AutoCAD.png>
 Package pdftex.def Info: programas/AutoCAD.png  used on input line 202.
 (pdftex.def)             Requested size: 10.74098pt x 11.38092pt.
-<programas/Ultimaker_cura.png, id=458, 301.125pt x 301.125pt>
+<programas/Ultimaker_cura.png, id=462, 301.125pt x 301.125pt>
 File: programas/Ultimaker_cura.png Graphic file (type png)
 <use programas/Ultimaker_cura.png>
 Package pdftex.def Info: programas/Ultimaker_cura.png  used on input line 203.
 (pdftex.def)             Requested size: 17.07182pt x 17.06964pt.
-<programas/Fusion.png, id=459, 1204.5pt x 1204.5pt>
+<programas/Fusion.png, id=463, 1204.5pt x 1204.5pt>
 File: programas/Fusion.png Graphic file (type png)
 <use programas/Fusion.png>
 Package pdftex.def Info: programas/Fusion.png  used on input line 204.
 (pdftex.def)             Requested size: 11.3767pt x 11.38092pt.
-<programas/Word.png, id=460, 1204.5pt x 1121.18875pt>
+<programas/Word.png, id=464, 1204.5pt x 1121.18875pt>
 File: programas/Word.png Graphic file (type png)
 <use programas/Word.png>
 Package pdftex.def Info: programas/Word.png  used on input line 205.
 (pdftex.def)             Requested size: 12.22214pt x 11.38092pt.
-<programas/Figma.png, id=461, 183.68625pt x 276.03125pt>
+<programas/Figma.png, id=465, 183.68625pt x 276.03125pt>
 File: programas/Figma.png Graphic file (type png)
 <use programas/Figma.png>
 Package pdftex.def Info: programas/Figma.png  used on input line 206.
 (pdftex.def)             Requested size: 7.57321pt x 11.38092pt.
-<programas/Ibis.jpg, id=462, 225.84375pt x 225.84375pt>
+<programas/Ibis.jpg, id=466, 225.84375pt x 225.84375pt>
 File: programas/Ibis.jpg Graphic file (type jpg)
 <use programas/Ibis.jpg>
 Package pdftex.def Info: programas/Ibis.jpg  used on input line 207.
@@ -1510,7 +1514,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [14]
 Cap\'{\i }tulo 3.
-<Modelos 3D/bedmodel_bottom.png, id=495, 712.6625pt x 487.8225pt>
+<Modelos 3D/bedmodel_bottom.png, id=499, 712.6625pt x 487.8225pt>
 File: Modelos 3D/bedmodel_bottom.png Graphic file (type png)
 <use Modelos 3D/bedmodel_bottom.png>
 Package pdftex.def Info: Modelos 3D/bedmodel_bottom.png  used on input line 294.
@@ -1531,7 +1535,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [15
 
 ]
-<Modelos 3D/Brazalete1.png, id=500, 548.0475pt x 857.2025pt>
+<Modelos 3D/Brazalete1.png, id=504, 548.0475pt x 857.2025pt>
 File: Modelos 3D/Brazalete1.png Graphic file (type png)
 <use Modelos 3D/Brazalete1.png>
 Package pdftex.def Info: Modelos 3D/Brazalete1.png  used on input line 305.
@@ -1555,7 +1559,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) h
                                                   \__shipout_drop_firstpage_...
 l.309 
        <./Modelos 3D/bedmodel_bottom.png>]
-<Modelos 3D/Brazalete2.png, id=506, 566.115pt x 900.36375pt>
+<Modelos 3D/Brazalete2.png, id=510, 566.115pt x 900.36375pt>
 File: Modelos 3D/Brazalete2.png Graphic file (type png)
 <use Modelos 3D/Brazalete2.png>
 Package pdftex.def Info: Modelos 3D/Brazalete2.png  used on input line 312.
@@ -1597,12 +1601,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3}) h
                                                   \__shipout_drop_firstpage_...
 l.317 \newpage
                <./Modelos 3D/Brazalete2.png>]
-<fotos/Brazaletes.png, id=517, 1049.9225pt x 1109.14375pt>
+<fotos/Brazaletes.png, id=521, 1049.9225pt x 1109.14375pt>
 File: fotos/Brazaletes.png Graphic file (type png)
 <use fotos/Brazaletes.png>
 Package pdftex.def Info: fotos/Brazaletes.png  used on input line 323.
 (pdftex.def)             Requested size: 269.33675pt x 284.52756pt.
-<fotos/brazalete.png, id=518, 963.6pt x 722.7pt>
+<fotos/brazalete.png, id=522, 963.6pt x 722.7pt>
 File: fotos/brazalete.png Graphic file (type png)
 <use fotos/brazalete.png>
 Package pdftex.def Info: fotos/brazalete.png  used on input line 332.
@@ -1626,7 +1630,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4}) h
                                                   \__shipout_drop_firstpage_...
 l.336 
        <./fotos/Brazaletes.png>]
-<Modelos 3D/brazalete3.png, id=525, 928.46875pt x 558.085pt>
+<Modelos 3D/brazalete3.png, id=529, 928.46875pt x 558.085pt>
 File: Modelos 3D/brazalete3.png Graphic file (type png)
 <use Modelos 3D/brazalete3.png>
 Package pdftex.def Info: Modelos 3D/brazalete3.png  used on input line 339.
@@ -1665,7 +1669,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6}) h
                                                   \__shipout_drop_firstpage_...
 l.347 
        <./fotos/brazalete.png> <./Modelos 3D/brazalete3.png>]
-<fotos/tanque.png, id=532, 1284.8pt x 963.6pt>
+<fotos/tanque.png, id=536, 1284.8pt x 963.6pt>
 File: fotos/tanque.png Graphic file (type png)
 <use fotos/tanque.png>
 Package pdftex.def Info: fotos/tanque.png  used on input line 352.
@@ -1732,12 +1736,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [24
 
 ]
-<Esquematicos/image.png, id=554, 636.87938pt x 279.29344pt>
+<Esquematicos/image.png, id=558, 636.87938pt x 279.29344pt>
 File: Esquematicos/image.png Graphic file (type png)
 <use Esquematicos/image.png>
 Package pdftex.def Info: Esquematicos/image.png  used on input line 412.
 (pdftex.def)             Requested size: 398.33858pt x 174.68582pt.
-<PCBs/PulseraPCB.jpg, id=555, 1106.1325pt x 791.95876pt>
+<PCBs/PulseraPCB.jpg, id=559, 1106.1325pt x 791.95876pt>
 File: PCBs/PulseraPCB.jpg Graphic file (type jpg)
 <use PCBs/PulseraPCB.jpg>
 Package pdftex.def Info: PCBs/PulseraPCB.jpg  used on input line 421.
@@ -1766,12 +1770,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.2}) h
                                                   \__shipout_drop_firstpage_...
 l.428 
        <./Esquematicos/image.png> <./PCBs/PulseraPCB.jpg>]
-<Esquematicos/bombarele.png, id=562, 533.74406pt x 544.28343pt>
+<Esquematicos/bombarele.png, id=566, 533.74406pt x 544.28343pt>
 File: Esquematicos/bombarele.png Graphic file (type png)
 <use Esquematicos/bombarele.png>
 Package pdftex.def Info: Esquematicos/bombarele.png  used on input line 431.
 (pdftex.def)             Requested size: 390.62352pt x 398.33858pt.
-<PCBs/BombaPCB.jpg, id=563, 906.38625pt x 800.9925pt>
+<PCBs/BombaPCB.jpg, id=567, 906.38625pt x 800.9925pt>
 File: PCBs/BombaPCB.jpg Graphic file (type jpg)
 <use PCBs/BombaPCB.jpg>
 Package pdftex.def Info: PCBs/BombaPCB.jpg  used on input line 438.
@@ -1813,12 +1817,12 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.4}) h
                                                   \__shipout_drop_firstpage_...
 l.447 
        <./PCBs/BombaPCB.jpg>]
-<Esquematicos/valvula.jpg, id=574, 863.225pt x 642.4pt>
+<Esquematicos/valvula.jpg, id=578, 863.225pt x 642.4pt>
 File: Esquematicos/valvula.jpg Graphic file (type jpg)
 <use Esquematicos/valvula.jpg>
 Package pdftex.def Info: Esquematicos/valvula.jpg  used on input line 450.
 (pdftex.def)             Requested size: 344.1116pt x 256.0748pt.
-<PCBs/valvulaPCB.jpg, id=575, 704.6325pt x 486.81876pt>
+<PCBs/valvulaPCB.jpg, id=579, 704.6325pt x 486.81876pt>
 File: PCBs/valvulaPCB.jpg Graphic file (type jpg)
 <use PCBs/valvulaPCB.jpg>
 Package pdftex.def Info: PCBs/valvulaPCB.jpg  used on input line 457.
@@ -1847,7 +1851,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{figure.4.6}) h
                                                   \__shipout_drop_firstpage_...
 l.464 
        <./Esquematicos/valvula.jpg> <./PCBs/valvulaPCB.jpg>]
-<Esquematicos/Raspberry.jpg, id=580, 1155.31625pt x 680.5425pt>
+<Esquematicos/Raspberry.jpg, id=584, 1155.31625pt x 680.5425pt>
 File: Esquematicos/Raspberry.jpg Graphic file (type jpg)
 <use Esquematicos/Raspberry.jpg>
 Package pdftex.def Info: Esquematicos/Raspberry.jpg  used on input line 471.
@@ -1871,7 +1875,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.98096pt}.
 
 [29]
-<PCBs/RaspberryPCB.jpg, id=585, 462.72874pt x 747.79375pt>
+<PCBs/RaspberryPCB.jpg, id=589, 462.72874pt x 747.79375pt>
 File: PCBs/RaspberryPCB.jpg Graphic file (type jpg)
 <use PCBs/RaspberryPCB.jpg>
 Package pdftex.def Info: PCBs/RaspberryPCB.jpg  used on input line 478.
@@ -2493,17 +2497,17 @@ Package rerunfilecheck Info: File `Carpeta_tecnica.out' has not changed.
 (rerunfilecheck)             Checksum: E9B9D07349B1BBBE827FE1A736AF3BD1;12486.
  ) 
 Here is how much of TeX's memory you used:
- 32364 strings out of 468080
- 643633 string characters out of 5425772
- 1183620 words of memory out of 5000000
- 60341 multiletter control sequences out of 15000+600000
+ 32392 strings out of 468080
+ 644406 string characters out of 5425772
+ 1183838 words of memory out of 5000000
+ 60369 multiletter control sequences out of 15000+600000
  655051 words of font info for 101 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,15n,91p,1032b,1376s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0800.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0500.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0700.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0700.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0900.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2074.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1440.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx2488.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2074.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm2488.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx0800.pk> <C:\Users\ezequ\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx0800.pk><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/cbgreek/grmn1200.pfb><C:/Users/ezequ/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on Carpeta_tecnica.pdf (57 pages, 6854719 bytes).
+Output written on Carpeta_tecnica.pdf (57 pages, 7339907 bytes).
 PDF statistics:
- 1856 PDF objects out of 2073 (max. 8388607)
+ 1860 PDF objects out of 2073 (max. 8388607)
  234 named destinations out of 1000 (max. 500000)
- 732 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 752 words of extra memory for PDF output out of 10000 (max. 10000000)
 

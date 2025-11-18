@@ -11,7 +11,7 @@ const char* ssid = "xiaomi";
 const char* password = "raspberry";
 
 // Configuración MQTT
-const char* mqtt_server = "10.150.147.27";  // IP de tu Raspberry Pi
+const char* mqtt_server = "172.22.39.27";  // IP de tu Raspberry Pi
 const int mqtt_port = 1883;
 const char* mqtt_user = "tu_usuario";  // opcional
 const char* mqtt_password = "tu_password";  // opcional
@@ -203,9 +203,9 @@ void loop() {
       
       // JSON con datos del corazón
       String heart_json = "{\"ir\":" + String(irValue) + 
-                         ",\"bpm\":" + String((int)beatsPerMinute) + 
-                         ",\"bpm_avg\":" + String(beatAvg) + 
-                         ",\"finger\":\"" + finger_status + "\"}";
+                        ",\"bpm\":" + String((int)beatsPerMinute) + 
+                        ",\"bpm_avg\":" + String(beatAvg) + 
+                        ",\"finger\":\"" + finger_status + "\"}";
       client.publish("sensores/heart_data", heart_json.c_str());
     }
     
