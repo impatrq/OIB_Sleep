@@ -32,6 +32,7 @@ https://youtu.be/yen7QRbAJQ8?si=tZINnR11tU10LYak
 Página Web e instagram:
 https://oib-sleep.vercel.app
 https://www.instagram.com/oibsleep?igsh=MXVqZHRpbnUxYzlxYw==
+
 Descripción y aplicaciones:
 El proyecto cuenta con una férula la cual toma datos biométricos de la persona (ritmo cardiaco, temperatura ambiente, temperatura corporal, acelerómetro) para determinar el estado de sueño en el que se encuentra un a persona. 
 De ahí, manda estos datos a unos tanques de agua donde se determinará si se tiene que mandar agua fría o caliente a través del colchón mediante la utilización de caños de cobre.
