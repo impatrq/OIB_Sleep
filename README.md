@@ -38,6 +38,7 @@ El proyecto cuenta con una férula la cual toma datos biométricos de la persona
 De ahí, manda estos datos a unos tanques de agua donde se determinará si se tiene que mandar agua fría o caliente a través del colchón mediante la utilización de caños de cobre.
 La idea es poder prolongar el estado de sueño REM de una persona para así mejorar su calidad de sueño. 
 También, al regular la temperatura del colchón, se puede tratar distintas patologías en pacientes de hospitales, ya sean personas con problemas de migrañas, adultos mayores con poca termo regulación, personas cuadripléjicas que no pueden determinar la temperatura de su cuerpo, etc.
+
 Contactos:
 
 Joaquin Vignetta: jvignetta@gmail.com
