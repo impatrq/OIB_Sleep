@@ -39,6 +39,8 @@ De ahí, manda estos datos a unos tanques de agua donde se determinará si se ti
 La idea es poder prolongar el estado de sueño REM de una persona para así mejorar su calidad de sueño. 
 También, al regular la temperatura del colchón, se puede tratar distintas patologías en pacientes de hospitales, ya sean personas con problemas de migrañas, adultos mayores con poca termo regulación, personas cuadripléjicas que no pueden determinar la temperatura de su cuerpo, etc.
 
+Agradecimientos: A Simmons, Layer by Layer y la cooperadora de la escuela por proveernos con los materiales para poder llevar acabo el proyecto y la ayuda.
+
 Contactos:
 
 Joaquin Vignetta: jvignetta@gmail.com
