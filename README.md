@@ -43,12 +43,15 @@ Contactos:
 Joaquin Vignetta: jvignetta@gmail.com
 https://www.linkedin.com/in/joaquin-vignetta-2a78a7398 
 https://github.com/joavig357
+
 Federico Rodriguez Domoñi: federicorodriguezdomoni@gmail.com
 https://www.linkedin.com/in/federico-rodriguez-domoñi-6005b51b8
 https://github.com/FedericoRD
+
 Ezequiel Bourlot: ezequiel.bourlot@gmail.com
 https://www.linkedin.com/in/ezequiel-bourlot-a96094232
 https://github.com/eze2508
+
 Lorenzo Fernandez: lfern9407@gmail.com
 https://www.linkedin.com/in/maximo-lorenzo-fernandez-39a160397
 https://github.com/lorenzrt
